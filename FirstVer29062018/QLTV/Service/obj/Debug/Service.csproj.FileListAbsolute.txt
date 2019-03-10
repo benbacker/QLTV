@@ -1,0 +1,12 @@
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\Service.exe.config
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\Service.exe
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\Service.pdb
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\Data.exe
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\EntityFramework.dll
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\Data.pdb
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\EntityFramework.xml
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\obj\Debug\Service.exe
+C:\Users\BenBacker\Documents\QLTVVer2\FirstVer29062018\QLTV\Service\obj\Debug\Service.pdb

@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D36497A2-EE07-45CA-BC7B-FD0B33574F8F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\BCSachTraTreBUS.cs" />
+    <Compile Include="BUS\BCTinhHinhMuonSachBUS.cs" />
+    <Compile Include="BUS\CTBCTinhHinhMuonSachBUS.cs" />
+    <Compile Include="BUS\CTPhieuMuonBUS.cs" />
+    <Compile Include="BUS\CTPhieuNhapSachBUS.cs" />
+    <Compile Include="BUS\CTPhieuTraBUS.cs" />
+    <Compile Include="BUS\CTUserAdminBUS.cs" />
+    <Compile Include="BUS\CuonSachBUS.cs" />
+    <Compile Include="BUS\DauSachBUS.cs" />
+    <Compile Include="BUS\LoaiDocGiaBUS.cs" />
+    <Compile Include="BUS\LoaiSachBUS.cs" />
+    <Compile Include="BUS\PhieuMuonBUS.cs" />
+    <Compile Include="BUS\PhieuNhapSachBUS.cs" />
+    <Compile Include="BUS\PhieuThuTienPhatBUS.cs" />
+    <Compile Include="BUS\PhieuTraBUS.cs" />
+    <Compile Include="BUS\SachBUS.cs" />
+    <Compile Include="BUS\TacGiaBUS.cs" />
+    <Compile Include="BUS\TheDocGiaBUS.cs" />
+    <Compile Include="BUS\UserAdminBUS.cs" />
+    <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="DAO\BCSachTraTreDAO.cs" />
+    <Compile Include="DAO\BCTinhHinhMuonSachDAO.cs" />
+    <Compile Include="DAO\CTBCTinhHinhMuonSachDAO.cs" />
+    <Compile Include="DAO\CTPhieuMuonDAO.cs" />
+    <Compile Include="DAO\CTPhieuNhapSachDAO.cs" />
+    <Compile Include="DAO\CTPhieuTraDAO.cs" />
+    <Compile Include="DAO\CTUserAdminDAO.cs" />
+    <Compile Include="DAO\CuonSachDAO.cs" />
+    <Compile Include="DAO\DauSachDAO.cs" />
+    <Compile Include="DAO\GetDataDAO.cs" />
+    <Compile Include="DAO\HelperDAO.cs" />
+    <Compile Include="DAO\LoaiDocGiaDAO.cs" />
+    <Compile Include="DAO\LoaiSachDAO.cs" />
+    <Compile Include="DAO\PhieuMuonDAO.cs" />
+    <Compile Include="DAO\PhieuNhapSachDAO.cs" />
+    <Compile Include="DAO\PhieuThuTienPhatDAO.cs" />
+    <Compile Include="DAO\PhieuTraDAO.cs" />
+    <Compile Include="DAO\SachDAO.cs" />
+    <Compile Include="DAO\TacGiaDAO.cs" />
+    <Compile Include="DAO\TheDocGiaDAO.cs" />
+    <Compile Include="DAO\UserAdminDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Dtos\BaoCaoTinhHinhMuonSachDtos.cs" />
+    <Compile Include="Dtos\BCSachTraTreDtos.cs" />
+    <Compile Include="Dtos\CTBaoCaoTinhHinhMuonSachDtos.cs" />
+    <Compile Include="Dtos\CTPhieuMuonDtos.cs" />
+    <Compile Include="Dtos\CTPhieuNhapSachDtos.cs" />
+    <Compile Include="Dtos\CTPhieuTraDtos.cs" />
+    <Compile Include="Dtos\CTTacGiaDtos.cs" />
+    <Compile Include="Dtos\CTUserAdminDtos.cs" />
+    <Compile Include="Dtos\CuonSachDtos.cs" />
+    <Compile Include="Dtos\DauSachDtos.cs" />
+    <Compile Include="Dtos\LoaiDocGiaDtos.cs" />
+    <Compile Include="Dtos\LoaiSachDtos.cs" />
+    <Compile Include="Dtos\PhieuMuonDtos.cs" />
+    <Compile Include="Dtos\PhieuNhapSachDtos.cs" />
+    <Compile Include="Dtos\PhieuThuTienPhatDtos.cs" />
+    <Compile Include="Dtos\PhieuTraDtos.cs" />
+    <Compile Include="Dtos\SachDtos.cs" />
+    <Compile Include="Dtos\TacGiaDtos.cs" />
+    <Compile Include="Dtos\TheDocGiaDtos.cs" />
+    <Compile Include="Dtos\UserAdminDtos.cs" />
+    <Compile Include="Dtos\UserDtos.cs" />
+    <Compile Include="DTO\BaoCaoTinhHinhMuonSachDTO.cs" />
+    <Compile Include="DTO\CTPhieuMuonDTO.cs" />
+    <Compile Include="DTO\CTPhieuTraDTO.cs" />
+    <Compile Include="DTO\CTTacGiaDTO.cs" />
+    <Compile Include="DTO\CuonSachDTO.cs" />
+    <Compile Include="DTO\PhieuMuonDTO.cs" />
+    <Compile Include="DTO\SachDTO.cs" />
+    <Compile Include="DTO\TheDocGiaDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="IBUS\IBCSachTraTreBUS.cs" />
+    <Compile Include="IBUS\IBCTinhHinhMuonSachBUS.cs" />
+    <Compile Include="IBUS\ICTBCTinhHinhMuonSachBUS.cs" />
+    <Compile Include="IBUS\ICTPhieuMuonBUS.cs" />
+    <Compile Include="IBUS\ICTPhieuNhapSachBUS.cs" />
+    <Compile Include="IBUS\ICTPhieuTraBUS.cs" />
+    <Compile Include="IBUS\ICTUserAdminBUS.cs" />
+    <Compile Include="IBUS\ICuonSachBUS.cs" />
+    <Compile Include="IBUS\IDauSachBUS.cs" />
+    <Compile Include="IBUS\ILoaiDocGiaBUS.cs" />
+    <Compile Include="IBUS\ILoaiSachBUS.cs" />
+    <Compile Include="IBUS\IPhieuMuonBUS.cs" />
+    <Compile Include="IBUS\IPhieuNhapSachBUS.cs" />
+    <Compile Include="IBUS\IPhieuThuTienPhatBUS.cs" />
+    <Compile Include="IBUS\IPhieuTraBUS.cs" />
+    <Compile Include="IBUS\ISachBUS.cs" />
+    <Compile Include="IBUS\ITacGiaBUS.cs" />
+    <Compile Include="IBUS\ITheDocGiaBUS.cs" />
+    <Compile Include="IBUS\IUseradminBUS.cs" />
+    <Compile Include="IBUS\IUserBUS.cs" />
+    <Compile Include="Model\BCSACHTRATRE.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BCTINHHINHMUONSACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_BCTINHHINHMUONSACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_PHIEUMUON.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_PHIEUNHAPSACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_PHIEUTRA.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_USERADMIN.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CUONSACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DAUSACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOAIDOCGIA.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOAISACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEUMUON.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEUNHAPSACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEUTHUTIENPHAT.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PHIEUTRA.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QuanLyThuVienEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVienEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QuanLyThuVienEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QuanLyThuVienEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVienEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SACH.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TACGIA.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\THEDOCGIA.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\USER.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\USERADMIN.cs">
+      <DependentUpon>QuanLyThuVienEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Model\QuanLyThuVienEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyThuVienEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\QuanLyThuVienEntities.edmx.diagram">
+      <DependentUpon>QuanLyThuVienEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\QuanLyThuVienEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyThuVienEntities.edmx</DependentUpon>
+      <LastGenOutput>QuanLyThuVienEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\QuanLyThuVienEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyThuVienEntities.edmx</DependentUpon>
+      <LastGenOutput>QuanLyThuVienEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

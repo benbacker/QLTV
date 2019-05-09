@@ -226,6 +226,7 @@
             this.bt_Lamlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_Lamlai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_Lamlai.UseVisualStyleBackColor = true;
+            this.bt_Lamlai.Click += new System.EventHandler(this.bt_Lamlai_Click);
             // 
             // bt_CNDL
             // 
@@ -239,10 +240,12 @@
             this.bt_CNDL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_CNDL.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_CNDL.UseVisualStyleBackColor = true;
+            this.bt_CNDL.Click += new System.EventHandler(this.bt_CNDL_Click);
             // 
             // dt_NgayLT
             // 
-            this.dt_NgayLT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_NgayLT.CustomFormat = "dd/MM/yyyy";
+            this.dt_NgayLT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_NgayLT.Location = new System.Drawing.Point(131, 368);
             this.dt_NgayLT.Name = "dt_NgayLT";
             this.dt_NgayLT.Size = new System.Drawing.Size(314, 30);
@@ -276,7 +279,8 @@
             // 
             // dt_Ngaysinh
             // 
-            this.dt_Ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_Ngaysinh.CustomFormat = "dd/MM/yyyy";
+            this.dt_Ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_Ngaysinh.Location = new System.Drawing.Point(131, 195);
             this.dt_Ngaysinh.Name = "dt_Ngaysinh";
             this.dt_Ngaysinh.Size = new System.Drawing.Size(314, 30);
@@ -361,7 +365,7 @@
             this.navigationPage1.Controls.Add(this.groupControl3);
             this.navigationPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage1.ImageOptions.Image")));
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(532, 500);
+            this.navigationPage1.Size = new System.Drawing.Size(526, 500);
             // 
             // groupControl3
             // 
@@ -393,6 +397,7 @@
             this.bt_TimKiem.Text = "Tìm kiếm";
             this.bt_TimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_TimKiem.UseVisualStyleBackColor = true;
+            this.bt_TimKiem.Click += new System.EventHandler(this.bt_TimKiem_Click);
             // 
             // tb_NhapTT
             // 
@@ -452,7 +457,7 @@
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.groupControl2.Location = new System.Drawing.Point(627, 52);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(796, 500);
+            this.groupControl2.Size = new System.Drawing.Size(874, 500);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Dữ liệu độc giả";
             // 
@@ -486,7 +491,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(796, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(874, 31);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -514,6 +519,7 @@
             this.toolStripBt_SuaTT.Name = "toolStripBt_SuaTT";
             this.toolStripBt_SuaTT.Size = new System.Drawing.Size(142, 28);
             this.toolStripBt_SuaTT.Text = "Sữa thông tin";
+            this.toolStripBt_SuaTT.Click += new System.EventHandler(this.toolStripBt_SuaTT_Click);
             // 
             // toolStripSeparator2
             // 
@@ -544,6 +550,7 @@
             this.toolStripBt_XuatCSV.Name = "toolStripBt_XuatCSV";
             this.toolStripBt_XuatCSV.Size = new System.Drawing.Size(107, 28);
             this.toolStripBt_XuatCSV.Text = "Xuất CSV";
+            this.toolStripBt_XuatCSV.Click += new System.EventHandler(this.toolStripBt_XuatCSV_Click);
             // 
             // toolStripSeparator4
             // 
@@ -559,6 +566,7 @@
             this.toolStripBt_Reset.Name = "toolStripBt_Reset";
             this.toolStripBt_Reset.Size = new System.Drawing.Size(137, 28);
             this.toolStripBt_Reset.Text = "Reset dữ liệu";
+            this.toolStripBt_Reset.Click += new System.EventHandler(this.toolStripBt_Reset_Click);
             // 
             // toolStripSeparator5
             // 
@@ -574,6 +582,7 @@
             this.toolStripBt_Muon.Name = "toolStripBt_Muon";
             this.toolStripBt_Muon.Size = new System.Drawing.Size(122, 28);
             this.toolStripBt_Muon.Text = "Mượn sách";
+            this.toolStripBt_Muon.Click += new System.EventHandler(this.toolStripBt_Muon_Click);
             // 
             // toolStripSeparator6
             // 
@@ -589,6 +598,7 @@
             this.toolStrip_Tra.Name = "toolStrip_Tra";
             this.toolStrip_Tra.Size = new System.Drawing.Size(99, 28);
             this.toolStrip_Tra.Text = "Trả sách";
+            this.toolStrip_Tra.Click += new System.EventHandler(this.toolStrip_Tra_Click);
             // 
             // toolStrip
             // 
@@ -604,6 +614,7 @@
             this.toolStripBt_Thoat.Name = "toolStripBt_Thoat";
             this.toolStripBt_Thoat.Size = new System.Drawing.Size(82, 28);
             this.toolStripBt_Thoat.Text = "Thoát";
+            this.toolStripBt_Thoat.Click += new System.EventHandler(this.toolStripBt_Thoat_Click);
             // 
             // dgv_DuLieu
             // 
@@ -625,8 +636,9 @@
             this.dgv_DuLieu.Location = new System.Drawing.Point(0, 66);
             this.dgv_DuLieu.MultiSelect = false;
             this.dgv_DuLieu.Name = "dgv_DuLieu";
-            this.dgv_DuLieu.Size = new System.Drawing.Size(796, 431);
+            this.dgv_DuLieu.Size = new System.Drawing.Size(874, 431);
             this.dgv_DuLieu.TabIndex = 0;
+            this.dgv_DuLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DuLieu_CellClick);
             // 
             // cl_ID
             // 
@@ -695,7 +707,7 @@
             // cl_TenLoaiDG
             // 
             this.cl_TenLoaiDG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_TenLoaiDG.DataPropertyName = "TenLoaiDocGia";
+            this.cl_TenLoaiDG.DataPropertyName = "TenLoaiDG";
             this.cl_TenLoaiDG.HeaderText = "Tên loại độc giả";
             this.cl_TenLoaiDG.Name = "cl_TenLoaiDG";
             this.cl_TenLoaiDG.Width = 210;
@@ -712,12 +724,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1423, 560);
+            this.ClientSize = new System.Drawing.Size(1501, 560);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.navigationPane1);
             this.InactiveGlowColor = System.Drawing.Color.White;
             this.Name = "frmTheDocGia";
             this.Text = "Thẻ độc giả";
+            this.Load += new System.EventHandler(this.frmTheDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
             this.navigationPane1.ResumeLayout(false);
             this.navigationPage2.ResumeLayout(false);
@@ -785,6 +798,10 @@
         private System.Windows.Forms.TextBox tb_Passwork;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripSeparator toolStrip;
+        private System.Windows.Forms.ToolStripButton toolStripBt_Muon;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton toolStrip_Tra;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_User;
@@ -795,9 +812,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_NgayHetHan;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenLoaiDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TongNo;
-        private System.Windows.Forms.ToolStripSeparator toolStrip;
-        private System.Windows.Forms.ToolStripButton toolStripBt_Muon;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton toolStrip_Tra;
     }
 }

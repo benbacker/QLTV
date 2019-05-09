@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Globalization;
+using app = Microsoft.Office.Interop.Excel.Application;
 
 namespace Desktop.HelperUI
 {
@@ -155,6 +156,46 @@ namespace Desktop.HelperUI
             int a = int.Parse(Money.Text.ToString());
             Tien = Convert.ToDecimal(String.Format("{0:0,0}", a));
             return Tien;
+        }
+        #endregion
+        #region ExportCSV
+        public void ExportExcel(DataGridView dgv_DL)
+        {
+            try
+            {
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "CSV|*.csv", ValidateNames = true })
+                {
+                    //sfd.Title = "Save an Excel File";
+                    //sfd.ShowDialog();
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        DialogResult dlg = MessageBox.Show("Bạn có chắc chắn xuất CSV!!", "Thông báo!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        app obj = new app();
+                        obj.Application.Workbooks.Add(Type.Missing);
+                        obj.Columns.ColumnWidth = 25;
+
+                        for (int i = 1; i < dgv_DL.Columns.Count + 1; i++)
+                            obj.Cells[1, i] = dgv_DL.Columns[i - 1].HeaderText;
+
+                        for (int i = 0; i < dgv_DL.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dgv_DL.Columns.Count; j++)
+                            {
+                                if (dgv_DL.Rows[i].Cells[j].Value != null)
+                                    obj.Cells[i + 2, j + 1] = dgv_DL.Rows[i].Cells[j].Value.ToString();
+                            }
+                        }
+                        obj.ActiveWorkbook.SaveCopyAs(sfd.FileName.ToString());
+                        obj.ActiveWorkbook.Saved = true;
+                        obj.Quit();
+                        MessageBox.Show("Xuất File Thành Công!");
+                    }
+                }
+            }
+            catch
+            {
+
+            }
         }
         #endregion
     }

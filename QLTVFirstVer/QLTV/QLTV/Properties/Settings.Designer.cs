@@ -26,11 +26,11 @@ namespace Desktop.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=DESKTOP-BBH5G7T\\BAODUYSQL;initial catalog=QuanLyThuVien;integrated se" +
-            "curity=True")]
-        public string QuanLyThuVienEntities {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-U5GBS6T\\BENBACKERSQL;Initial Catalog=QLTV;Integrated Security" +
+            "=True")]
+        public string QuanLyThuVien {
             get {
-                return ((string)(this["QuanLyThuVienEntities"]));
+                return ((string)(this["QuanLyThuVien"]));
             }
         }
     }

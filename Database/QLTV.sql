@@ -1,8 +1,4 @@
-﻿USE MASTER
-GO
-CREATE DATABASE QuanLyThuVien
-GO
-USE QuanLyThuVien
+﻿USE QLTV
 GO
 CREATE TABLE LOAIDOCGIA
 (
@@ -209,7 +205,11 @@ BEGIN
 		PRINT N'Lỗi: Tuổi của độc giả phải từ ' + CAST(@TUOIMIN AS varchar) + N' đến ' + CAST(@TUOIMAX AS varchar)
 		ROLLBACK TRANSACTION
 	END	
-
+	/*Ngày hết hạn thẻ*/
+	UPDATE THEDOCGIA 
+	SET NgayHetHan = DATEADD(month, O.HanThe, I.NgayLapThe)
+	FROM INSERTED I, THAMSO O, THEDOCGIA A
+	WHERE A.IDDocGia = I.IDDocGia
 END
 GO
 --DROP TRIGGER TRG_ISA
@@ -239,6 +239,20 @@ BEGIN
 		ROLLBACK TRANSACTION
 	END
 
+END
+GO
+--DROP TRIGGER TRG_ITG
+CREATE TRIGGER TRG_ITG ON TACGIA
+FOR INSERT
+AS
+BEGIN
+
+/*Max 100 tác giả*/
+	IF((SELECT COUNT(DISTINCT IDTacGia) FROM TACGIA) > 100)
+	BEGIN
+		PRINT N'Lỗi: Vượt quá 100 tác giả'
+		ROLLBACK TRANSACTION
+	END
 END
 GO
 --DROP TRIGGER TRG_U_IPN
@@ -314,12 +328,52 @@ FOR INSERT, UPDATE
 AS
 BEGIN
 
-	DECLARE @IDDOCGIA int
+/*Kiểm tra sách còn số lượng tồn k*/
+	DECLARE @SOLUONGTON int
+
+	SELECT @SOLUONGTON = B.SoLuongTon
+	FROM INSERTED I, CUONSACH A, SACH B
+	WHERE A.IDCuonSach = I.IDCuonSach AND B.IDSach = A.IDSach
+
+	IF (@SOLUONGTON = 0)
+	BEGIN
+		PRINT N'Số lượng sách đã hết'
+		ROLLBACK TRANSACTION
+	END
+/*Quy định cho mượn sách.9*/
+	DECLARE @NGAYHETHAN date, @IDCUONSACH varchar(6), @IDDOCGIA varchar(6), @NGAYMUON date, @TINHTRANG nvarchar(20)
 		
-	SELECT @IDDOCGIA = IDDocGia
+	SELECT @IDCUONSACH = IDCuonSach, @IDDOCGIA = IDDocGia, @NGAYMUON = NgayMuon
 	FROM INSERTED I, PHIEUMUON A
 	WHERE I.IDPhieuMuon = A.IDPhieuMuon
-		
+	SELECT @NGAYHETHAN = NgayHetHan
+	FROM THEDOCGIA
+	WHERE IDDocGia = @IDDOCGIA
+	SELECT @TINHTRANG = TinhTrang
+	FROM CUONSACH
+	WHERE IDCuonSach = @IDCUONSACH
+
+	IF(@NGAYHETHAN <= @NGAYMUON) OR (@TINHTRANG = N'Đã cho mượn') OR EXISTS (SELECT * FROM PHIEUMUON A, CT_PHIEUMUON B, CUONSACH C
+																		     WHERE A.IDPhieuMuon = B.IDPhieuMuon 
+																			 AND A.IDDocGia = @IDDOCGIA AND A.HanTra < @NGAYMUON
+																		     AND C.IDCuonSach = B.IDCuonSach AND C.TinhTrang = N'Đã cho mượn')
+	BEGIN
+		PRINT N'Lỗi: Chỉ cho mượn với thẻ còn hạn, không có sách mượn quá hạn, và sách không có người đang mượn'
+		ROLLBACK TRANSACTION
+	END
+	ELSE
+	BEGIN
+		UPDATE CUONSACH
+		SET TinhTrang = N'Đã cho mượn'
+		WHERE IDCuonSach = @IDCUONSACH
+
+		UPDATE SACH
+		SET SoLuongTon -= 1
+		FROM SACH A, CUONSACH B
+		WHERE A.IDSach = B.IDSach AND B.IDCuonSach = @IDCUONSACH
+	END
+
+/*Mỗi độc giả Max mượn 5 cuốn*/
 	DECLARE @SOSACHMUONMAX int	
 	
 	SELECT @SOSACHMUONMAX = SoSachMuonMax
@@ -365,4 +419,3 @@ BEGIN
 	END
 
 END
-

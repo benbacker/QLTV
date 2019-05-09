@@ -1,0 +1,97 @@
+﻿using Desktop.DAO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Desktop.DTO;
+using Desktop.GUI;
+using System.Data;
+
+namespace Desktop.BUS
+{
+    public class TheDocGiaBUS
+    {
+
+        //private static TheDocGiaBUS instance;
+        //public static TheDocGiaBUS Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //            instance = new TheDocGiaBUS();
+        //        return instance;
+        //    }
+        //}
+        //private TheDocGiaBUS() { }
+        //public void Xem(DataGridView data)
+        //{
+        //    data.DataSource = TheDocGiaDAO.Instance.Xem();
+        //}
+        TheDocGiaDAO TDG_DAO = new TheDocGiaDAO();
+        #region SearchTheDocGia
+        public DataTable SearchTheDocGia(string SearchTT, string NhapTT)
+        {
+            DataTable table;
+            table = ConnectionSQL.TaoBang(TDG_DAO.QuerySearchTDG(SearchTT, NhapTT));
+            return table;
+        }
+        #endregion
+        #region LoadTheDocGia
+        public DataTable LoadTheDocGia()
+        {
+            DataTable table;
+            table = ConnectionSQL.TaoBang(TDG_DAO.QueryLoadTDG());
+            return table;
+        }
+        #endregion
+        #region InsertTheDocGia
+        public bool InsertTheDocGia(TheDocGiaDTO TDG)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(TDG_DAO.QueryInsertTDG(TDG)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
+        public bool InsertUser(UserDTO User)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(TDG_DAO.QueryInsertUser(User)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+        #endregion
+        #region UpdateTheDocGia
+        public bool UpdateTheDocGia(TheDocGiaDTO TDG, UserDTO user)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(TDG_DAO.QueryUpdateTDG(TDG)) > 0 && ConnectionSQL.ExecuteNonQuery(TDG_DAO.QueryUpdateUser(user)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+        #endregion
+        public string GetTuoimin()
+        {
+            string TuoiMin;
+            string Get = "TuoiMin";
+            TuoiMin = ConnectionSQL.GetStringTable(Get, TDG_DAO.GetStringMin());
+            return TuoiMin;
+        }
+
+        public string GetTuoimax()
+        {
+            string TuoiMax;
+            string Get = "TuoiMax";
+            TuoiMax = ConnectionSQL.GetStringTable(Get, TDG_DAO.GetStringMax());
+            return TuoiMax;
+        }
+    }
+}

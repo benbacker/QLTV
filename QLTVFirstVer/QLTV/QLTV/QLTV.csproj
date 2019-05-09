@@ -46,11 +46,25 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Desktop\Microsoft.Office.Interop.Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\QLTV\Project 1.6\packages\MicrosoftOfficeCore.15.0.0\lib\net35\Office.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,6 +77,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\PhieuMuonBUS.cs" />
+    <Compile Include="BUS\PhieuTraBUS.cs" />
+    <Compile Include="BUS\SachBUS.cs" />
+    <Compile Include="BUS\TacGiaBUS.cs" />
+    <Compile Include="BUS\TheDocGiaBUS.cs" />
+    <Compile Include="DAO\ConnectionSQL.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\PhieuMuonDAO.cs" />
+    <Compile Include="DAO\PhieuTraDAO.cs" />
+    <Compile Include="DAO\SachDAO.cs" />
+    <Compile Include="DAO\TacGiaDAO.cs" />
+    <Compile Include="DAO\TheDocGiaDAO.cs" />
+    <Compile Include="DTO\PhieuMuonDTO.cs" />
+    <Compile Include="DTO\PhieuTraDTO.cs" />
+    <Compile Include="DTO\SachDTO.cs" />
+    <Compile Include="DTO\TacGiaDTO.cs" />
+    <Compile Include="DTO\TheDocGiaDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="GUI\frmConnection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,9 +222,12 @@
     <EmbeddedResource Include="Report\rpTinhHinhMuonSach.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Data.DAO.BCTinhHinhMuonSachDAO.datasource" />
     <None Include="Properties\DataSources\Data.DTO.BaoCaoTinhHinhMuonSachDTO.datasource" />
     <None Include="Properties\DataSources\Data.Dtos.BCSachTraTreDtos.datasource" />
+    <None Include="Properties\DataSources\Desktop.DTO.TheDocGiaDTO.datasource" />
+    <None Include="Properties\DataSources\Desktop.DTO.UserDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -208,11 +243,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
-    <Folder Include="DAO\" />
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

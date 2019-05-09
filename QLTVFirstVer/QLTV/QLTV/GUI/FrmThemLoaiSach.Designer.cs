@@ -86,6 +86,7 @@
             this.bt_CNDL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_CNDL.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_CNDL.UseVisualStyleBackColor = true;
+            this.bt_CNDL.Click += new System.EventHandler(this.bt_CNDL_Click);
             // 
             // FrmThemLoaiSach
             // 

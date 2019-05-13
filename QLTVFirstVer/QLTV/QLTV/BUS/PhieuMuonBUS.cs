@@ -54,6 +54,14 @@ namespace Desktop.BUS
             ID = ConnectionSQL.Identitytable(ID, column, table);
             return ID;
         }
+        public int IdentityIDCTPhieuMuon()
+        {
+            int ID = 0;
+            string column = "IDCTPhieuMuon";
+            string table = "CT_PHIEUMUON";
+            ID = ConnectionSQL.Identitytable(ID, column, table);
+            return ID;
+        }
         #endregion
         #region InsertPhieuMuon
         public bool InsertPhieuMuon(PhieuMuonDTO PM)
@@ -76,5 +84,14 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        public bool DeleteCTPhieuMuon(PhieuMuonDTO PM)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(PhieuMuon_DAO.QueryDeletePhieuMuon(PM)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
     }
 }

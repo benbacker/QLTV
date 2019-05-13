@@ -37,6 +37,7 @@
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.groupControl_TTS = new DevExpress.XtraEditors.GroupControl();
+            this.btnThemTacGia = new DevExpress.XtraEditors.SimpleButton();
             this.dt_NgayNhap = new System.Windows.Forms.DateTimePicker();
             this.label = new System.Windows.Forms.Label();
             this.tb_NamXuatBan = new System.Windows.Forms.TextBox();
@@ -156,6 +157,7 @@
             this.groupControl_TTS.AppearanceCaption.Options.UseFont = true;
             this.groupControl_TTS.AutoSize = true;
             this.groupControl_TTS.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl_TTS.CaptionImageOptions.Image")));
+            this.groupControl_TTS.Controls.Add(this.btnThemTacGia);
             this.groupControl_TTS.Controls.Add(this.dt_NgayNhap);
             this.groupControl_TTS.Controls.Add(this.label);
             this.groupControl_TTS.Controls.Add(this.tb_NamXuatBan);
@@ -183,6 +185,16 @@
             this.groupControl_TTS.Size = new System.Drawing.Size(542, 669);
             this.groupControl_TTS.TabIndex = 0;
             this.groupControl_TTS.Text = "Thông tin sách";
+            // 
+            // btnThemTacGia
+            // 
+            this.btnThemTacGia.Location = new System.Drawing.Point(446, 137);
+            this.btnThemTacGia.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThemTacGia.Name = "btnThemTacGia";
+            this.btnThemTacGia.Size = new System.Drawing.Size(91, 28);
+            this.btnThemTacGia.TabIndex = 38;
+            this.btnThemTacGia.Text = "Thêm Tác Giả";
+            this.btnThemTacGia.Click += new System.EventHandler(this.btnThemTacGia_Click);
             // 
             // dt_NgayNhap
             // 
@@ -826,5 +838,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_DonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_GiaTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_ThanhTien;
+        private DevExpress.XtraEditors.SimpleButton btnThemTacGia;
     }
 }

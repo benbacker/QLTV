@@ -322,24 +322,70 @@ BEGIN
 
 END
 GO
+--DROP TRIGGER TRG_IU_IPM
+CREATE TRIGGER TRG_IU_IPM ON PHIEUMUON
+FOR INSERT, UPDATE
+AS
+BEGIN
+
+/*NgayMuon > NgayLapThe*/
+	DECLARE @NGAYMUON date, @NGAYLAPTHE date
+	
+	SELECT @NGAYMUON = NgayMuon, @NGAYLAPTHE = NgayLapThe
+	FROM INSERTED I, THEDOCGIA A
+	WHERE A.IDDocGia = I.IDDocGia
+
+	IF (@NGAYMUON < @NGAYLAPTHE)
+	BEGIN
+		PRINT N'Ngày mượn sách phải lớn hơn hoặc bằng ngày lập thẻ độc giả'
+		ROLLBACK TRANSACTION
+	END
+
+/*Hạn trả 4 ngày*/
+	UPDATE PHIEUMUON
+	SET HanTra = DATEADD(day, O.SoNgayMuonMax, I.NgayMuon)
+	FROM INSERTED I, THAMSO O, PHIEUMUON A
+	WHERE A.IDPhieuMuon = I.IDPhieuMuon
+
+/*UPDATE SoNgayMuon(CT_PHIEUTRA) khi UPDATE NgayMuon*/
+	DECLARE @NGAYMUONI date, @NGAYMUOND date
+	SELECT @NGAYMUONI = I.NgayMuon, @NGAYMUOND = D.NgayMuon
+	FROM INSERTED I, DELETED D
+
+	IF(@NGAYMUONI <> @NGAYMUOND)
+	BEGIN
+		UPDATE CUONSACH
+		SET TinhTrang = N'Đã cho mượn'
+		FROM INSERTED I, CUONSACH A, CT_PHIEUMUON B
+		WHERE B.IDPhieuMuon = I.IDPhieuMuon AND A.IDCuonSach = B.IDCuonSach
+
+		UPDATE CT_PHIEUTRA
+		SET	SoNgayMuon = DATEDIFF(day, I.NgayMuon, A.NgayTra)
+		FROM INSERTED I, PHIEUTRA A, CT_PHIEUTRA B
+		WHERE B.IDPhieuMuon = I.IDPhieuMuon
+			  AND A.IDPhieuTra = B.IDPhieuTra
+	END
+
+END
+GO
 --DROP TRIGGER TRG_IU_CPM
-CREATE TRIGGER TRG_IU_CPM ON CT_PHIEUMUON
+ALTER TRIGGER TRG_IU_CPM ON CT_PHIEUMUON
 FOR INSERT, UPDATE
 AS
 BEGIN
 
 /*Kiểm tra sách còn số lượng tồn k*/
-	DECLARE @SOLUONGTON int
+	--DECLARE @SOLUONGTON int
 
-	SELECT @SOLUONGTON = B.SoLuongTon
-	FROM INSERTED I, CUONSACH A, SACH B
-	WHERE A.IDCuonSach = I.IDCuonSach AND B.IDSach = A.IDSach
+	--SELECT @SOLUONGTON = B.SoLuongTon
+	--FROM INSERTED I, CUONSACH A, SACH B
+	--WHERE A.IDCuonSach = I.IDCuonSach AND B.IDSach = A.IDSach
 
-	IF (@SOLUONGTON = 0)
-	BEGIN
-		PRINT N'Số lượng sách đã hết'
-		ROLLBACK TRANSACTION
-	END
+	--IF (@SOLUONGTON = 0)
+	--BEGIN
+	--	PRINT N'Số lượng sách đã hết'
+	--	ROLLBACK TRANSACTION
+	--END
 /*Quy định cho mượn sách.9*/
 	DECLARE @NGAYHETHAN date, @IDCUONSACH varchar(6), @IDDOCGIA varchar(6), @NGAYMUON date, @TINHTRANG nvarchar(20)
 		
@@ -367,10 +413,10 @@ BEGIN
 		SET TinhTrang = N'Đã cho mượn'
 		WHERE IDCuonSach = @IDCUONSACH
 
-		UPDATE SACH
-		SET SoLuongTon -= 1
-		FROM SACH A, CUONSACH B
-		WHERE A.IDSach = B.IDSach AND B.IDCuonSach = @IDCUONSACH
+		--UPDATE SACH
+		--SET SoLuongTon -= 1
+		--FROM SACH A, CUONSACH B
+		--WHERE A.IDSach = B.IDSach AND B.IDCuonSach = @IDCUONSACH
 	END
 
 /*Mỗi độc giả Max mượn 5 cuốn*/
@@ -417,5 +463,276 @@ BEGIN
 			ROLLBACK TRANSACTION
 		END
 	END
+
+END
+
+
+CREATE TRIGGER TRG_U_IPT ON PHIEUTRA
+FOR UPDATE
+AS
+BEGIN
+
+/*TienNoKyNay*/
+	DECLARE @ROWNUM int, @ROW int = 0
+	SELECT @ROWNUM = (SELECT COUNT(*) FROM INSERTED)
+
+	SELECT IDENTITY(int, 1, 1) AS Num, IDPhieuTra, IDDocGia, NgayTra, TienPhatKyNay, SoTienTra, TienNoKyNay INTO #INSERTED FROM INSERTED
+		
+	WHILE (@ROW < @ROWNUM)
+	BEGIN		
+		SET @ROW += 1
+
+		DECLARE @TIENPHATKYNAY money, @SOTIENTRA money
+
+		SELECT @TIENPHATKYNAY = TienPhatKyNay, @SOTIENTRA = SoTienTra
+		FROM #INSERTED I
+		WHERE I.Num = @ROW
+
+		IF (@SOTIENTRA > @TIENPHATKYNAY)
+		BEGIN
+			PRINT N'Số tiền trả(Phiếu trả) vượt quá tiền phạt kỳ này. Vui lòng nhập lại số tiền trả'
+
+			UPDATE PHIEUTRA
+			SET TienNoKyNay = 0
+			FROM #INSERTED I, PHIEUTRA A
+			WHERE A.IDPhieuTra = I.IDPhieuTra AND I.Num = @ROW
+		END
+		ELSE
+		BEGIN
+			UPDATE PHIEUTRA
+			SET TienNoKyNay = A.TienPhatKyNay - A.SoTienTra
+			FROM #INSERTED I, PHIEUTRA A
+			WHERE A.IDPhieuTra = I.IDPhieuTra AND I.Num = @ROW
+		END	
+	END
+	
+/*TongNo*/
+	UPDATE THEDOCGIA
+	SET TongNo = (SELECT SUM(A.TienNoKyNay)
+				  FROM INSERTED I, PHIEUTRA A
+				  WHERE A.IDDocGia = I.IDDocGia)
+	FROM INSERTED I, THEDOCGIA A
+	WHERE A.IDDocGia = I.IDDocGia			  		
+
+/*UPDATE SoNgayMuon(CT_PHIEUTRA) khi UPDATE NgayTra*/
+	DECLARE @NGAYTRAI date, @NGAYTRAD date
+	SELECT @NGAYTRAI = I.NgayTra, @NGAYTRAD = D.NgayTra
+	FROM INSERTED I, DELETED D
+
+	IF(@NGAYTRAI <> @NGAYTRAD)
+	BEGIN
+		UPDATE CUONSACH
+		SET TinhTrang = N'Đã cho mượn'
+		FROM INSERTED I, CUONSACH A, CT_PHIEUTRA B
+		WHERE B.IDPhieuTra = I.IDPhieuTra AND A.IDCuonSach = B.IDCuonSach
+
+		UPDATE CT_PHIEUTRA
+		SET	SoNgayMuon = DATEDIFF(day, B.NgayMuon, I.NgayTra)
+		FROM INSERTED I, CT_PHIEUTRA A, PHIEUMUON B
+		WHERE A.IDPhieuTra = I.IDPhieuTra
+			  AND B.IDPhieuMuon = A.IDPhieuMuon
+	END
+
+END
+
+--DROP TRIGGER TRG_IU_CPT
+alter TRIGGER TRG_IU_CPT ON CT_PHIEUTRA
+FOR INSERT, UPDATE
+AS
+BEGIN
+
+/*Điều kiện*/
+	DECLARE @TINHTRANG nvarchar(20), @SONGAYMUONMAX int, @TIENPHATMOINGAY int
+	
+	SELECT @TINHTRANG = TinhTrang
+	FROM INSERTED I, CUONSACH A
+	WHERE A.IDCuonSach = I.IDCuonSach
+	SELECT @SONGAYMUONMAX = SoNgayMuonMax, @TIENPHATMOINGAY = TienPhatMoiNgay
+	FROM THAMSO	
+
+	IF (@TINHTRANG = N'Chưa cho mượn') --****
+	BEGIN
+		PRINT N'Sách chưa cho mượn'
+		ROLLBACK TRANSACTION
+	END	
+	ELSE
+	BEGIN
+
+	/*IDPhieuMuon, SoNgayMuon*/
+		UPDATE CT_PHIEUTRA
+		SET IDPhieuMuon = C.IDPhieuMuon, SoNgayMuon = DATEDIFF(day, C.NgayMuon, A.NgayTra)
+		FROM INSERTED I, PHIEUTRA A, CT_PHIEUTRA B, PHIEUMUON C, CT_PHIEUMUON D
+		WHERE B.IDCTPhieuTra = I.IDCTPhieuTra
+			  AND A.IDPhieuTra = B.IDPhieuTra AND C.IDPhieuMuon = D.IDPhieuMuon 
+			  AND B.IDCuonSach = D.IDCuonSach AND NOT EXISTS (SELECT * FROM PHIEUMUON M, CT_PHIEUMUON N 
+															  WHERE M.IDPhieuMuon = N.IDPhieuMuon AND N.IDCuonSach = B.IDCuonSach 
+															  AND M.NgayMuon > C.NgayMuon);
+																	
+	/*NgayTra > NgayMuon*/
+		DECLARE @ROWNUM1 int, @ROW1 int = 0
+		SELECT @ROWNUM1 = (SELECT COUNT(*) FROM INSERTED)
+
+		SELECT IDENTITY(int, 1, 1) AS Num1, IDCTPhieuTra, IDPhieuTra, IDCuonSach, IDPhieuMuon, SoNgayMuon, TienPhat INTO #INSERTED1 FROM INSERTED
+		
+		WHILE (@ROW1 < @ROWNUM1)
+		BEGIN
+			SET @ROW1 += 1
+			
+			DECLARE @SONGAYMUON int
+
+			SELECT @SONGAYMUON = A.SoNgayMuon
+			FROM #INSERTED1 I1, CT_PHIEUTRA A
+			WHERE A.IDCTPhieuTra = I1.IDCTPhieuTra AND I1.Num1 = @ROW1
+
+			IF (@SONGAYMUON < 0)
+			BEGIN
+				PRINT N'Ngày trả(phiếu trả) phải lớn hơn ngày mượn(phiếu mượn)'
+				ROLLBACK TRANSACTION
+			END	
+
+			IF (@SONGAYMUON = 0)
+			BEGIN
+				UPDATE CT_PHIEUTRA
+				SET SoNgayMuon = 1
+				FROM #INSERTED1 I1, CT_PHIEUTRA A
+				WHERE A.IDCTPhieuTra = I1.IDCTPhieuTra AND I1.Num1 = @ROW1		
+			END
+
+	/*TienPhat và Tự động thêm BCSACHTRATRE*/		
+			DECLARE @NGAYTRA date, @IDCUONSACH varchar(6), @IDPHIEUMUON varchar(6)
+
+			SELECT @NGAYTRA = NgayTra, @IDCUONSACH = I1.IDCuonSach, @IDPHIEUMUON = B.IDPhieuMuon --
+			FROM #INSERTED1 I1, PHIEUTRA A, CT_PHIEUTRA B
+			WHERE A.IDPhieuTra = I1.IDPhieuTra AND B.IDCTPhieuTra = I1.IDCTPhieuTra AND I1.Num1 = @ROW1
+
+			IF (@SONGAYMUON > @SONGAYMUONMAX)
+			BEGIN
+				UPDATE CT_PHIEUTRA
+				SET TienPhat = @TIENPHATMOINGAY * (A.SoNgayMuon - @SONGAYMUONMAX)
+				FROM #INSERTED1 I1, CT_PHIEUTRA A
+				WHERE A.IDCTPhieuTra = I1.IDCTPhieuTra AND I1.Num1 = @ROW1
+		/*Tự động thêm BCSACHTRATRE*/ --- 23/5
+				DECLARE @t int
+				DECLARE @mt varchar(5) = '0'				
+				
+				SET @t = (SELECT COUNT (IDBCSachTre) 
+						  FROM BCSACHTRATRE)
+				SET @t += 1
+				IF (@t >= 10 AND @t < 100) 
+				BEGIN
+					SET @mt = '0'
+				END
+				ELSE
+				BEGIN
+					IF (@t >= 100 AND @t < 1000) 
+					BEGIN
+						SET @mt = '0'
+					END
+				END				
+
+				IF (EXISTS (SELECT * FROM #INSERTED1 I1, BCSACHTRATRE A 
+									WHERE A.IDCuonSach = I1.IDCuonSach AND A.IDPhieuMuon = I1.IDPhieuMuon AND I1.Num1 = @ROW1))
+				BEGIN
+					UPDATE BCSACHTRATRE
+					SET NgayThangNam = @NGAYTRA
+					FROM #INSERTED1 I1, BCSACHTRATRE A
+					WHERE A.IDCuonSach = I1.IDCuonSach AND A.IDPhieuMuon = I1.IDPhieuMuon AND I1.Num1 = @ROW1
+				END
+				ELSE
+				BEGIN
+					INSERT INTO BCSACHTRATRE (IDBCSachTre, NgayThangNam, IDCuonSach, IDPhieuMuon) VALUES (@mt + CAST(@t AS varchar), @NGAYTRA, @IDCUONSACH, @IDPHIEUMUON)
+				END
+			END
+			ELSE
+			BEGIN
+				UPDATE CT_PHIEUTRA
+				SET TienPhat = 0
+				FROM #INSERTED1 I1, CT_PHIEUTRA A
+				WHERE A.IDCTPhieuTra = I1.IDCTPhieuTra AND I1.Num1 = @ROW1	
+		/*update BCSACHTRATRE khi k trả trễ*/ --- 23/5
+				UPDATE BCSACHTRATRE 
+				SET SoNgayTraTre = 0
+				WHERE IDCuonSach = @IDCUONSACH AND IDPhieuMuon = @IDPHIEUMUON
+			END
+		END
+
+	/*Sau khi trả thành công*/
+		UPDATE CUONSACH
+		SET TinhTrang = N'Chưa cho mượn'
+		FROM INSERTED I, CUONSACH A
+		WHERE A.IDCuonSach = I.IDCuonSach
+
+	/*Thay đổi IDCuonSach cùng hàng*/
+		DECLARE @IDCUONSACHI varchar(6), @IDCUONSACHD varchar(6)
+		SELECT @IDCUONSACHI = I.IDCuonSach, @IDCUONSACHD = D.IDCuonSach
+		FROM INSERTED I, DELETED D	
+		
+		IF (@IDCUONSACHI <> @IDCUONSACHD)
+		BEGIN
+			UPDATE CUONSACH
+			SET TinhTrang = N'Đã cho mượn'
+			FROM DELETED D, CUONSACH A
+			WHERE A.IDCuonSach = D.IDCuonSach
+
+			UPDATE CUONSACH
+			SET TinhTrang = N'Chưa cho mượn'
+			FROM INSERTED I, CUONSACH A
+			WHERE A.IDCuonSach = I.IDCuonSach
+		END									
+		
+	/*TienPhatKyNay*/
+		DECLARE @ROWNUM2 int, @ROW2 int = 0
+		SELECT @ROWNUM2 = (SELECT COUNT(*) FROM INSERTED)
+
+		SELECT IDENTITY(int, 1, 1) AS Num2, IDCTPhieuTra, IDPhieuTra, IDCuonSach, IDPhieuMuon, SoNgayMuon, TienPhat INTO #INSERTED2 FROM INSERTED
+		
+		WHILE (@ROW2 < @ROWNUM2)
+		BEGIN
+			SET @ROW2 += 1
+
+			UPDATE PHIEUTRA
+			SET TienPhatKyNay = (SELECT SUM(A.TienPhat)
+							     FROM #INSERTED2 I2, CT_PHIEUTRA A
+							     WHERE A.IDPhieuTra = I2.IDPhieuTra AND I2.Num2 = @ROW2)
+			FROM #INSERTED2 I2, PHIEUTRA A
+			WHERE A.IDPhieuTra = I2.IDPhieuTra AND I2.Num2 = @ROW2
+		END
+		
+	END
+
+END
+GO
+CREATE TRIGGER TRG_IU_IST ON BCSACHTRATRE
+FOR INSERT, UPDATE
+AS
+BEGIN
+
+/*NgayThangNam >= min(NgayTra)*/
+	DECLARE @NGAYTHANGNAM date, @NGAYTRA date
+
+	SELECT @NGAYTHANGNAM = NgayThangNam
+	FROM INSERTED
+	SELECT @NGAYTRA = A.NgayTra
+	FROM PHIEUTRA A
+	WHERE NOT EXISTS (SELECT * FROM PHIEUTRA B
+					  WHERE B.NgayTra < A.NgayTra)
+
+	IF (@NGAYTHANGNAM < @NGAYTRA)
+	BEGIN
+		PRINT N'Ngày tháng năm của "Báo cáo thông kê sách trả trễ" phải lớn hơn hoặc bằng ngày trả sách đầu tiên'
+		ROLLBACK TRANSACTION
+	END
+
+/*SoNgayTraTre*/
+	DECLARE @SONGAYMUONMAX int
+
+	SELECT @SONGAYMUONMAX = SoNgayMuonMax 
+	FROM THAMSO
+
+	UPDATE BCSACHTRATRE
+	SET SoNgayTraTre = SoNgayMuon - @SONGAYMUONMAX
+	FROM INSERTED I, BCSACHTRATRE A, CT_PHIEUTRA B
+	WHERE A.IDBCSachTre = I.IDBCSachTre
+		  AND A.IDCuonSach = B.IDCuonSach AND A.IDPhieuMuon = B.IDPhieuMuon
 
 END

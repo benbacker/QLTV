@@ -43,6 +43,8 @@
             this.btn_Admin = new DevExpress.XtraBars.BarButtonItem();
             this.btn_MuonSach = new DevExpress.XtraBars.BarButtonItem();
             this.btn_TraSach = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_BaoCaoMuon = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_BaoCaoTra = new DevExpress.XtraBars.BarButtonItem();
             this.ribbon_TDGia = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbon_DGia = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbon_Sach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -53,14 +55,10 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbon_BCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbon_TKiem = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbon_QDinh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedfMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btn_BaoCaoMuon = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_BaoCaoTra = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedfMain)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +89,6 @@
             this.ribbon_TDGia,
             this.ribbon_TTMTra,
             this.ribbon_BCao,
-            this.ribbon_TKiem,
             this.ribbon_QDinh});
             this.ribbon.Size = new System.Drawing.Size(974, 162);
             this.ribbon.StatusBar = this.ribbonStatusBar;
@@ -185,6 +182,22 @@
             this.btn_TraSach.Name = "btn_TraSach";
             this.btn_TraSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_TraSach_ItemClick);
             // 
+            // btn_BaoCaoMuon
+            // 
+            this.btn_BaoCaoMuon.Caption = "Báo cáo phiếu mượn";
+            this.btn_BaoCaoMuon.Id = 13;
+            this.btn_BaoCaoMuon.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_BaoCaoMuon.ImageOptions.LargeImage")));
+            this.btn_BaoCaoMuon.Name = "btn_BaoCaoMuon";
+            this.btn_BaoCaoMuon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_BaoCaoMuon_ItemClick);
+            // 
+            // btn_BaoCaoTra
+            // 
+            this.btn_BaoCaoTra.Caption = "Báo cáo phiếu trả";
+            this.btn_BaoCaoTra.Id = 15;
+            this.btn_BaoCaoTra.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_BaoCaoTra.ImageOptions.LargeImage")));
+            this.btn_BaoCaoTra.Name = "btn_BaoCaoTra";
+            this.btn_BaoCaoTra.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_BaoCaoTra_ItemClick);
+            // 
             // ribbon_TDGia
             // 
             this.ribbon_TDGia.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -211,7 +224,6 @@
             // ribbon_TGia
             // 
             this.ribbon_TGia.ItemLinks.Add(this.btn_TGia);
-            this.ribbon_TGia.ItemLinks.Add(this.btn_CTTGia);
             this.ribbon_TGia.Name = "ribbon_TGia";
             this.ribbon_TGia.Text = "Tác giả";
             // 
@@ -257,19 +269,6 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Báo cáo";
             // 
-            // ribbon_TKiem
-            // 
-            this.ribbon_TKiem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbon_TKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbon_TKiem.ImageOptions.Image")));
-            this.ribbon_TKiem.Name = "ribbon_TKiem";
-            this.ribbon_TKiem.Text = "Tìm kiếm";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
             // ribbon_QDinh
             // 
             this.ribbon_QDinh.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -294,22 +293,6 @@
             // 
             this.xtraTabbedfMain.MdiParent = this;
             // 
-            // btn_BaoCaoMuon
-            // 
-            this.btn_BaoCaoMuon.Caption = "Báo cáo phiếu mượn";
-            this.btn_BaoCaoMuon.Id = 13;
-            this.btn_BaoCaoMuon.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btn_BaoCaoMuon.Name = "btn_BaoCaoMuon";
-            this.btn_BaoCaoMuon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_BaoCaoMuon_ItemClick);
-            // 
-            // btn_BaoCaoTra
-            // 
-            this.btn_BaoCaoTra.Caption = "Báo cáo phiếu trả";
-            this.btn_BaoCaoTra.Id = 15;
-            this.btn_BaoCaoTra.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.btn_BaoCaoTra.Name = "btn_BaoCaoTra";
-            this.btn_BaoCaoTra.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_BaoCaoTra_ItemClick);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,6 +306,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Tag = "";
             this.Text = "frmMain";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedfMain)).EndInit();
             this.ResumeLayout(false);
@@ -353,8 +337,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_BCao;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_TKiem;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_QDinh;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedfMain;

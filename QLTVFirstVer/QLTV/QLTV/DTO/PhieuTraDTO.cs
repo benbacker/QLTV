@@ -19,5 +19,7 @@ namespace Desktop.DTO
         public string TenDauSach { get; set; }
         public int SoNgayMuon { get; set; }
         public decimal TienPhat { get; set; }
+        public decimal TienPhatKyNay { get; set; }
+        public decimal TienNoKyNay { get; set; }
     }
 }

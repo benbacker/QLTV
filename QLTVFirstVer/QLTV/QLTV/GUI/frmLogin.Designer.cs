@@ -29,64 +29,262 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.tb_user = new System.Windows.Forms.TextBox();
-            this.tb_passwork = new System.Windows.Forms.TextBox();
-            this.btn_login = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCSDL = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbPassWork = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.tbUser = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
-            // tb_user
+            // panel1
             // 
-            this.tb_user.BackColor = System.Drawing.SystemColors.Menu;
-            this.tb_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_user.Font = new System.Drawing.Font("Candara", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_user.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tb_user.Location = new System.Drawing.Point(38, 142);
-            this.tb_user.Multiline = true;
-            this.tb_user.Name = "tb_user";
-            this.tb_user.Size = new System.Drawing.Size(452, 68);
-            this.tb_user.TabIndex = 0;
-            this.tb_user.Text = "Username";
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.btnCSDL);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(360, 589);
+            this.panel1.TabIndex = 0;
             // 
-            // tb_passwork
+            // btnCSDL
             // 
-            this.tb_passwork.BackColor = System.Drawing.SystemColors.Menu;
-            this.tb_passwork.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_passwork.Font = new System.Drawing.Font("Candara", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_passwork.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tb_passwork.Location = new System.Drawing.Point(38, 258);
-            this.tb_passwork.Multiline = true;
-            this.tb_passwork.Name = "tb_passwork";
-            this.tb_passwork.Size = new System.Drawing.Size(452, 64);
-            this.tb_passwork.TabIndex = 1;
-            this.tb_passwork.Text = "Passwork";
+            this.btnCSDL.ActiveBorderThickness = 1;
+            this.btnCSDL.ActiveCornerRadius = 20;
+            this.btnCSDL.ActiveFillColor = System.Drawing.Color.LemonChiffon;
+            this.btnCSDL.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnCSDL.ActiveLineColor = System.Drawing.Color.Black;
+            this.btnCSDL.BackColor = System.Drawing.Color.White;
+            this.btnCSDL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCSDL.BackgroundImage")));
+            this.btnCSDL.ButtonText = "Kết Nối CSDL";
+            this.btnCSDL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCSDL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCSDL.ForeColor = System.Drawing.Color.Black;
+            this.btnCSDL.IdleBorderThickness = 1;
+            this.btnCSDL.IdleCornerRadius = 20;
+            this.btnCSDL.IdleFillColor = System.Drawing.Color.White;
+            this.btnCSDL.IdleForecolor = System.Drawing.Color.Black;
+            this.btnCSDL.IdleLineColor = System.Drawing.Color.Black;
+            this.btnCSDL.Location = new System.Drawing.Point(82, 449);
+            this.btnCSDL.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCSDL.Name = "btnCSDL";
+            this.btnCSDL.Size = new System.Drawing.Size(189, 41);
+            this.btnCSDL.TabIndex = 4;
+            this.btnCSDL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCSDL.Click += new System.EventHandler(this.btnCSDL_Click);
             // 
-            // btn_login
+            // label4
             // 
-            this.btn_login.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btn_login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_login.BackgroundImage")));
-            this.btn_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_login.Location = new System.Drawing.Point(28, 358);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(149, 66);
-            this.btn_login.TabIndex = 3;
-            this.btn_login.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.LightCyan;
+            this.label4.Font = new System.Drawing.Font("Bungee Inline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.Location = new System.Drawing.Point(49, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(266, 61);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Quản Lý Thư Viện\r\n";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LightCyan;
+            this.label3.Font = new System.Drawing.Font("Bungee Inline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label3.Location = new System.Drawing.Point(100, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(163, 61);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Phần Mềm \r\n";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.LightCyan;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(360, 589);
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(366, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(173, 76);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Login";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(375, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Xin Chào! Mời bạn đăng nhập";
+            // 
+            // tbPassWork
+            // 
+            this.tbPassWork.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPassWork.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassWork.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbPassWork.HintForeColor = System.Drawing.Color.Empty;
+            this.tbPassWork.HintText = "PassWord";
+            this.tbPassWork.isPassword = true;
+            this.tbPassWork.LineFocusedColor = System.Drawing.Color.White;
+            this.tbPassWork.LineIdleColor = System.Drawing.Color.White;
+            this.tbPassWork.LineMouseHoverColor = System.Drawing.Color.White;
+            this.tbPassWork.LineThickness = 4;
+            this.tbPassWork.Location = new System.Drawing.Point(367, 312);
+            this.tbPassWork.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbPassWork.Name = "tbPassWork";
+            this.tbPassWork.Size = new System.Drawing.Size(316, 50);
+            this.tbPassWork.TabIndex = 2;
+            this.tbPassWork.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbPassWork.OnValueChanged += new System.EventHandler(this.tbPassWork_OnValueChanged);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.ActiveBorderThickness = 1;
+            this.btnLogin.ActiveCornerRadius = 20;
+            this.btnLogin.ActiveFillColor = System.Drawing.Color.Black;
+            this.btnLogin.ActiveForecolor = System.Drawing.Color.White;
+            this.btnLogin.ActiveLineColor = System.Drawing.Color.LawnGreen;
+            this.btnLogin.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
+            this.btnLogin.ButtonText = "Đăng Nhập";
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnLogin.IdleBorderThickness = 1;
+            this.btnLogin.IdleCornerRadius = 20;
+            this.btnLogin.IdleFillColor = System.Drawing.Color.White;
+            this.btnLogin.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogin.IdleLineColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogin.Location = new System.Drawing.Point(424, 394);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(201, 41);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // tbUser
+            // 
+            this.tbUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUser.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbUser.HintForeColor = System.Drawing.Color.Empty;
+            this.tbUser.HintText = "Tài Khoản";
+            this.tbUser.isPassword = false;
+            this.tbUser.LineFocusedColor = System.Drawing.Color.White;
+            this.tbUser.LineIdleColor = System.Drawing.Color.White;
+            this.tbUser.LineMouseHoverColor = System.Drawing.Color.White;
+            this.tbUser.LineThickness = 4;
+            this.tbUser.Location = new System.Drawing.Point(367, 234);
+            this.tbUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(316, 50);
+            this.tbUser.TabIndex = 1;
+            this.tbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(649, 246);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 29);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(649, 323);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 29);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(454, 155);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(145, 70);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Location = new System.Drawing.Point(655, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(34, 29);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(579, 472);
-            this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.tb_passwork);
-            this.Controls.Add(this.tb_user);
+            this.ClientSize = new System.Drawing.Size(691, 589);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.tbUser);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.tbPassWork);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
             this.Text = "Login";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,8 +292,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tb_user;
-        private System.Windows.Forms.TextBox tb_passwork;
-        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox tbPassWork;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox tbUser;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnCSDL;
+        private System.Windows.Forms.PictureBox btnExit;
     }
 }

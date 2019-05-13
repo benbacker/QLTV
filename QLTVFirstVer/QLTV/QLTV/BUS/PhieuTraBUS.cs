@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Desktop.DAO;
+using Desktop.DTO;
 using System.Data;
 
 namespace Desktop.BUS
@@ -26,5 +27,50 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        public bool InsertPhieuTra(PhieuTraDTO PT)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(PhieuTra_DAO.QueryInsertPhieuTra(PT)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
+        public bool InsertCTPhieuTra(PhieuTraDTO PT)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(PhieuTra_DAO.QueryInsertCTPhieuTra(PT)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
+        public int IdentityID()
+        {
+            int ID = 0;
+            string column = "IDPhieuTra";
+            string table = "PHIEUTRA";
+            ID = ConnectionSQL.Identitytable(ID, column, table);
+            return ID;
+        }
+
+        public int IdentityIDCTPhieuTra()
+        {
+            int ID = 0;
+            string column = "IDCTPhieuTra";
+            string table = "CT_PhieuTra";
+            ID = ConnectionSQL.Identitytable(ID, column, table);
+            return ID;
+        }
+
+        public decimal GetSoTienTra(int IDDocGia,int IDCuonSach)
+        {
+            decimal SLThamSo;
+            string Get = "SL";
+            SLThamSo = decimal.Parse(ConnectionSQL.GetStringTable(Get, PhieuTra_DAO.QueryGetSoTienTra(IDDocGia, IDCuonSach)));
+            return SLThamSo;
+        }
     }
 }

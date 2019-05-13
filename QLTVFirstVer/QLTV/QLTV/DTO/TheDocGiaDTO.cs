@@ -18,19 +18,5 @@ namespace Desktop.DTO
         public DateTime NgayLapThe { get; set; }
         public DateTime NgayHetHan { get; set; }
         public Decimal TongNo { get; set; }
-
-        //public TheDocGiaDTO(int IDDocGia, string HoTenDG, string UserName, string DiaChiDG, string EmailDG, DateTime NgaySinhDG, DateTime NgayLapThe, DateTime NgayHetHan, string TenLoaiDocGia, Decimal TongNo)
-        //{
-        //    this.IDDocGia = IDDocGia;
-        //    this.HoTenDG = HoTenDG;
-        //    this.UserName = UserName;
-        //    this.DiaChiDG = DiaChiDG;
-        //    this.EmailDG = EmailDG;
-        //    this.NgaySinhDG = NgaySinhDG;
-        //    this.NgayLapThe = NgayLapThe;
-        //    this.NgayHetHan = NgayHetHan;
-        //    this.TenLoaiDocGia = TenLoaiDocGia;
-        //    this.TongNo = TongNo;
-        //}
     }
 }

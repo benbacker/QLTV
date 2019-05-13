@@ -29,9 +29,6 @@ namespace Desktop.DAO
 
         public string QueryInsertCT_PHIEUMUON(PhieuMuonDTO PM)
         {
-            string ID = "IDCTPhieuMuon";
-            string Bang = "CT_PHIEUMUON";
-            PM.IDCTPhieuMuon = ConnectionSQL.Identitytable(PM.IDCTPhieuMuon, ID, Bang);
             string Query = "INSERT INTO CT_PHIEUMUON VALUES ('" + PM.IDCTPhieuMuon + "','" + PM.IDPhieuMuon + "', '" + PM.IDCuonSach + "')";
             return Query;
         }
@@ -45,6 +42,12 @@ namespace Desktop.DAO
         public string QueryUpdateCuonSach(PhieuMuonDTO PM)
         {
             string Query = "UPDATE CuonSach SET TinhTrang = N'Đã cho mượn' WHERE IDCuonSach = '" + PM.IDCuonSach + "'";
+            return Query;
+        }
+
+        public string QueryDeletePhieuMuon(PhieuMuonDTO PM)
+        {
+            string Query = "DELETE PhieuMuon Where IDPhieuMuon = " + PM.IDPhieuMuon + "";
             return Query;
         }
     }

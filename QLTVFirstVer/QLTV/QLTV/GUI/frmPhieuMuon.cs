@@ -79,7 +79,7 @@ namespace Desktop.GUI
             AutocomboboxTenTacGia();
         }
         #endregion
-
+        #region Click
         private void btn_TimSach_Click(object sender, EventArgs e)
         {
             LoadCuonSachMuon();
@@ -88,20 +88,21 @@ namespace Desktop.GUI
         private void btn_ChonSachVaoList_Click(object sender, EventArgs e)
         {
             ID = Int32.Parse(dgv_DuLieuTT.CurrentRow.Cells["cl_IDCuonSach"].Value.ToString());
-            IDCuonSach.Add(ID);
             TenDauSach = dgv_DuLieuTT.CurrentRow.Cells["cl_DS"].Value.ToString();
-            if (listbox_TenDauSach.Items.Contains(TenDauSach))
+            if (IDCuonSach.Contains(ID))
             {
                 MessageBox.Show("Dữ liệu đã tồn tại");
             }
             else
             {
+                IDCuonSach.Add(ID);
                 listbox_TenDauSach.Items.Add(TenDauSach);
             }
         }
 
         private void btn_XoaSachRaKhoiList_Click(object sender, EventArgs e)
         {
+            IDCuonSach.RemoveAt(listbox_TenDauSach.SelectedIndex);
             listbox_TenDauSach.Items.RemoveAt(listbox_TenDauSach.SelectedIndex);
         }
 
@@ -122,13 +123,20 @@ namespace Desktop.GUI
                     PM.NgayMuon = NgayMuon;
                     PM.HanTra = NgayMuon.AddDays(5);
                     PM.IDCuonSach = IDCuonSach[0];
-                    if (PhieuMuon_BUS.InsertPhieuMuon(PM) && PhieuMuon_BUS.InsertCTPhieuMuon(PM))
+                    PM.IDCTPhieuMuon = PhieuMuon_BUS.IdentityIDCTPhieuMuon();
+                    if (PhieuMuon_BUS.InsertPhieuMuon(PM)  && PhieuMuon_BUS.InsertCTPhieuMuon(PM))
                     {
-                        for (int i = 1; i < IDCuonSach.Count; i++)
+                        foreach (int item in IDCuonSach)
                         {
-                            PM.IDCuonSach = IDCuonSach[i];
+                            PM.IDCTPhieuMuon = PhieuMuon_BUS.IdentityIDCTPhieuMuon();
+                            PM.IDCuonSach = item;
                             PhieuMuon_BUS.InsertCTPhieuMuon(PM);
                         }
+                        //for (int i = 1; i < IDCuonSach.Count; i++)
+                        //{
+                        //    PM.IDCuonSach = IDCuonSach[i];
+                        //    PhieuMuon_BUS.InsertCTPhieuMuon(PM);
+                        //}
                         MessageBox.Show("Cập nhật dữ liệu thành công!");
                         LoadCuonSachMuon();
                         LoadPhieuMuon();
@@ -137,12 +145,15 @@ namespace Desktop.GUI
                     }
                     else
                     {
+                        listbox_TenDauSach.Items.Clear();
+                        IDCuonSach.Clear();
+                        PhieuMuon_BUS.DeleteCTPhieuMuon(PM);
                         MessageBox.Show("Cập nhật dữ liệu thất bại");
                     }
                 }   
-                catch
+                catch(Exception ex)
                 {
-
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
@@ -161,6 +172,7 @@ namespace Desktop.GUI
         {
             HelperGUI.Instance.ExportExcel(dgv_DuLieuPM);
         }
+        #endregion
     }
 }
 

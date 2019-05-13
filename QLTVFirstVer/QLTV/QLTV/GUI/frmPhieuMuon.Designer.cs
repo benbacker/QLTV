@@ -71,7 +71,7 @@
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
             this.dgv_DuLieuPM = new System.Windows.Forms.DataGridView();
             this.cl_IDTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -474,7 +474,7 @@
             this.toolStripBt_XuatCSV,
             this.toolStripSeparator4,
             this.toolStripBt_Reset,
-            this.toolStripSeparator5,
+            this.toolStripSeparator6,
             this.toolStripBt_Thoat});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 38);
             this.bindingNavigator1.MoveFirstItem = null;
@@ -559,10 +559,10 @@
             this.toolStripBt_Reset.Text = "Reset dữ liệu";
             this.toolStripBt_Reset.Click += new System.EventHandler(this.toolStripBt_Reset_Click);
             // 
-            // toolStripSeparator5
+            // toolStripSeparator6
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripBt_Thoat
             // 
@@ -697,7 +697,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBt_XuatCSV;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripBt_Reset;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripBt_Thoat;
         private System.Windows.Forms.DataGridView dgv_DuLieuPM;
         private DevExpress.XtraEditors.SimpleButton btn_TimSach;
@@ -718,5 +717,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_NgayMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_HanTra;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
     }
 }

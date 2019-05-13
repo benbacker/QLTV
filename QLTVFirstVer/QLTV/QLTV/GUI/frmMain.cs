@@ -141,5 +141,10 @@ namespace Desktop.GUI
                 f.Show();
             }
         }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -128,5 +128,19 @@ namespace Desktop.DAO
             GetTable = reader[""+GetString+""].ToString();
             return GetTable;
         }
+
+        public static bool check(string sql)
+        {
+            SqlConnection con = new SqlConnection(Lenh);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataReader dta = cmd.ExecuteReader();
+
+            if (dta.Read() == true)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

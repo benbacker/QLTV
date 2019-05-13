@@ -46,7 +46,7 @@
             this.groupControl_ThemTacGia.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl_ThemTacGia.AppearanceCaption.Options.UseFont = true;
             this.groupControl_ThemTacGia.AutoSize = true;
-            this.groupControl_ThemTacGia.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl_TTDG.CaptionImageOptions.Image")));
+            this.groupControl_ThemTacGia.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl_ThemTacGia.CaptionImageOptions.Image")));
             this.groupControl_ThemTacGia.Controls.Add(this.dt_NgaySinh);
             this.groupControl_ThemTacGia.Controls.Add(this.label1);
             this.groupControl_ThemTacGia.Controls.Add(this.tb_TenTacGia);
@@ -109,6 +109,7 @@
             this.bt_CNDL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_CNDL.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_CNDL.UseVisualStyleBackColor = true;
+            this.bt_CNDL.Click += new System.EventHandler(this.bt_CNDL_Click);
             // 
             // frmThemTacGia
             // 

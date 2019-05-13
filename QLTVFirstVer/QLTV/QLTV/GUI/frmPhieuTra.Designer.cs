@@ -39,6 +39,7 @@
             this.listbox_TenDauSach = new System.Windows.Forms.ListBox();
             this.dgv_DuLieuTra = new System.Windows.Forms.DataGridView();
             this.cl_IDCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_IDPhieuMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_TenCuonSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dt_NgayTra = new System.Windows.Forms.DateTimePicker();
@@ -65,7 +66,7 @@
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
             this.dgv_DuLieuPT = new System.Windows.Forms.DataGridView();
             this.cl_IDTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,6 +167,7 @@
             this.btn_XoaListSach.Size = new System.Drawing.Size(108, 26);
             this.btn_XoaListSach.TabIndex = 28;
             this.btn_XoaListSach.Text = "Xóa khỏi danh sách";
+            this.btn_XoaListSach.Click += new System.EventHandler(this.btn_XoaListSach_Click);
             // 
             // btn_ChonSachVaoList
             // 
@@ -190,6 +192,7 @@
             this.dgv_DuLieuTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DuLieuTra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cl_IDCuonSach,
+            this.cl_IDPhieuMuon,
             this.cl_TenCuonSach,
             this.cl_TinhTrang});
             this.dgv_DuLieuTra.Location = new System.Drawing.Point(15, 166);
@@ -202,6 +205,12 @@
             this.cl_IDCuonSach.DataPropertyName = "IDCuonSach";
             this.cl_IDCuonSach.HeaderText = "STT";
             this.cl_IDCuonSach.Name = "cl_IDCuonSach";
+            // 
+            // cl_IDPhieuMuon
+            // 
+            this.cl_IDPhieuMuon.DataPropertyName = "IDPhieuMuon";
+            this.cl_IDPhieuMuon.HeaderText = "IDPhieuMuon";
+            this.cl_IDPhieuMuon.Name = "cl_IDPhieuMuon";
             // 
             // cl_TenCuonSach
             // 
@@ -266,6 +275,7 @@
             this.bt_Lamlai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_Lamlai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_Lamlai.UseVisualStyleBackColor = true;
+            this.bt_Lamlai.Click += new System.EventHandler(this.bt_Lamlai_Click);
             // 
             // bt_CNDL
             // 
@@ -378,7 +388,7 @@
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.groupControl2.Location = new System.Drawing.Point(627, 52);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(970, 555);
+            this.groupControl2.Size = new System.Drawing.Size(985, 555);
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Dữ liệu độc giả";
             // 
@@ -399,7 +409,7 @@
             this.toolStripBt_XuatCSV,
             this.toolStripSeparator4,
             this.toolStripBt_Reset,
-            this.toolStripSeparator5,
+            this.toolStripSeparator6,
             this.toolStripBt_Thoat});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 38);
             this.bindingNavigator1.MoveFirstItem = null;
@@ -408,7 +418,7 @@
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(970, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(985, 31);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -466,6 +476,7 @@
             this.toolStripBt_XuatCSV.Name = "toolStripBt_XuatCSV";
             this.toolStripBt_XuatCSV.Size = new System.Drawing.Size(107, 28);
             this.toolStripBt_XuatCSV.Text = "Xuất CSV";
+            this.toolStripBt_XuatCSV.Click += new System.EventHandler(this.toolStripBt_XuatCSV_Click);
             // 
             // toolStripSeparator4
             // 
@@ -482,10 +493,10 @@
             this.toolStripBt_Reset.Size = new System.Drawing.Size(137, 28);
             this.toolStripBt_Reset.Text = "Reset dữ liệu";
             // 
-            // toolStripSeparator5
+            // toolStripSeparator6
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripBt_Thoat
             // 
@@ -496,6 +507,7 @@
             this.toolStripBt_Thoat.Name = "toolStripBt_Thoat";
             this.toolStripBt_Thoat.Size = new System.Drawing.Size(82, 28);
             this.toolStripBt_Thoat.Text = "Thoát";
+            this.toolStripBt_Thoat.Click += new System.EventHandler(this.toolStripBt_Thoat_Click);
             // 
             // dgv_DuLieuPT
             // 
@@ -512,7 +524,7 @@
             this.cl_TienPhat});
             this.dgv_DuLieuPT.Location = new System.Drawing.Point(0, 66);
             this.dgv_DuLieuPT.Name = "dgv_DuLieuPT";
-            this.dgv_DuLieuPT.Size = new System.Drawing.Size(970, 486);
+            this.dgv_DuLieuPT.Size = new System.Drawing.Size(985, 486);
             this.dgv_DuLieuPT.TabIndex = 0;
             // 
             // cl_IDTacGia
@@ -567,7 +579,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1599, 607);
+            this.ClientSize = new System.Drawing.Size(1614, 607);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.navigationPane1);
             this.Name = "frmPhieuTra";
@@ -630,18 +642,19 @@
         private System.Windows.Forms.ToolStripButton toolStripBt_XuatCSV;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripBt_Reset;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripBt_Thoat;
         private System.Windows.Forms.DataGridView dgv_DuLieuPT;
         private DevExpress.XtraEditors.SimpleButton btn_XoaListSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_IDCuonSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenCuonSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cl_TinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_IDTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_NguoiTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenSachTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_HanTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_SoNgayMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TienPhat;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cl_IDCuonSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cl_IDPhieuMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenCuonSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cl_TinhTrang;
     }
 }

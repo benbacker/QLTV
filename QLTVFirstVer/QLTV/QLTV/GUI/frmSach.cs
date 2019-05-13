@@ -90,6 +90,9 @@ namespace Desktop.GUI
         private void toolStripBt_Reset_Click(object sender, EventArgs e)
         {
             fillAllDataFromTableSach();
+            AutocomboboxTheLoaiSach();
+            AutotextboxTenTacGia();
+            AutoTextBoxNhaXB();
         }
 
         private void btn_ThemLoaiSach_Click(object sender, EventArgs e)
@@ -245,7 +248,6 @@ namespace Desktop.GUI
         {
             AutocomboboxTheLoaiSach();
         }
-        #endregion
 
         private void toolStripBt_SuaTT_Click(object sender, EventArgs e)
         {
@@ -298,5 +300,13 @@ namespace Desktop.GUI
                     MessageBox.Show("Cập nhật dữ liệu thất bại!");
                 }
         }
+
+        private void btnThemTacGia_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmThemTacGia();
+            frm.Show();
+        }
+
+        #endregion
     }
 }

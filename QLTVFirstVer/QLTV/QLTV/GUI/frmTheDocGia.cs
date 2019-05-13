@@ -217,21 +217,53 @@ namespace Desktop.GUI
             this.Close();
         }
         #endregion
-
+        private Form KiemTra(Type fType)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == fType)
+                {
+                    return f;
+                }
+            }
+            return null;
+        }
         private void toolStripBt_Muon_Click(object sender, EventArgs e)
         {
-            frmPhieuMuon frm = new frmPhieuMuon();
-            frm.HoTenDG = dgv_DuLieu.CurrentRow.Cells["cl_HoTen"].Value.ToString();
-            frm.IDLoaiDG = Int32.Parse(dgv_DuLieu.CurrentRow.Cells["cl_ID"].Value.ToString());
-            frm.Show();
+            Form frm = this.KiemTra(typeof(frmPhieuMuon));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+
+                frmPhieuMuon f = new frmPhieuMuon();
+                f.MdiParent = frmMain.ActiveForm;
+                f.Dock = DockStyle.Fill;
+                f.HoTenDG = dgv_DuLieu.CurrentRow.Cells["cl_HoTen"].Value.ToString();
+                f.IDLoaiDG = Int32.Parse(dgv_DuLieu.CurrentRow.Cells["cl_ID"].Value.ToString());
+                f.Show();
+            }
         }
 
         private void toolStrip_Tra_Click(object sender, EventArgs e)
         {
-            frmPhieuTra frm = new frmPhieuTra();
-            frm.HoTenDG = dgv_DuLieu.CurrentRow.Cells["cl_HoTen"].Value.ToString();
-            frm.IDLoaiDG = Int32.Parse(dgv_DuLieu.CurrentRow.Cells["cl_ID"].Value.ToString());
-            frm.Show();
+            Form frm = this.KiemTra(typeof(frmPhieuTra));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+
+                frmPhieuTra f = new frmPhieuTra();
+                f.MdiParent = frmMain.ActiveForm;
+                f.Dock = DockStyle.Fill;
+                f.HoTenDG = dgv_DuLieu.CurrentRow.Cells["cl_HoTen"].Value.ToString();
+                f.IDLoaiDG = Int32.Parse(dgv_DuLieu.CurrentRow.Cells["cl_ID"].Value.ToString());
+                f.Show();
+            }
         }
     }
 }

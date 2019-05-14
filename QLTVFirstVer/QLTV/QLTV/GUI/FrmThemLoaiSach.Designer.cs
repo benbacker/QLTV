@@ -95,7 +95,7 @@
             this.ClientSize = new System.Drawing.Size(434, 196);
             this.Controls.Add(this.groupControl_ThemTheLoai);
             this.Name = "FrmThemLoaiSach";
-            this.Text = "FrmThemLoaiSach";
+            this.Text = "Thêm thể loại sách";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_ThemTheLoai)).EndInit();
             this.groupControl_ThemTheLoai.ResumeLayout(false);
             this.groupControl_ThemTheLoai.PerformLayout();

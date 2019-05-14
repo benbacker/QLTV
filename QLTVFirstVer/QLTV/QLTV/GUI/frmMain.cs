@@ -17,7 +17,7 @@ namespace Desktop.GUI
         {
             InitializeComponent();
         }
-
+        public static string QuyenHan { get; set; }
         private Form KiemTra(Type fType)
         {
             foreach (Form f in this.MdiChildren)
@@ -145,6 +145,47 @@ namespace Desktop.GUI
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_Admin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTra(typeof(frmAdminUser));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmAdminUser f = new frmAdminUser();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            if(QuyenHan == "Nhân viên")
+            {
+                btn_Admin.Enabled = false;
+                ribbon_BCao.Visible = false;
+            }
+        }
+
+        private void btn_QuyDinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTra(typeof(frmQuyDinh));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmQuyDinh f = new frmQuyDinh();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
         }
     }
 }

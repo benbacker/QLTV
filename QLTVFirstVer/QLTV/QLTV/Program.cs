@@ -16,7 +16,7 @@ namespace Desktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             SkinManager.EnableFormSkins();
-            Application.Run(new frmLogin());
+            Application.Run(new frmMain());
         }
     }
 }

@@ -35,7 +35,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_TaoBaoCao = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtNgayLapBC = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDuLieu = new System.Windows.Forms.DataGridView();
             this.cl_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.btn_TaoBaoCao);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtNgayLapBC);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(3, 111);
@@ -85,6 +85,7 @@
             this.btn_TaoBaoCao.Size = new System.Drawing.Size(91, 28);
             this.btn_TaoBaoCao.TabIndex = 35;
             this.btn_TaoBaoCao.Text = "Tạo báo cáo";
+            this.btn_TaoBaoCao.Click += new System.EventHandler(this.btn_TaoBaoCao_Click);
             // 
             // label2
             // 
@@ -97,13 +98,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Ngày tháng năm:";
             // 
-            // dateTimePicker1
+            // dtNgayLapBC
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(208, 40);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(179, 35);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtNgayLapBC.CustomFormat = "dd/MM/yyyy";
+            this.dtNgayLapBC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayLapBC.Location = new System.Drawing.Point(208, 40);
+            this.dtNgayLapBC.Name = "dtNgayLapBC";
+            this.dtNgayLapBC.Size = new System.Drawing.Size(179, 35);
+            this.dtNgayLapBC.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -190,7 +192,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmReportPhieuTra";
-            this.Text = "frmReportPhieuTra";
+            this.Text = "Báo cáo phiếu trả sách";
             this.Load += new System.EventHandler(this.frmReportPhieuTra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BCSachTraTreDtosBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -211,7 +213,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private Microsoft.Reporting.WinForms.ReportViewer RpvBaoCao;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtNgayLapBC;
         private System.Windows.Forms.DataGridView dgvDuLieu;
         private DevExpress.XtraEditors.SimpleButton btn_TaoBaoCao;
         private System.Windows.Forms.BindingSource BCSachTraTreDtosBindingSource;

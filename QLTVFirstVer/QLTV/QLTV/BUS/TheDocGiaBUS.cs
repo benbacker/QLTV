@@ -13,22 +13,6 @@ namespace Desktop.BUS
 {
     public class TheDocGiaBUS
     {
-
-        //private static TheDocGiaBUS instance;
-        //public static TheDocGiaBUS Instance
-        //{
-        //    get
-        //    {
-        //        if (instance == null)
-        //            instance = new TheDocGiaBUS();
-        //        return instance;
-        //    }
-        //}
-        //private TheDocGiaBUS() { }
-        //public void Xem(DataGridView data)
-        //{
-        //    data.DataSource = TheDocGiaDAO.Instance.Xem();
-        //}
         TheDocGiaDAO TDG_DAO = new TheDocGiaDAO();
         #region SearchTheDocGia
         public DataTable SearchTheDocGia(string SearchTT, string NhapTT)
@@ -78,6 +62,7 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region GetTuoi
         public string GetTuoimin()
         {
             string TuoiMin;
@@ -93,5 +78,6 @@ namespace Desktop.BUS
             TuoiMax = ConnectionSQL.GetStringTable(Get, TDG_DAO.GetStringMax());
             return TuoiMax;
         }
+        #endregion
     }
 }

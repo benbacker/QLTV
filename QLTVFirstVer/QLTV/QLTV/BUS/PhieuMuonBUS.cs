@@ -84,6 +84,7 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region Delete
         public bool DeleteCTPhieuMuon(PhieuMuonDTO PM)
         {
             bool table = false;
@@ -93,5 +94,6 @@ namespace Desktop.BUS
             }
             return table;
         }
+        #endregion
     }
 }

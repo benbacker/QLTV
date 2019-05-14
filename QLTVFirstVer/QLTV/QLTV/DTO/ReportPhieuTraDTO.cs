@@ -11,6 +11,7 @@ namespace Desktop.DTO
         public int IDBCSachTre { get; set; }
         public DateTime NgayThangNam { get; set; }
         public int IDCuonSach { get; set; }
+        public string TenCuonSach { get; set; }
         public int IDPhieuMuon { get; set; }
         public int SoNgayTraTre { get; set; }
     }

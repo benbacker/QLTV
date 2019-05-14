@@ -27,6 +27,7 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region Insert
         public bool InsertPhieuTra(PhieuTraDTO PT)
         {
             bool table = false;
@@ -46,7 +47,8 @@ namespace Desktop.BUS
             }
             return table;
         }
-
+        #endregion
+        #region GetPhieuTra
         public int IdentityID()
         {
             int ID = 0;
@@ -72,5 +74,6 @@ namespace Desktop.BUS
             SLThamSo = decimal.Parse(ConnectionSQL.GetStringTable(Get, PhieuTra_DAO.QueryGetSoTienTra(IDDocGia, IDCuonSach)));
             return SLThamSo;
         }
+        #endregion
     }
 }

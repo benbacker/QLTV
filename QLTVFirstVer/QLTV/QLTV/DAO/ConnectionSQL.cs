@@ -16,6 +16,7 @@ namespace Desktop.DAO
         public static DataTable dt;
         public static SqlDataAdapter da;
         public static string Lenh = Properties.Settings.Default.QuanLyThuVien;
+        #region ConnecTionSQL
         public static DataTable TaoBang(string sql)
         {
             conn = new SqlConnection(Lenh);
@@ -142,5 +143,6 @@ namespace Desktop.DAO
             }
             return false;
         }
+        #endregion
     }
 }

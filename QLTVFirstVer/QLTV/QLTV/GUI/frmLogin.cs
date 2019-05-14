@@ -36,8 +36,11 @@ namespace Desktop.GUI
                 AD.PasswordAdmin = PasswordAdmin;
                 if(AD_BUS.CheckLogin(AD))
                 {
+                    AD.UserNameAdmin = tbUser.Text.Trim();
+                    AD.PasswordAdmin = tbPassWork.Text.Trim();
                     MessageBox.Show("Đăng nhập thành công");
                     frmMain f = new frmMain();
+                    frmMain.QuyenHan = AD_BUS.GetQuyenHan(AD);
                     f.Show();
                     this.Hide();
                 }

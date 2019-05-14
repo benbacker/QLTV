@@ -9,6 +9,7 @@ namespace Desktop.DAO
 {
     public class PhieuMuonDAO
     {
+        #region PhieuMuon
         public string QueryAutocombobox(string TenDauSach)
         {
             string Query = "select * from TacGia,Sach,DauSach where TacGia.IDTacGia = Sach.IDTacGia and DauSach.IDDauSach = Sach.IDDauSach and DauSach.TenDauSach = N'"+TenDauSach+"'";
@@ -50,5 +51,6 @@ namespace Desktop.DAO
             string Query = "DELETE PhieuMuon Where IDPhieuMuon = " + PM.IDPhieuMuon + "";
             return Query;
         }
+        #endregion
     }
 }

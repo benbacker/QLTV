@@ -118,7 +118,7 @@
             this.ClientSize = new System.Drawing.Size(550, 310);
             this.Controls.Add(this.groupControl_ThemTacGia);
             this.Name = "frmThemTacGia";
-            this.Text = "frmThemTacGia";
+            this.Text = "Thêm tác giả";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_ThemTacGia)).EndInit();
             this.groupControl_ThemTacGia.ResumeLayout(false);
             this.groupControl_ThemTacGia.PerformLayout();

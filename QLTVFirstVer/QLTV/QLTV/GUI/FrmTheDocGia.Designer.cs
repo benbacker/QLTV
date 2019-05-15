@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTheDocGia));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -71,11 +71,11 @@
             this.toolStripBt_Muon = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip_Tra = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStrip_PThu = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
             this.dgv_DuLieu = new System.Windows.Forms.DataGridView();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStrip_PThu = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.cl_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -567,6 +567,27 @@
             this.toolStrip_Tra.Text = "Trả sách";
             this.toolStrip_Tra.Click += new System.EventHandler(this.toolStrip_Tra_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStrip_PThu
+            // 
+            this.toolStrip_PThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip_PThu.ForeColor = System.Drawing.Color.Red;
+            this.toolStrip_PThu.Image = ((System.Drawing.Image)(resources.GetObject("toolStrip_PThu.Image")));
+            this.toolStrip_PThu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrip_PThu.Name = "toolStrip_PThu";
+            this.toolStrip_PThu.Size = new System.Drawing.Size(112, 28);
+            this.toolStrip_PThu.Text = "Phiếu thu";
+            this.toolStrip_PThu.Click += new System.EventHandler(this.toolStrip_PThu_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
             // toolStripBt_Thoat
             // 
             this.toolStripBt_Thoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -601,27 +622,6 @@
             this.dgv_DuLieu.Size = new System.Drawing.Size(874, 431);
             this.dgv_DuLieu.TabIndex = 0;
             this.dgv_DuLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DuLieu_CellClick);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStrip_PThu
-            // 
-            this.toolStrip_PThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip_PThu.ForeColor = System.Drawing.Color.Red;
-            this.toolStrip_PThu.Image = ((System.Drawing.Image)(resources.GetObject("toolStrip_PThu.Image")));
-            this.toolStrip_PThu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStrip_PThu.Name = "toolStrip_PThu";
-            this.toolStrip_PThu.Size = new System.Drawing.Size(112, 28);
-            this.toolStrip_PThu.Text = "Phiếu thu";
-            this.toolStrip_PThu.Click += new System.EventHandler(this.toolStrip_PThu_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // cl_ID
             // 
@@ -699,8 +699,8 @@
             // 
             this.cl_TongNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.cl_TongNo.DataPropertyName = "TongNo";
-            dataGridViewCellStyle2.Format = "#,###";
-            this.cl_TongNo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "#,###";
+            this.cl_TongNo.DefaultCellStyle = dataGridViewCellStyle1;
             this.cl_TongNo.HeaderText = "Tổng nợ";
             this.cl_TongNo.Name = "cl_TongNo";
             this.cl_TongNo.Width = 160;
@@ -712,6 +712,7 @@
             this.ClientSize = new System.Drawing.Size(1501, 560);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.navigationPane1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.InactiveGlowColor = System.Drawing.Color.White;
             this.Name = "frmTheDocGia";
             this.Text = "Thẻ độc giả";

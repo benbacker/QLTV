@@ -441,6 +441,7 @@
             this.ClientSize = new System.Drawing.Size(1491, 627);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.navigationPane1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTacGia";
             this.Text = "Tác giả";
             this.Load += new System.EventHandler(this.frmTacGia_Load);

@@ -596,6 +596,7 @@
             this.ClientSize = new System.Drawing.Size(1485, 616);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.navigationPane1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdminUser";
             this.Text = "Thông tin tài khoản admin";
             this.Load += new System.EventHandler(this.frmAdminUser_Load);

@@ -411,6 +411,7 @@
             this.ClientSize = new System.Drawing.Size(1335, 807);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupControl2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQuyDinh";
             this.Text = "frmQuyDinh";
             this.Load += new System.EventHandler(this.frmQuyDinh_Load);

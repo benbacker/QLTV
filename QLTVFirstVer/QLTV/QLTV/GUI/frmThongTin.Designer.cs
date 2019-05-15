@@ -31,35 +31,35 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTin));
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -87,6 +87,28 @@
             this.panel1.Size = new System.Drawing.Size(1429, 136);
             this.panel1.TabIndex = 14;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1301, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(128, 136);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(128, 136);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
             // groupControl2
             // 
             this.groupControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,53 +124,6 @@
             this.groupControl2.Size = new System.Drawing.Size(589, 507);
             this.groupControl2.TabIndex = 16;
             this.groupControl2.Text = "Thông tin phần mềm";
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
-            this.groupControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.Appearance.Options.UseFont = true;
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
-            this.groupControl1.Controls.Add(this.panel2);
-            this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Title;
-            this.groupControl1.Location = new System.Drawing.Point(595, 137);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(834, 507);
-            this.groupControl1.TabIndex = 17;
-            this.groupControl1.Text = "Tác giả phần mềm";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightCyan;
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 38);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(834, 469);
-            this.panel2.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(189, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(487, 69);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "     Phần mềm được tạo bởi nhóm F5RERESH\r\n  Là sinh viên trường ĐH - Công Nghệ Th" +
-    "ông Tin\r\nThuộc Khoa Hệ Thống Thông Tin - Lớp TMĐT2017";
             // 
             // panel3
             // 
@@ -209,16 +184,81 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Phần mềm phát triển dựa trên các nền tảng:";
             // 
-            // pictureBox1
+            // groupControl1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(481, 99);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 275);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.groupControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.Appearance.Options.UseBackColor = true;
+            this.groupControl1.Appearance.Options.UseFont = true;
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
+            this.groupControl1.Controls.Add(this.panel2);
+            this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Title;
+            this.groupControl1.Location = new System.Drawing.Point(595, 137);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(834, 507);
+            this.groupControl1.TabIndex = 17;
+            this.groupControl1.Text = "Tác giả phần mềm";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightCyan;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 38);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(834, 469);
+            this.panel2.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(490, 423);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(173, 23);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "MSSV: 17521164";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(47, 423);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(173, 23);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "MSSV: 17520277";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(490, 389);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(308, 23);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Họ Tên: Nguyễn Thị Thục Trinh";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 389);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(210, 23);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Họ Tên: Võ Nhật Bảo";
             // 
             // pictureBox2
             // 
@@ -231,67 +271,27 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // label8
+            // pictureBox1
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 389);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(210, 23);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Họ Tên: Võ Nhật Bảo";
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(481, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(298, 275);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
-            // label9
+            // label7
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(490, 389);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(308, 23);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Họ Tên: Nguyễn Thị Thục Trinh";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(47, 423);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(173, 23);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "MSSV: 17520277";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(490, 423);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(173, 23);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "MSSV: 17521164";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(128, 136);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1301, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(128, 136);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(189, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(487, 69);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "     Phần mềm được tạo bởi nhóm F5RERESH\r\n  Là sinh viên trường ĐH - Công Nghệ Th" +
+    "ông Tin\r\nThuộc Khoa Hệ Thống Thông Tin - Lớp TMĐT2017";
             // 
             // frmThongTin
             // 
@@ -302,22 +302,23 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.LightCyan;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmThongTin";
             this.Text = "Thông Tin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

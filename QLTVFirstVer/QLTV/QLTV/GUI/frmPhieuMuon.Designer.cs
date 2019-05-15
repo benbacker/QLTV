@@ -583,6 +583,7 @@
             this.ClientSize = new System.Drawing.Size(1534, 674);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.navigationPane1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPhieuMuon";
             this.Text = "Phiếu mượn";
             this.Load += new System.EventHandler(this.frmPhieuMuon_Load);

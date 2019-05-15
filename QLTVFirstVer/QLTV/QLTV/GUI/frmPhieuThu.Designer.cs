@@ -32,23 +32,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuThu));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tb_TienThu = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbHoTen = new System.Windows.Forms.Label();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.lbDiaChi = new System.Windows.Forms.Label();
+            this.lbNgayLapPhieu = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.bt_CNDL = new System.Windows.Forms.Button();
+            this.lbDiaChi = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbHoTen = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_TienThu = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rpvPhieuThu = new Microsoft.Reporting.WinForms.ReportViewer();
             this.BaoCaoTinhHinhMuonSachDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbNgayLapPhieu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -95,102 +95,23 @@
             this.panel3.Size = new System.Drawing.Size(589, 598);
             this.panel3.TabIndex = 0;
             // 
-            // label1
+            // lbNgayLapPhieu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Phiếu Thu Tiền Phạt:";
+            this.lbNgayLapPhieu.AutoSize = true;
+            this.lbNgayLapPhieu.Location = new System.Drawing.Point(222, 52);
+            this.lbNgayLapPhieu.Name = "lbNgayLapPhieu";
+            this.lbNgayLapPhieu.Size = new System.Drawing.Size(160, 23);
+            this.lbNgayLapPhieu.TabIndex = 18;
+            this.lbNgayLapPhieu.Text = "Ngày lập phiếu:";
             // 
-            // label2
+            // label8
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Họ và tên:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 23);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Địa Chỉ:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Email:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 241);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 23);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Số tiền:";
-            // 
-            // tb_TienThu
-            // 
-            this.tb_TienThu.Location = new System.Drawing.Point(198, 234);
-            this.tb_TienThu.Name = "tb_TienThu";
-            this.tb_TienThu.Size = new System.Drawing.Size(237, 30);
-            this.tb_TienThu.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 297);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 23);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Nội dung thu tiền:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(247, 297);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(280, 23);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Đóng tiền mượn sách trả trể";
-            // 
-            // lbHoTen
-            // 
-            this.lbHoTen.AutoSize = true;
-            this.lbHoTen.Location = new System.Drawing.Point(194, 101);
-            this.lbHoTen.Name = "lbHoTen";
-            this.lbHoTen.Size = new System.Drawing.Size(65, 23);
-            this.lbHoTen.TabIndex = 13;
-            this.lbHoTen.Text = "Name";
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(194, 149);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(63, 23);
-            this.lbEmail.TabIndex = 14;
-            this.lbEmail.Text = "Email";
-            // 
-            // lbDiaChi
-            // 
-            this.lbDiaChi.AutoSize = true;
-            this.lbDiaChi.Location = new System.Drawing.Point(194, 194);
-            this.lbDiaChi.Name = "lbDiaChi";
-            this.lbDiaChi.Size = new System.Drawing.Size(72, 23);
-            this.lbDiaChi.TabIndex = 15;
-            this.lbDiaChi.Text = "DiaChi";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(56, 52);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 23);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Ngày lập phiếu:";
             // 
             // bt_CNDL
             // 
@@ -205,6 +126,103 @@
             this.bt_CNDL.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_CNDL.UseVisualStyleBackColor = true;
             this.bt_CNDL.Click += new System.EventHandler(this.bt_CNDL_Click);
+            // 
+            // lbDiaChi
+            // 
+            this.lbDiaChi.AutoSize = true;
+            this.lbDiaChi.Location = new System.Drawing.Point(194, 194);
+            this.lbDiaChi.Name = "lbDiaChi";
+            this.lbDiaChi.Size = new System.Drawing.Size(72, 23);
+            this.lbDiaChi.TabIndex = 15;
+            this.lbDiaChi.Text = "DiaChi";
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Location = new System.Drawing.Point(194, 149);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(63, 23);
+            this.lbEmail.TabIndex = 14;
+            this.lbEmail.Text = "Email";
+            // 
+            // lbHoTen
+            // 
+            this.lbHoTen.AutoSize = true;
+            this.lbHoTen.Location = new System.Drawing.Point(194, 101);
+            this.lbHoTen.Name = "lbHoTen";
+            this.lbHoTen.Size = new System.Drawing.Size(65, 23);
+            this.lbHoTen.TabIndex = 13;
+            this.lbHoTen.Text = "Name";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(247, 297);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(280, 23);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Đóng tiền mượn sách trả trể";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(56, 297);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 23);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nội dung thu tiền:";
+            // 
+            // tb_TienThu
+            // 
+            this.tb_TienThu.Location = new System.Drawing.Point(198, 234);
+            this.tb_TienThu.Name = "tb_TienThu";
+            this.tb_TienThu.Size = new System.Drawing.Size(237, 30);
+            this.tb_TienThu.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(56, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 23);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Số tiền:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(56, 149);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 23);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Email:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(56, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 23);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Địa Chỉ:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(56, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Họ và tên:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(194, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Phiếu Thu Tiền Phạt:";
             // 
             // groupBox1
             // 
@@ -232,24 +250,6 @@
             // 
             this.BaoCaoTinhHinhMuonSachDTOBindingSource.DataMember = "BaoCaoTinhHinhMuonSachDTO";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(56, 52);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 23);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Ngày lập phiếu:";
-            // 
-            // lbNgayLapPhieu
-            // 
-            this.lbNgayLapPhieu.AutoSize = true;
-            this.lbNgayLapPhieu.Location = new System.Drawing.Point(222, 52);
-            this.lbNgayLapPhieu.Name = "lbNgayLapPhieu";
-            this.lbNgayLapPhieu.Size = new System.Drawing.Size(160, 23);
-            this.lbNgayLapPhieu.TabIndex = 18;
-            this.lbNgayLapPhieu.Text = "Ngày lập phiếu:";
-            // 
             // frmPhieuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +257,7 @@
             this.ClientSize = new System.Drawing.Size(1391, 636);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupControl2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPhieuThu";
             this.Text = "frmPhieuThu";
             this.Load += new System.EventHandler(this.frmPhieuThu_Load);

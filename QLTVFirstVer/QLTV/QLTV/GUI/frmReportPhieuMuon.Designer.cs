@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportPhieuMuon));
             this.BaoCaoTinhHinhMuonSachDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_Nam = new System.Windows.Forms.TextBox();
             this.tb_Thang = new System.Windows.Forms.TextBox();
@@ -226,6 +227,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReportPhieuMuon";
             this.Text = "Báo cáo phiếu mượn sách";
             this.Load += new System.EventHandler(this.frmReportPhieuMuon_Load);

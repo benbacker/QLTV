@@ -168,6 +168,7 @@
             this.tbPassWork.TabIndex = 2;
             this.tbPassWork.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbPassWork.OnValueChanged += new System.EventHandler(this.tbPassWork_OnValueChanged);
+            this.tbPassWork.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPassWork_KeyDown);
             // 
             // btnLogin
             // 

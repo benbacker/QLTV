@@ -35,7 +35,7 @@ namespace Desktop.GUI
                 PasswordAdmin = tbPassWork.Text.Trim();
                 AD.UserNameAdmin = UserNameAdmin;
                 AD.PasswordAdmin = PasswordAdmin;
-                if(AD_BUS.CheckLogin(AD))
+                if (AD_BUS.CheckLogin(AD))
                 {
                     AD.UserNameAdmin = tbUser.Text.Trim();
                     AD.PasswordAdmin = tbPassWork.Text.Trim();
@@ -83,6 +83,39 @@ namespace Desktop.GUI
         {
             tbPassWork.isPassword = true;
         }
+
+        private void tbPassWork_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    AdminDTO AD = new AdminDTO();
+                    UserNameAdmin = tbUser.Text.Trim();
+                    PasswordAdmin = tbPassWork.Text.Trim();
+                    AD.UserNameAdmin = UserNameAdmin;
+                    AD.PasswordAdmin = PasswordAdmin;
+                    if (AD_BUS.CheckLogin(AD))
+                    {
+                        AD.UserNameAdmin = tbUser.Text.Trim();
+                        AD.PasswordAdmin = tbPassWork.Text.Trim();
+                        MessageBox.Show("Đăng nhập thành công");
+                        frmMain f = new frmMain();
+                        frmMain.QuyenHan = AD_BUS.GetQuyenHan(AD);
+                        f.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản và mật khẩu không hợp lệ");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn chưa kết nối cơ sở dữ liệu vui vòng kết nối lại!");
+                }
+            }
+        } 
         #endregion
     }
 }

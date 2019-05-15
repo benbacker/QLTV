@@ -89,7 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\AdminBUS.cs" />
+    <Compile Include="BUS\AppSettingBUS.cs" />
     <Compile Include="BUS\PhieuMuonBUS.cs" />
+    <Compile Include="BUS\PhieuThuBUS.cs" />
     <Compile Include="BUS\PhieuTraBUS.cs" />
     <Compile Include="BUS\QuyDinhBUS.cs" />
     <Compile Include="BUS\ReportPhieuMuonBUS.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\AdminDAO.cs" />
     <Compile Include="DAO\PhieuMuonDAO.cs" />
+    <Compile Include="DAO\PhieuThuDAO.cs" />
     <Compile Include="DAO\PhieuTraDAO.cs" />
     <Compile Include="DAO\QuyDinhDAO.cs" />
     <Compile Include="DAO\ReportPhieuMuonDAO.cs" />
@@ -110,6 +113,7 @@
     <Compile Include="DAO\TheDocGiaDAO.cs" />
     <Compile Include="DTO\AdminDTO.cs" />
     <Compile Include="DTO\PhieuMuonDTO.cs" />
+    <Compile Include="DTO\PhieuThuDTO.cs" />
     <Compile Include="DTO\PhieuTraDTO.cs" />
     <Compile Include="DTO\QuyDinhDTO.cs" />
     <Compile Include="DTO\ReportPhieuMuonDTO.cs" />
@@ -141,6 +145,12 @@
     </Compile>
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPhieuThu.Designer.cs">
+      <DependentUpon>frmPhieuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmPhieuTra.cs">
       <SubType>Form</SubType>
@@ -202,6 +212,12 @@
     <Compile Include="GUI\frmThemTacGia.Designer.cs">
       <DependentUpon>frmThemTacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongTin.Designer.cs">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelperUI\HelperGUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -216,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPhieuThu.resx">
+      <DependentUpon>frmPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPhieuTra.resx">
       <DependentUpon>frmPhieuTra.cs</DependentUpon>
@@ -247,6 +266,9 @@
     <EmbeddedResource Include="GUI\frmThemTacGia.resx">
       <DependentUpon>frmThemTacGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongTin.resx">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -260,6 +282,7 @@
     <EmbeddedResource Include="Report\rpBaoCaoTraTre.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpPhieuThuTien.rdlc" />
     <EmbeddedResource Include="Report\rpTinhHinhMuonSach.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

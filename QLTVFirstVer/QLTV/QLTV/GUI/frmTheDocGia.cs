@@ -51,6 +51,18 @@ namespace Desktop.GUI
             dgv_DuLieu.AutoGenerateColumns = false;
             dgv_DuLieu.DataSource = TDG_BUS.LoadTheDocGia();
         }
+
+        private Form KiemTra(Type fType)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == fType)
+                {
+                    return f;
+                }
+            }
+            return null;
+        }
         #endregion
         #region Click
         private void bt_CNDL_Click(object sender, EventArgs e)
@@ -216,18 +228,7 @@ namespace Desktop.GUI
         {
             this.Close();
         }
-        #endregion
-        private Form KiemTra(Type fType)
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.GetType() == fType)
-                {
-                    return f;
-                }
-            }
-            return null;
-        }
+
         private void toolStripBt_Muon_Click(object sender, EventArgs e)
         {
             Form frm = this.KiemTra(typeof(frmPhieuMuon));
@@ -265,5 +266,28 @@ namespace Desktop.GUI
                 f.Show();
             }
         }
+
+        private void toolStrip_PThu_Click(object sender, EventArgs e)
+        {
+            Form frm = this.KiemTra(typeof(frmPhieuThu));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+
+                frmPhieuThu f = new frmPhieuThu();
+                f.MdiParent = frmMain.ActiveForm;
+                f.Dock = DockStyle.Fill;
+                f.HoTenDG = dgv_DuLieu.CurrentRow.Cells["cl_HoTen"].Value.ToString();
+                f.EmailDG = dgv_DuLieu.CurrentRow.Cells["cl_Email"].Value.ToString();
+                f.DiaChiDG = dgv_DuLieu.CurrentRow.Cells["cl_DiaChi"].Value.ToString();
+                f.TongNo = dgv_DuLieu.CurrentRow.Cells["cl_TongNo"].Value.ToString();
+                f.IDLoaiDG = Int32.Parse(dgv_DuLieu.CurrentRow.Cells["cl_ID"].Value.ToString());
+                f.Show();
+            }
+        }
+        #endregion
     }
 }

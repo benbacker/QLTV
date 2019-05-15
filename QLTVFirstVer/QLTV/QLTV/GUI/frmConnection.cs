@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DevComponents.DotNetBar;
+using Desktop.BUS;
 
 namespace Desktop.GUI
 {
@@ -19,7 +20,6 @@ namespace Desktop.GUI
         {
             InitializeComponent();
         }
-
         private void frmConnection_Load(object sender, EventArgs e)
         {
             btnTestConnection.Enabled = false;
@@ -110,10 +110,16 @@ namespace Desktop.GUI
             }
             else
             {
-
+                if (cmbAuthentication.SelectedIndex == 0)
+                {
+                    XML.XMLWriter("Connection.xml", txtServer.Text, cmbDatabase.Text, "true");
+                }
+                else
+                    XML.XMLWriter("Connection.xml", txtServer.Text, txtUsername.Text, txtPassword.Text, cmbDatabase.Text, "false");
+                this.DialogResult = DialogResult.OK;
+                MessageBox.Show("OK");
             }
-            MessageBox.Show("Kết Nối Thành Công");
-            Application.Exit();
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

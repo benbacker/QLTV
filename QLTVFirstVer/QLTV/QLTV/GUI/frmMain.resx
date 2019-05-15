@@ -476,7 +476,7 @@
         FHe1NYQ7udE5RWQRmtuDBFut/TshmlhP2PrhdqKBsBACA/gfG0DpCVwdVEEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="barButtonItem2.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_ThongTin.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAJ+tJREFUeF7Ne3dc1Fe+9tfETfZms3d7THK33N3sZrNZY48lia5pm2YSS4pGjQ2V
@@ -650,6 +650,21 @@
         40XMBWH0i+QbXUTSknM+cvWdSNyJ3k12mhBFrsqRw5HXdrH6Po7mN0RkSUPjyzTP5tIskMcwYmewQQHd
         DnGFqv9sAsiV87hiJVQ3uVHitqGnF/xvbLF+1fYM+clPjnCpq46J1B8eFhqXRTfq1x4Xy1dEcaq3pUlT
         IrKVG+MrzPPS6q0/Sa8ZF02pdQZimBD6gE74zyOgB/4Pgh6RaSZxg0UAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSignOut.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAFkAAABZAaqdqYYAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAB9ElEQVQ4T2OgBTAGYhEQQ1VTZ7qBicU8dKyuqTMVJI8BrE00+1ZOL/8eFWB/E8gViEnOvnfqxqv/
+        yPj6o/f/QeIQHWjAy8l48+frq/7P6cr9AORqYDPg8asvuA1QlBJRd3cwWm9hpNEA4mMz4NpD3C7QN7b2
+        P27jGnMAhJU0zA4uWrf3JLLmE9de/D997TFOAxySimb8b5p28v+8bV/+e4eV/PcKSvm07/QduGbfiJD/
+        81Zu/z957qpzUD0IICWn0ZhSPOt/dd8+sAHqujZ3sioX/E4vqAdrjs1O+1+/uuR/XFX0/5jysB+qxsr7
+        oVoZGFS0zbOSi2a+dfROfT9j/SuwAZaOEXvCEmu+p+bV/j95/eX/lKK8/5WL8v/HV8b+jymN+Kasr7gH
+        qp2BoX3+dQUL+7CVzr4Zm0Gatx7/DjYgr3ra2/qu2WAvgAwJT4oHe6Fn2qILUK0IICalbBUYW3sH6JLn
+        SYXTX4IMKKhouoEciCBDDl14iD0Qjax892VXLXmroGqU4BFccBdkALZoBGGsBoA0gDSC2O5BufdsXGIu
+        kWaAa8o5p4Cy1yC2kobJvPS63b9sPdN+L9lx6f+6w/dRcHhiPlgdDJSDsIS87iQFDZt5ML60kuE0S+fo
+        Q6Z2nhtNbV3WIGNdQ8sFMHVATAlgYAAA+z95Sz4l0igAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="ribbon_TDGia.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

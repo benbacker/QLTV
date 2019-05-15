@@ -94,6 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 196);
             this.Controls.Add(this.groupControl_ThemTheLoai);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmThemLoaiSach";
             this.Text = "Thêm thể loại sách";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_ThemTheLoai)).EndInit();

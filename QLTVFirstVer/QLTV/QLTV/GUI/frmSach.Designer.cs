@@ -68,12 +68,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripBt_Luu = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBt_Xoa = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
@@ -518,12 +514,8 @@
             this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBt_Luu,
-            this.toolStripSeparator1,
             this.toolStripBt_SuaTT,
             this.toolStripSeparator2,
-            this.toolStripBt_Xoa,
-            this.toolStripSeparator3,
             this.toolStripBt_XuatCSV,
             this.toolStripSeparator4,
             this.toolStripBt_Reset,
@@ -540,21 +532,6 @@
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // toolStripBt_Luu
-            // 
-            this.toolStripBt_Luu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_Luu.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_Luu.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Luu.Image")));
-            this.toolStripBt_Luu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_Luu.Name = "toolStripBt_Luu";
-            this.toolStripBt_Luu.Size = new System.Drawing.Size(67, 28);
-            this.toolStripBt_Luu.Text = "Lưu";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
             // toolStripBt_SuaTT
             // 
             this.toolStripBt_SuaTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -570,21 +547,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripBt_Xoa
-            // 
-            this.toolStripBt_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_Xoa.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Xoa.Image")));
-            this.toolStripBt_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_Xoa.Name = "toolStripBt_Xoa";
-            this.toolStripBt_Xoa.Size = new System.Drawing.Size(67, 28);
-            this.toolStripBt_Xoa.Text = "Xóa";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripBt_XuatCSV
             // 
@@ -807,12 +769,8 @@
         private System.Windows.Forms.TextBox tb_SoLuong;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton toolStripBt_Luu;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripBt_SuaTT;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripBt_XuatCSV;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripBt_Reset;

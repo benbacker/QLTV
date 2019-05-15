@@ -47,7 +47,7 @@
             this.btn_BaoCaoTra = new DevExpress.XtraBars.BarButtonItem();
             this.btn_QuyDinh = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_ThongTin = new DevExpress.XtraBars.BarButtonItem();
             this.ribbon_TDGia = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbon_DGia = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbon_Sach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -63,6 +63,7 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedfMain = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnSignOut = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedfMain)).BeginInit();
             this.SuspendLayout();
@@ -88,15 +89,17 @@
             this.btn_BaoCaoTra,
             this.btn_QuyDinh,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.btn_ThongTin,
+            this.btnSignOut});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 21;
+            this.ribbon.MaxItemId = 22;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbon_TDGia,
             this.ribbon_TTMTra,
             this.ribbon_BCao,
             this.ribbon_QDinh});
+            this.ribbon.QuickToolbarItemLinks.Add(this.btnSignOut);
             this.ribbon.Size = new System.Drawing.Size(974, 162);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -220,12 +223,13 @@
             this.barButtonItem1.Id = 18;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // barButtonItem2
+            // btn_ThongTin
             // 
-            this.barButtonItem2.Caption = "Thông tin";
-            this.barButtonItem2.Id = 19;
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.btn_ThongTin.Caption = "Thông tin";
+            this.btn_ThongTin.Id = 19;
+            this.btn_ThongTin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_ThongTin.ImageOptions.LargeImage")));
+            this.btn_ThongTin.Name = "btn_ThongTin";
+            this.btn_ThongTin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ThongTin_ItemClick);
             // 
             // ribbon_TDGia
             // 
@@ -315,7 +319,7 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_ThongTin);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Thông tin phần mềm";
             // 
@@ -330,6 +334,14 @@
             // 
             this.xtraTabbedfMain.MdiParent = this;
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Caption = "barButtonItem2";
+            this.btnSignOut.Id = 21;
+            this.btnSignOut.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.ImageOptions.Image")));
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSignOut_ItemClick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,6 +355,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Tag = "";
             this.Text = "frmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
@@ -385,7 +398,8 @@
         private DevExpress.XtraBars.BarButtonItem btn_BaoCaoTra;
         private DevExpress.XtraBars.BarButtonItem btn_QuyDinh;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btn_ThongTin;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem btnSignOut;
     }
 }

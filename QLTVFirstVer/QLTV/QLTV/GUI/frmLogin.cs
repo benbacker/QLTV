@@ -25,6 +25,7 @@ namespace Desktop.GUI
         public string PasswordAdmin;
         public string QuyenHan;
         #endregion
+        #region Click
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -51,24 +52,37 @@ namespace Desktop.GUI
             }
             catch
             {
-
+                MessageBox.Show("Bạn chưa kết nối cơ sở dữ liệu vui vòng kết nối lại!");
             }
         }
 
         private void btnCSDL_Click(object sender, EventArgs e)
         {
-            frmConnection f = new frmConnection();
-            f.Show();
+            Form fsf = Application.OpenForms["frmConnection"];
+
+            if (fsf != null)
+            {
+                fsf.WindowState = FormWindowState.Normal;
+                fsf.Show();
+                fsf.TopMost = true;
+            }
+            else
+            {
+                Form formSubForm = new frmConnection();
+                formSubForm.Show();
+                formSubForm.TopMost = true;
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void tbPassWork_OnValueChanged(object sender, EventArgs e)
         {
             tbPassWork.isPassword = true;
         }
+        #endregion
     }
 }

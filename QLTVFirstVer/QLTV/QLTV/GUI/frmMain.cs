@@ -18,6 +18,7 @@ namespace Desktop.GUI
             InitializeComponent();
         }
         public static string QuyenHan { get; set; }
+
         private Form KiemTra(Type fType)
         {
             foreach (Form f in this.MdiChildren)
@@ -29,7 +30,22 @@ namespace Desktop.GUI
             }
             return null;
         }
-        
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            if(QuyenHan == "Nhân viên")
+            {
+                btn_Admin.Enabled = false;
+                btn_QuyDinh.Enabled = false;
+                ribbon_BCao.Visible = false;
+            }
+            if (QuyenHan == "Kế toán")
+            {
+                btn_Admin.Enabled = false;
+                btn_QuyDinh.Enabled = false;
+            }
+        }
+        #region Click
         private void btn_TDG_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.KiemTra(typeof(frmTheDocGia));
@@ -163,15 +179,6 @@ namespace Desktop.GUI
             }
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            if(QuyenHan == "Nhân viên")
-            {
-                btn_Admin.Enabled = false;
-                ribbon_BCao.Visible = false;
-            }
-        }
-
         private void btn_QuyDinh_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.KiemTra(typeof(frmQuyDinh));
@@ -186,6 +193,30 @@ namespace Desktop.GUI
                 f.Dock = DockStyle.Fill;
                 f.Show();
             }
+        }
+
+        private void btn_ThongTin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTra(typeof(frmThongTin));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmThongTin f = new frmThongTin();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
+        }
+        #endregion
+
+        private void btnSignOut_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form f = new frmLogin();
+            f.Show();
+            this.Hide();
         }
     }
 }

@@ -21,6 +21,12 @@ namespace Desktop.DAO
             return Query;
         }
 
+        public string QuerySearchAdmin(string SearchTT, string NhapTT)
+        {
+            string Query = "select * from USERADMIN,CT_USERADMIN where USERADMIN.IDAdmin = CT_USERADMIN.IDAdmin and " + SearchTT + " like '%" + NhapTT + "%'";
+            return Query;
+        }
+
         public string QueryInsertAdmin(AdminDTO AD)
         {
             string Query = "INSERT INTO USERADMIN VALUES ('" + AD.UserNameAdmin + "','" + AD.PasswordAdmin + "', N'" + AD.QuyenHan + "', N'" + AD.IDAdmin + "')";
@@ -36,6 +42,12 @@ namespace Desktop.DAO
         public string QueryGetChucVu(AdminDTO AD)
         {
             string Query = "select QuyenHan from USERADMIN where UserNameAdmin = '" + AD.UserNameAdmin + "' and PasswordAdmin = '" + AD.PasswordAdmin + "'";
+            return Query;
+        }
+
+        public string QueryUpdateAdmin(AdminDTO AD)
+        {
+            string Query = "UPDATE CT_USERADMIN SET HoTenAdmin = N'" + AD.HoTenAdmin + "', NgaySinhAdmin = '" + AD.NgaySinhAdmin + "', DiaChiAdmin = N'" + AD.DiaChiAdmin + "', EmailAdmin = '" + AD.EmailAdmin + "' WHERE IDAdmin = '" + AD.IDAdmin + "'";
             return Query;
         }
         #endregion

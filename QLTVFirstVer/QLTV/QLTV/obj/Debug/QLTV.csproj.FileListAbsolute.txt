@@ -395,3 +395,5 @@ C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\bin\Debug\Crystal
 C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\bin\Debug\stdole.dll
 C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmAdminUser.resources
 C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmQuyDinh.resources
+C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmThongTin.resources
+C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmPhieuThu.resources

@@ -97,8 +97,20 @@ namespace Desktop.GUI
 
         private void btn_ThemLoaiSach_Click(object sender, EventArgs e)
         {
-            FrmThemLoaiSach LoaiSach = new FrmThemLoaiSach();
-            LoaiSach.Show();
+            Form fsf = Application.OpenForms["FrmThemLoaiSach"];
+
+            if (fsf != null)
+            {
+                fsf.WindowState = FormWindowState.Normal;
+                fsf.Show();
+                fsf.TopMost = true;
+            }
+            else
+            {
+                Form formSubForm = new FrmThemLoaiSach();
+                formSubForm.Show();
+                formSubForm.TopMost = true;
+            }
         }
 
         private void bt_CNDL_Click(object sender, EventArgs e)
@@ -303,8 +315,20 @@ namespace Desktop.GUI
 
         private void btnThemTacGia_Click(object sender, EventArgs e)
         {
-            Form frm = new frmThemTacGia();
-            frm.Show();
+            Form fsf = Application.OpenForms["FrmThemTacGia"];
+
+            if (fsf != null)
+            {
+                fsf.WindowState = FormWindowState.Normal;
+                fsf.Show();
+                fsf.TopMost = true;
+            }
+            else
+            {
+                Form formSubForm = new frmThemTacGia();
+                formSubForm.Show();
+                formSubForm.TopMost = true;
+            }
         }
 
         #endregion

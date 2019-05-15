@@ -117,6 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 310);
             this.Controls.Add(this.groupControl_ThemTacGia);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmThemTacGia";
             this.Text = "Thêm tác giả";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_ThemTacGia)).EndInit();

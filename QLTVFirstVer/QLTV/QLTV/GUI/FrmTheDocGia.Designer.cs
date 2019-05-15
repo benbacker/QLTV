@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTheDocGia));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -61,12 +62,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripBt_Luu = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBt_Xoa = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
@@ -74,9 +71,11 @@
             this.toolStripBt_Muon = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip_Tra = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
             this.dgv_DuLieu = new System.Windows.Forms.DataGridView();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStrip_PThu = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.cl_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -469,12 +468,8 @@
             this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBt_Luu,
-            this.toolStripSeparator1,
             this.toolStripBt_SuaTT,
             this.toolStripSeparator2,
-            this.toolStripBt_Xoa,
-            this.toolStripSeparator3,
             this.toolStripBt_XuatCSV,
             this.toolStripSeparator4,
             this.toolStripBt_Reset,
@@ -482,7 +477,9 @@
             this.toolStripBt_Muon,
             this.toolStripSeparator6,
             this.toolStrip_Tra,
-            this.toolStrip,
+            this.toolStripSeparator3,
+            this.toolStrip_PThu,
+            this.toolStripSeparator1,
             this.toolStripBt_Thoat});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 38);
             this.bindingNavigator1.MoveFirstItem = null;
@@ -494,21 +491,6 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(874, 31);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // toolStripBt_Luu
-            // 
-            this.toolStripBt_Luu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_Luu.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_Luu.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Luu.Image")));
-            this.toolStripBt_Luu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_Luu.Name = "toolStripBt_Luu";
-            this.toolStripBt_Luu.Size = new System.Drawing.Size(67, 28);
-            this.toolStripBt_Luu.Text = "Lưu";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripBt_SuaTT
             // 
@@ -525,21 +507,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripBt_Xoa
-            // 
-            this.toolStripBt_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_Xoa.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Xoa.Image")));
-            this.toolStripBt_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_Xoa.Name = "toolStripBt_Xoa";
-            this.toolStripBt_Xoa.Size = new System.Drawing.Size(67, 28);
-            this.toolStripBt_Xoa.Text = "Xóa";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripBt_XuatCSV
             // 
@@ -600,11 +567,6 @@
             this.toolStrip_Tra.Text = "Trả sách";
             this.toolStrip_Tra.Click += new System.EventHandler(this.toolStrip_Tra_Click);
             // 
-            // toolStrip
-            // 
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(6, 31);
-            // 
             // toolStripBt_Thoat
             // 
             this.toolStripBt_Thoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -639,6 +601,27 @@
             this.dgv_DuLieu.Size = new System.Drawing.Size(874, 431);
             this.dgv_DuLieu.TabIndex = 0;
             this.dgv_DuLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DuLieu_CellClick);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStrip_PThu
+            // 
+            this.toolStrip_PThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip_PThu.ForeColor = System.Drawing.Color.Red;
+            this.toolStrip_PThu.Image = ((System.Drawing.Image)(resources.GetObject("toolStrip_PThu.Image")));
+            this.toolStrip_PThu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrip_PThu.Name = "toolStrip_PThu";
+            this.toolStrip_PThu.Size = new System.Drawing.Size(112, 28);
+            this.toolStrip_PThu.Text = "Phiếu thu";
+            this.toolStrip_PThu.Click += new System.EventHandler(this.toolStrip_PThu_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // cl_ID
             // 
@@ -716,6 +699,8 @@
             // 
             this.cl_TongNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.cl_TongNo.DataPropertyName = "TongNo";
+            dataGridViewCellStyle2.Format = "#,###";
+            this.cl_TongNo.DefaultCellStyle = dataGridViewCellStyle2;
             this.cl_TongNo.HeaderText = "Tổng nợ";
             this.cl_TongNo.Name = "cl_TongNo";
             this.cl_TongNo.Width = 160;
@@ -783,12 +768,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgv_DuLieu;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton toolStripBt_Luu;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripBt_SuaTT;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripBt_XuatCSV;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripBt_Reset;
@@ -798,10 +779,12 @@
         private System.Windows.Forms.TextBox tb_Passwork;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripSeparator toolStrip;
         private System.Windows.Forms.ToolStripButton toolStripBt_Muon;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton toolStrip_Tra;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStrip_PThu;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_User;

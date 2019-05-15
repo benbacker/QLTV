@@ -6,16 +6,96 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using Desktop.BUS;
 
 namespace Desktop.DAO
 {
     class ConnectionSQL
     {
+        #region checkConnection
+        private static SqlConnection m_Connection;
+        public static String m_ConnectString = "";
+
+        #region Field
+        #endregion
+        private static XmlDocument xmlDoc = XML.XMLReader("Connection.xml");
+        private static XmlElement xmlEle = xmlDoc.DocumentElement;
+        private ConnectionSQL() { }
+        public static bool OpenConnection() // Hàm mở connection
+        {
+            if (m_ConnectString == "")
+                ConnectionString();
+            try
+            {
+                if (m_Connection == null)
+                    m_Connection = new SqlConnection(m_ConnectString);
+                if (m_Connection.State == ConnectionState.Closed)
+                    m_Connection.Open();
+                return true;
+            }
+            catch
+            {
+                m_Connection.Close();
+                return false;
+            }
+        }
+
+        public static void ConnectionString() // hàm lấy lệnh connection
+        {
+            try
+            {
+                if (xmlEle.SelectSingleNode("costatus").InnerText == "true")
+                {
+                    m_ConnectString = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";Integrated Security=True;";
+
+                }
+                else
+                {
+                    m_ConnectString = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";User Id=" + xmlEle.SelectSingleNode("username").InnerText + ";Password=" + xmlEle.SelectSingleNode("password").InnerText + ";";
+                }
+
+                AppSettingBUS.DatabaseName = xmlEle.SelectSingleNode("database").InnerText;
+            }
+            catch
+            {
+                //MessageBox.Show("Lỗi kết nối đến cơ sở dữ liệu! Xin vui lòng thiết lập lại kết nối...", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
+        }
+
+        public static String ConSTR()
+        {
+            XmlDocument xmlDoc = XML.XMLReader("Connection.xml");
+            XmlElement xmlEle = xmlDoc.DocumentElement;
+            String connectionST = "";
+            try
+            {
+                if (xmlEle.SelectSingleNode("costatus").InnerText == "true")
+                {
+                    connectionST = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";Integrated Security=True;";
+
+                }
+                else
+                {
+                    connectionST = "Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";User Id=" + xmlEle.SelectSingleNode("username").InnerText + ";Password=" + xmlEle.SelectSingleNode("password").InnerText + ";";
+                }
+
+                AppSettingBUS.DatabaseName = xmlEle.SelectSingleNode("database").InnerText;
+            }
+            catch
+            {
+                //MessageBox.Show("Lỗi kết nối đến cơ sở dữ liệu! Xin vui lòng thiết lập lại kết nối...", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            return connectionST;
+        }
+        #endregion
+        #region ThuVienConection
         public static SqlConnection conn;
         public static SqlCommand cmd;
         public static DataTable dt;
         public static SqlDataAdapter da;
-        public static string Lenh = Properties.Settings.Default.QuanLyThuVien;
+        public static string Lenh = ConSTR();/*Properties.Settings.Default.QuanLyThuVien;*/
+        #endregion
         #region ConnecTionSQL
         public static DataTable TaoBang(string sql)
         {

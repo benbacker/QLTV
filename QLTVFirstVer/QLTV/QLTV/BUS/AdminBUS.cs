@@ -26,10 +26,27 @@ namespace Desktop.BUS
             return table;
         }
 
+        public DataTable SearchAdmin(string TT,string Search)
+        {
+            DataTable table;
+            table = ConnectionSQL.TaoBang(AD_DAO.QuerySearchAdmin(TT,Search));
+            return table;
+        }
+
         public bool InsertAdmin(AdminDTO AD)
         {
             bool table = false;
             if (ConnectionSQL.ExecuteNonQuery(AD_DAO.QueryInsertCTAdmin(AD)) > 0 && ConnectionSQL.ExecuteNonQuery(AD_DAO.QueryInsertAdmin(AD)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
+        public bool UpdateAdmin(AdminDTO AD)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(AD_DAO.QueryUpdateAdmin(AD)) > 0)
             {
                 table = true;
             }

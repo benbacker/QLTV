@@ -331,7 +331,7 @@
             this.navigationPage1.Controls.Add(this.groupControl3);
             this.navigationPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage1.ImageOptions.Image")));
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(80, 616);
+            this.navigationPage1.Size = new System.Drawing.Size(526, 556);
             // 
             // groupControl3
             // 
@@ -349,7 +349,7 @@
             this.groupControl3.Controls.Add(this.label8);
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(532, 616);
+            this.groupControl3.Size = new System.Drawing.Size(532, 556);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Tìm kiếm thông tin:";
             // 
@@ -363,6 +363,7 @@
             this.bt_TimKiem.Text = "Tìm kiếm";
             this.bt_TimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_TimKiem.UseVisualStyleBackColor = true;
+            this.bt_TimKiem.Click += new System.EventHandler(this.bt_TimKiem_Click);
             // 
             // tb_NhapTT
             // 
@@ -389,7 +390,6 @@
             this.cbb_ThongTinTimKiem.Items.AddRange(new object[] {
             "Họ và tên",
             "Email",
-            "Địa chỉ",
             "Tài khoản"});
             this.cbb_ThongTinTimKiem.Location = new System.Drawing.Point(211, 95);
             this.cbb_ThongTinTimKiem.Name = "cbb_ThongTinTimKiem";
@@ -461,6 +461,7 @@
             this.toolStripBt_SuaTT.Name = "toolStripBt_SuaTT";
             this.toolStripBt_SuaTT.Size = new System.Drawing.Size(142, 28);
             this.toolStripBt_SuaTT.Text = "Sữa thông tin";
+            this.toolStripBt_SuaTT.Click += new System.EventHandler(this.toolStripBt_SuaTT_Click);
             // 
             // toolStripSeparator2
             // 

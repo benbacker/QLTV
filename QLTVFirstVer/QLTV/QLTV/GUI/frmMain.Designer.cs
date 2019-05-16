@@ -233,7 +233,7 @@
             // 
             // btnSignOut
             // 
-            this.btnSignOut.Caption = "barButtonItem2";
+            this.btnSignOut.Caption = "Sign Out";
             this.btnSignOut.Id = 21;
             this.btnSignOut.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.ImageOptions.Image")));
             this.btnSignOut.Name = "btnSignOut";

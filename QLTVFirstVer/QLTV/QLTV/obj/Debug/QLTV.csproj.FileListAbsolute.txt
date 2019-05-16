@@ -397,3 +397,6 @@ C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop
 C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmQuyDinh.resources
 C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmThongTin.resources
 C:\Users\BenBacker\Desktop\ben\QLTVVer3\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmPhieuThu.resources
+C:\Users\BenBacker\Documents\QLTV\QLTVFirstVer\QLTV\QLTV\bin\Debug\Desktop.exe.config
+C:\Users\BenBacker\Documents\QLTV\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.exe
+C:\Users\BenBacker\Documents\QLTV\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.pdb

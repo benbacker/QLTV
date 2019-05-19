@@ -228,7 +228,8 @@ namespace Desktop.GUI
 
         private void dgv_DuLieuSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string LDonGia;
+            string LGiaTien;
             try
             {
                 int i;
@@ -239,8 +240,12 @@ namespace Desktop.GUI
                 dt_NgayNhap.Value = DateTime.Parse(dgv_DuLieuSach.Rows[i].Cells["cl_NgayNhap"].Value.ToString());
                 tb_NamXuatBan.Text = dgv_DuLieuSach.Rows[i].Cells["cl_NamXB"].Value.ToString();
                 tb_NhaXuatBan.Text = dgv_DuLieuSach.Rows[i].Cells["cl_NhaXB"].Value.ToString();
-                tb_DonGia.Text = dgv_DuLieuSach.Rows[i].Cells["cl_DonGia"].Value.ToString();
-                tb_GiaTien.Text = dgv_DuLieuSach.Rows[i].Cells["cl_GiaTien"].Value.ToString();
+                LDonGia = dgv_DuLieuSach.Rows[i].Cells["cl_DonGia"].Value.ToString();
+                long a = Convert.ToInt64(Math.Round(Convert.ToDouble(LDonGia)));
+                tb_DonGia.Text = a.ToString();
+                LGiaTien = dgv_DuLieuSach.Rows[i].Cells["cl_GiaTien"].Value.ToString();
+                long b = Convert.ToInt64(Math.Round(Convert.ToDouble(LGiaTien)));
+                tb_GiaTien.Text = b.ToString();
                 tb_SoLuong.Text = dgv_DuLieuSach.Rows[i].Cells["cl_SoLuongTon"].Value.ToString();
                 bt_CNDL.Enabled = false;
             }

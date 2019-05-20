@@ -148,7 +148,7 @@ namespace Desktop.GUI
                         listbox_TenDauSach.Items.Clear();
                         IDCuonSach.Clear();
                         PhieuMuon_BUS.DeleteCTPhieuMuon(PM);
-                        MessageBox.Show("Cập nhật dữ liệu thất bại");
+                        MessageBox.Show("Cập nhật dữ liệu thất bại! Quy phạm quy định thư viện xin kiểm tra lại");
                     }
                 }   
                 catch(Exception ex)

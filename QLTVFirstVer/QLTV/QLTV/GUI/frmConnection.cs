@@ -117,7 +117,7 @@ namespace Desktop.GUI
                 else
                     XML.XMLWriter("Connection.xml", txtServer.Text, txtUsername.Text, txtPassword.Text, cmbDatabase.Text, "false");
                 this.DialogResult = DialogResult.OK;
-                MessageBox.Show("OK");
+                MessageBox.Show("Kết nối thành công");
             }
             this.Close();
         }

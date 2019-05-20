@@ -81,7 +81,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(1780, 220);
             this.groupControl2.TabIndex = 5;
@@ -151,7 +151,7 @@
             this.cl_SoNgayMuonMax,
             this.cl_TienPhatMoiNgay});
             this.dgv_DuLieu.Location = new System.Drawing.Point(0, 81);
-            this.dgv_DuLieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_DuLieu.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_DuLieu.Name = "dgv_DuLieu";
             this.dgv_DuLieu.Size = new System.Drawing.Size(1780, 139);
             this.dgv_DuLieu.TabIndex = 0;
@@ -222,9 +222,9 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 220);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1780, 773);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
@@ -249,7 +249,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 31);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1772, 304);
             this.panel1.TabIndex = 0;
@@ -261,7 +261,7 @@
             this.btn_SuaTT.ForeColor = System.Drawing.Color.Red;
             this.btn_SuaTT.Image = ((System.Drawing.Image)(resources.GetObject("btn_SuaTT.Image")));
             this.btn_SuaTT.Location = new System.Drawing.Point(781, 245);
-            this.btn_SuaTT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SuaTT.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SuaTT.Name = "btn_SuaTT";
             this.btn_SuaTT.Size = new System.Drawing.Size(252, 44);
             this.btn_SuaTT.TabIndex = 2;
@@ -274,7 +274,7 @@
             // 
             this.tb_NgayMuon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_NgayMuon.Location = new System.Drawing.Point(1464, 39);
-            this.tb_NgayMuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_NgayMuon.Margin = new System.Windows.Forms.Padding(4);
             this.tb_NgayMuon.Name = "tb_NgayMuon";
             this.tb_NgayMuon.Size = new System.Drawing.Size(132, 34);
             this.tb_NgayMuon.TabIndex = 13;
@@ -283,7 +283,7 @@
             // 
             this.tb_TienPhat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_TienPhat.Location = new System.Drawing.Point(1464, 122);
-            this.tb_TienPhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_TienPhat.Margin = new System.Windows.Forms.Padding(4);
             this.tb_TienPhat.Name = "tb_TienPhat";
             this.tb_TienPhat.Size = new System.Drawing.Size(132, 34);
             this.tb_TienPhat.TabIndex = 12;
@@ -292,7 +292,7 @@
             // 
             this.tb_KCach.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_KCach.Location = new System.Drawing.Point(996, 190);
-            this.tb_KCach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_KCach.Margin = new System.Windows.Forms.Padding(4);
             this.tb_KCach.Name = "tb_KCach";
             this.tb_KCach.Size = new System.Drawing.Size(132, 34);
             this.tb_KCach.TabIndex = 11;
@@ -301,7 +301,7 @@
             // 
             this.tb_SachMuon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_SachMuon.Location = new System.Drawing.Point(996, 122);
-            this.tb_SachMuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_SachMuon.Margin = new System.Windows.Forms.Padding(4);
             this.tb_SachMuon.Name = "tb_SachMuon";
             this.tb_SachMuon.Size = new System.Drawing.Size(132, 34);
             this.tb_SachMuon.TabIndex = 10;
@@ -310,7 +310,7 @@
             // 
             this.tb_HanThe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_HanThe.Location = new System.Drawing.Point(996, 43);
-            this.tb_HanThe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_HanThe.Margin = new System.Windows.Forms.Padding(4);
             this.tb_HanThe.Name = "tb_HanThe";
             this.tb_HanThe.Size = new System.Drawing.Size(132, 34);
             this.tb_HanThe.TabIndex = 9;
@@ -319,7 +319,7 @@
             // 
             this.tb_TuoiMax.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_TuoiMax.Location = new System.Drawing.Point(495, 126);
-            this.tb_TuoiMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_TuoiMax.Margin = new System.Windows.Forms.Padding(4);
             this.tb_TuoiMax.Name = "tb_TuoiMax";
             this.tb_TuoiMax.Size = new System.Drawing.Size(132, 34);
             this.tb_TuoiMax.TabIndex = 8;
@@ -328,7 +328,7 @@
             // 
             this.tb_TuoiMin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_TuoiMin.Location = new System.Drawing.Point(495, 43);
-            this.tb_TuoiMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_TuoiMin.Margin = new System.Windows.Forms.Padding(4);
             this.tb_TuoiMin.Name = "tb_TuoiMin";
             this.tb_TuoiMin.Size = new System.Drawing.Size(132, 34);
             this.tb_TuoiMin.TabIndex = 7;
@@ -418,9 +418,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupControl2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuyDinh";
-            this.Text = "frmQuyDinh";
+            this.Text = "Quy định";
             this.Load += new System.EventHandler(this.frmQuyDinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);

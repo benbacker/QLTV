@@ -75,5 +75,13 @@ namespace Desktop.BUS
             return SLThamSo;
         }
         #endregion
+        #region Search
+        public DataTable SearchPhieuTra(string SearchTT, string NhapTT)
+        {
+            DataTable table;
+            table = ConnectionSQL.TaoBang(PhieuTra_DAO.QuerySearch(SearchTT, NhapTT));
+            return table;
+        }
+        #endregion
     }
 }

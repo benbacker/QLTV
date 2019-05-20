@@ -95,5 +95,13 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region Search
+        public DataTable SearchPhieuMuon(string SearchTT, string NhapTT)
+        {
+            DataTable table;
+            table = ConnectionSQL.TaoBang(PhieuMuon_DAO.QuerySearch(SearchTT, NhapTT));
+            return table;
+        }
+        #endregion
     }
 }

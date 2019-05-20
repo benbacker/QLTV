@@ -43,6 +43,13 @@ namespace Desktop.DAO
             return Query;
         }
         #endregion
+        #region Search
+        public string QuerySearch(string SearchTT, string NhapTT)
+        {
+            string Query = "select * from CT_PHIEUTRA,PHIEUTRA,THEDOCGIA,CUONSACH,SACH,DAUSACH where CT_PHIEUTRA.IDPhieuTra = PHIEUTRA.IDPhieuTra and PHIEUTRA.IDDocGia = THEDOCGIA.IDDocGia and CUONSACH.IDCuonSach = CT_PHIEUTRA.IDCuonSach and SACH.IDSach = CUONSACH.IDSach and DAUSACH.IDDauSach = SACH.IDDauSach and " + SearchTT + " like N'%" + NhapTT + "%'";
+            return Query;
+        }
+        #endregion
         #endregion
     }
 }

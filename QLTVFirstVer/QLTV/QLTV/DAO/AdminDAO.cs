@@ -23,7 +23,7 @@ namespace Desktop.DAO
 
         public string QuerySearchAdmin(string SearchTT, string NhapTT)
         {
-            string Query = "select * from USERADMIN,CT_USERADMIN where USERADMIN.IDAdmin = CT_USERADMIN.IDAdmin and " + SearchTT + " like '%" + NhapTT + "%'";
+            string Query = "select * from USERADMIN,CT_USERADMIN where USERADMIN.IDAdmin = CT_USERADMIN.IDAdmin and " + SearchTT + " like N'%" + NhapTT + "%'";
             return Query;
         }
 

@@ -71,7 +71,7 @@ namespace Desktop.DAO
         #region QuerySearch
         public string QuerySearchSach(string SearchTT, string NhapTT)
         {
-            string Query = "select S.*,T.TenTacGia,D.TenDauSach,P.NgayNhap,L.TenLoaiSach,C.DonGia,ThanhTien from Sach as S,TacGia as T,DauSach as D,LoaiSach as L,CT_PHIEUNHAPSACH as C,PHIEUNHAPSACH as P where S.IDTacGia = T.IDTacGia and D.IDLoaiSach = L.IDLoaiSach and D.IDDauSach = S.IDDauSach and P.IDPhieuNhap = C. IDPhieuNhap and S.IDSach = C.IDSach and " + SearchTT + " like '%" +NhapTT+ "%'";
+            string Query = "select S.*,T.TenTacGia,D.TenDauSach,P.NgayNhap,L.TenLoaiSach,C.DonGia,ThanhTien from Sach as S,TacGia as T,DauSach as D,LoaiSach as L,CT_PHIEUNHAPSACH as C,PHIEUNHAPSACH as P where S.IDTacGia = T.IDTacGia and D.IDLoaiSach = L.IDLoaiSach and D.IDDauSach = S.IDDauSach and P.IDPhieuNhap = C. IDPhieuNhap and S.IDSach = C.IDSach and " + SearchTT + " like N'%" +NhapTT+ "%'";
             return Query;
         }
         #endregion

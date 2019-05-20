@@ -51,6 +51,12 @@ namespace Desktop.DAO
             string Query = "DELETE PhieuMuon Where IDPhieuMuon = " + PM.IDPhieuMuon + "";
             return Query;
         }
+
+        public string QuerySearch(string SearchTT,string NhapTT)
+        {
+            string Query = "select IDCTPhieuMuon,HoTenDG,TenDauSach,NgayMuon,HanTra from CT_PHIEUMUON as A,PHIEUMUON as B,THEDOCGIA as C,SACH as D,CUONSACH as E,DAUSACH as F where A.IDPhieuMuon =  B.IDPhieuMuon and A.IDCuonSach = E.IDCuonSach and E.IDSach = D.IDSach and D.IDDauSach = F.IDDauSach and B.IDDocGia = C.IDDocGia and " + SearchTT + " like N'%" + NhapTT + "%'";
+            return Query;
+        }
         #endregion
     }
 }

@@ -34,7 +34,7 @@ namespace Desktop.DAO
 
         public string QuerySearchTG(string SearchTT, string NhapTT)
         {
-            string Query = "select * From TacGia where  " + SearchTT + " like '%" + NhapTT + "%' order by IDTacGia asc";
+            string Query = "select * From TacGia where  " + SearchTT + " like N'%" + NhapTT + "%' order by IDTacGia asc";
             return Query;
         }
         #endregion

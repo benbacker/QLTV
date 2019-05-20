@@ -19,7 +19,7 @@ namespace Desktop.DAO
 
         public string QuerySearchTDG(string SearchTT, string NhapTT)
         {
-            string Query = "select TheDocGia.*,Users.UserName,LoaiDocGia.TenLoaiDG From TheDocGia,Users,LoaiDocGia where TheDocGia.IDDocGia = Users.IDDocGia and LoaiDocGia.IDLoaiDG = TheDocGia.IDLoaiDG and " + SearchTT + " like '%" + NhapTT + "%' order by IDDocGia asc";
+            string Query = "select TheDocGia.*,Users.UserName,LoaiDocGia.TenLoaiDG From TheDocGia,Users,LoaiDocGia where TheDocGia.IDDocGia = Users.IDDocGia and LoaiDocGia.IDLoaiDG = TheDocGia.IDLoaiDG and " + SearchTT + " like N'%" + NhapTT + "%' order by IDDocGia asc";
             return Query;
         }
 

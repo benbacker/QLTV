@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSach));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -67,14 +67,7 @@
             this.cbb_ThongTinTimKiem = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_DuLieuSach = new System.Windows.Forms.DataGridView();
             this.cl_IDSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,7 +80,14 @@
             this.cl_DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -99,10 +99,10 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DuLieuSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DuLieuSach)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // navigationPane1
@@ -436,7 +436,7 @@
             this.navigationPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage1.ImageOptions.Image")));
             this.navigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(731, 550);
+            this.navigationPage1.Size = new System.Drawing.Size(837, 620);
             // 
             // groupControl3
             // 
@@ -455,7 +455,7 @@
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(727, 587);
+            this.groupControl3.Size = new System.Drawing.Size(727, 657);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Tìm kiếm thông tin:";
             // 
@@ -541,90 +541,14 @@
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Dữ liệu độc giả";
             // 
-            // bindingNavigator1
+            // panel1
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.CountItem = null;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBt_SuaTT,
-            this.toolStripSeparator2,
-            this.toolStripBt_XuatCSV,
-            this.toolStripSeparator4,
-            this.toolStripBt_Reset,
-            this.toolStripSeparator5,
-            this.toolStripBt_Thoat});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 40);
-            this.bindingNavigator1.MoveFirstItem = null;
-            this.bindingNavigator1.MoveLastItem = null;
-            this.bindingNavigator1.MoveNextItem = null;
-            this.bindingNavigator1.MovePreviousItem = null;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1185, 35);
-            this.bindingNavigator1.TabIndex = 1;
-            this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // toolStripBt_SuaTT
-            // 
-            this.toolStripBt_SuaTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_SuaTT.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_SuaTT.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_SuaTT.Image")));
-            this.toolStripBt_SuaTT.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_SuaTT.Name = "toolStripBt_SuaTT";
-            this.toolStripBt_SuaTT.Size = new System.Drawing.Size(169, 32);
-            this.toolStripBt_SuaTT.Text = "Sữa thông tin";
-            this.toolStripBt_SuaTT.Click += new System.EventHandler(this.toolStripBt_SuaTT_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 35);
-            // 
-            // toolStripBt_XuatCSV
-            // 
-            this.toolStripBt_XuatCSV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_XuatCSV.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_XuatCSV.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_XuatCSV.Image")));
-            this.toolStripBt_XuatCSV.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_XuatCSV.Name = "toolStripBt_XuatCSV";
-            this.toolStripBt_XuatCSV.Size = new System.Drawing.Size(126, 32);
-            this.toolStripBt_XuatCSV.Text = "Xuất CSV";
-            this.toolStripBt_XuatCSV.Click += new System.EventHandler(this.toolStripBt_XuatCSV_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
-            // 
-            // toolStripBt_Reset
-            // 
-            this.toolStripBt_Reset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_Reset.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_Reset.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Reset.Image")));
-            this.toolStripBt_Reset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_Reset.Name = "toolStripBt_Reset";
-            this.toolStripBt_Reset.Size = new System.Drawing.Size(164, 32);
-            this.toolStripBt_Reset.Text = "Reset dữ liệu";
-            this.toolStripBt_Reset.Click += new System.EventHandler(this.toolStripBt_Reset_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 35);
-            // 
-            // toolStripBt_Thoat
-            // 
-            this.toolStripBt_Thoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBt_Thoat.ForeColor = System.Drawing.Color.Red;
-            this.toolStripBt_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Thoat.Image")));
-            this.toolStripBt_Thoat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBt_Thoat.Name = "toolStripBt_Thoat";
-            this.toolStripBt_Thoat.Size = new System.Drawing.Size(95, 32);
-            this.toolStripBt_Thoat.Text = "Thoát";
-            this.toolStripBt_Thoat.Click += new System.EventHandler(this.toolStripBt_Thoat_Click);
+            this.panel1.Controls.Add(this.dgv_DuLieuSach);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1185, 493);
+            this.panel1.TabIndex = 2;
             // 
             // dgv_DuLieuSach
             // 
@@ -716,8 +640,8 @@
             // 
             this.cl_DonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.cl_DonGia.DataPropertyName = "DonGia";
-            dataGridViewCellStyle10.Format = "#,###";
-            this.cl_DonGia.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Format = "#,###";
+            this.cl_DonGia.DefaultCellStyle = dataGridViewCellStyle1;
             this.cl_DonGia.HeaderText = "Đơn giá";
             this.cl_DonGia.Name = "cl_DonGia";
             this.cl_DonGia.Width = 120;
@@ -726,8 +650,8 @@
             // 
             this.cl_GiaTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.cl_GiaTien.DataPropertyName = "GiaTien";
-            dataGridViewCellStyle11.Format = "#,###";
-            this.cl_GiaTien.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Format = "#,###";
+            this.cl_GiaTien.DefaultCellStyle = dataGridViewCellStyle2;
             this.cl_GiaTien.HeaderText = "Giá tiền";
             this.cl_GiaTien.Name = "cl_GiaTien";
             this.cl_GiaTien.Width = 120;
@@ -736,20 +660,96 @@
             // 
             this.cl_ThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.cl_ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle12.Format = "#,###";
-            this.cl_ThanhTien.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Format = "#,###";
+            this.cl_ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
             this.cl_ThanhTien.HeaderText = "Tổng tiền";
             this.cl_ThanhTien.Name = "cl_ThanhTien";
             this.cl_ThanhTien.Width = 130;
             // 
-            // panel1
+            // bindingNavigator1
             // 
-            this.panel1.Controls.Add(this.dgv_DuLieuSach);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1185, 493);
-            this.panel1.TabIndex = 2;
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.CountItem = null;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripBt_SuaTT,
+            this.toolStripSeparator2,
+            this.toolStripBt_XuatCSV,
+            this.toolStripSeparator4,
+            this.toolStripBt_Reset,
+            this.toolStripSeparator5,
+            this.toolStripBt_Thoat});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 40);
+            this.bindingNavigator1.MoveFirstItem = null;
+            this.bindingNavigator1.MoveLastItem = null;
+            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.MovePreviousItem = null;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = null;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1185, 35);
+            this.bindingNavigator1.TabIndex = 1;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // toolStripBt_SuaTT
+            // 
+            this.toolStripBt_SuaTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_SuaTT.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_SuaTT.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_SuaTT.Image")));
+            this.toolStripBt_SuaTT.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_SuaTT.Name = "toolStripBt_SuaTT";
+            this.toolStripBt_SuaTT.Size = new System.Drawing.Size(169, 32);
+            this.toolStripBt_SuaTT.Text = "Sữa thông tin";
+            this.toolStripBt_SuaTT.Click += new System.EventHandler(this.toolStripBt_SuaTT_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBt_XuatCSV
+            // 
+            this.toolStripBt_XuatCSV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_XuatCSV.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_XuatCSV.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_XuatCSV.Image")));
+            this.toolStripBt_XuatCSV.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_XuatCSV.Name = "toolStripBt_XuatCSV";
+            this.toolStripBt_XuatCSV.Size = new System.Drawing.Size(126, 32);
+            this.toolStripBt_XuatCSV.Text = "Xuất CSV";
+            this.toolStripBt_XuatCSV.Click += new System.EventHandler(this.toolStripBt_XuatCSV_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBt_Reset
+            // 
+            this.toolStripBt_Reset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_Reset.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_Reset.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Reset.Image")));
+            this.toolStripBt_Reset.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_Reset.Name = "toolStripBt_Reset";
+            this.toolStripBt_Reset.Size = new System.Drawing.Size(164, 32);
+            this.toolStripBt_Reset.Text = "Reset dữ liệu";
+            this.toolStripBt_Reset.Click += new System.EventHandler(this.toolStripBt_Reset_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBt_Thoat
+            // 
+            this.toolStripBt_Thoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_Thoat.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Thoat.Image")));
+            this.toolStripBt_Thoat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_Thoat.Name = "toolStripBt_Thoat";
+            this.toolStripBt_Thoat.Size = new System.Drawing.Size(95, 32);
+            this.toolStripBt_Thoat.Text = "Thoát";
+            this.toolStripBt_Thoat.Click += new System.EventHandler(this.toolStripBt_Thoat_Click);
             // 
             // frmSach
             // 
@@ -777,11 +777,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DuLieuSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DuLieuSach)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

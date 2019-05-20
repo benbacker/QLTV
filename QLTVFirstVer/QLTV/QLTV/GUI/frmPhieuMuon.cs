@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Desktop.HelperUI;
 using Desktop.BUS;
 using Desktop.DTO;
-using Desktop.HelperUI;
 namespace Desktop.GUI
 {
     public partial class frmPhieuMuon : Form
@@ -171,6 +170,21 @@ namespace Desktop.GUI
         private void toolStripBt_XuatCSV_Click(object sender, EventArgs e)
         {
             HelperGUI.Instance.ExportExcel(dgv_DuLieuPM);
+        }
+
+        private void bt_TimKiem_Click(object sender, EventArgs e)
+        {
+            string SearchTT = "";
+            if (cbb_ThongTinTimKiem.Text == "Họ và tên")
+            {
+                SearchTT = "HoTenDG";
+                dgv_DuLieuPM.DataSource = PhieuMuon_BUS.SearchPhieuMuon(SearchTT, tb_NhapTT.Text.Trim());
+            }
+            else if (cbb_ThongTinTimKiem.Text == "Tên sách")
+            {
+                SearchTT = "TenDauSach";
+                dgv_DuLieuPM.DataSource = PhieuMuon_BUS.SearchPhieuMuon(SearchTT, tb_NhapTT.Text.Trim());
+            }
         }
         #endregion
     }

@@ -135,5 +135,20 @@ namespace Desktop.GUI
         {
             this.Close();
         }
+
+        private void bt_TimKiem_Click(object sender, EventArgs e)
+        {
+            string SearchTT = "";
+            if (cbb_ThongTinTimKiem.Text == "Họ và tên")
+            {
+                SearchTT = "HoTenDG";
+                dgv_DuLieuPT.DataSource = PhieuTra_BUS.SearchPhieuTra(SearchTT, tb_NhapTT.Text.Trim());
+            }
+            else if (cbb_ThongTinTimKiem.Text == "Tên sách")
+            {
+                SearchTT = "TenDauSach";
+                dgv_DuLieuPT.DataSource = PhieuTra_BUS.SearchPhieuTra(SearchTT, tb_NhapTT.Text.Trim());
+            }
+        }
     }
 }

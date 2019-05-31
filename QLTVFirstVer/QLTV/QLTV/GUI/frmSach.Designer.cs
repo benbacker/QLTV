@@ -192,7 +192,7 @@
             // 
             // btnThemTacGia
             // 
-            this.btnThemTacGia.Location = new System.Drawing.Point(595, 169);
+            this.btnThemTacGia.Location = new System.Drawing.Point(579, 169);
             this.btnThemTacGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemTacGia.Name = "btnThemTacGia";
             this.btnThemTacGia.Size = new System.Drawing.Size(121, 34);
@@ -204,7 +204,7 @@
             // 
             this.dt_NgayNhap.CustomFormat = "dd/MM/yyyy";
             this.dt_NgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_NgayNhap.Location = new System.Drawing.Point(201, 210);
+            this.dt_NgayNhap.Location = new System.Drawing.Point(185, 210);
             this.dt_NgayNhap.Margin = new System.Windows.Forms.Padding(4);
             this.dt_NgayNhap.Name = "dt_NgayNhap";
             this.dt_NgayNhap.Size = new System.Drawing.Size(388, 36);
@@ -226,7 +226,7 @@
             // 
             this.tb_NamXuatBan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tb_NamXuatBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tb_NamXuatBan.Location = new System.Drawing.Point(201, 302);
+            this.tb_NamXuatBan.Location = new System.Drawing.Point(185, 302);
             this.tb_NamXuatBan.Margin = new System.Windows.Forms.Padding(4);
             this.tb_NamXuatBan.Name = "tb_NamXuatBan";
             this.tb_NamXuatBan.Size = new System.Drawing.Size(388, 36);
@@ -234,7 +234,7 @@
             // 
             // btn_ThemLoaiSach
             // 
-            this.btn_ThemLoaiSach.Location = new System.Drawing.Point(595, 116);
+            this.btn_ThemLoaiSach.Location = new System.Drawing.Point(579, 116);
             this.btn_ThemLoaiSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ThemLoaiSach.Name = "btn_ThemLoaiSach";
             this.btn_ThemLoaiSach.Size = new System.Drawing.Size(121, 34);
@@ -246,7 +246,7 @@
             // 
             this.cbb_TheLoaiSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_TheLoaiSach.FormattingEnabled = true;
-            this.cbb_TheLoaiSach.Location = new System.Drawing.Point(201, 116);
+            this.cbb_TheLoaiSach.Location = new System.Drawing.Point(185, 116);
             this.cbb_TheLoaiSach.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_TheLoaiSach.Name = "cbb_TheLoaiSach";
             this.cbb_TheLoaiSach.Size = new System.Drawing.Size(388, 37);
@@ -257,7 +257,7 @@
             // 
             this.tb_TenTacGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tb_TenTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tb_TenTacGia.Location = new System.Drawing.Point(201, 164);
+            this.tb_TenTacGia.Location = new System.Drawing.Point(185, 164);
             this.tb_TenTacGia.Margin = new System.Windows.Forms.Padding(4);
             this.tb_TenTacGia.Name = "tb_TenTacGia";
             this.tb_TenTacGia.Size = new System.Drawing.Size(388, 36);
@@ -277,7 +277,7 @@
             // 
             // tb_DonGia
             // 
-            this.tb_DonGia.Location = new System.Drawing.Point(201, 453);
+            this.tb_DonGia.Location = new System.Drawing.Point(185, 453);
             this.tb_DonGia.Margin = new System.Windows.Forms.Padding(4);
             this.tb_DonGia.Name = "tb_DonGia";
             this.tb_DonGia.Size = new System.Drawing.Size(388, 36);
@@ -285,7 +285,7 @@
             // 
             // tb_TenDauSach
             // 
-            this.tb_TenDauSach.Location = new System.Drawing.Point(201, 68);
+            this.tb_TenDauSach.Location = new System.Drawing.Point(185, 68);
             this.tb_TenDauSach.Margin = new System.Windows.Forms.Padding(4);
             this.tb_TenDauSach.Name = "tb_TenDauSach";
             this.tb_TenDauSach.Size = new System.Drawing.Size(388, 36);
@@ -317,7 +317,7 @@
             // 
             // tb_SoLuong
             // 
-            this.tb_SoLuong.Location = new System.Drawing.Point(201, 402);
+            this.tb_SoLuong.Location = new System.Drawing.Point(185, 402);
             this.tb_SoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.tb_SoLuong.Name = "tb_SoLuong";
             this.tb_SoLuong.Size = new System.Drawing.Size(388, 36);
@@ -327,7 +327,7 @@
             // 
             this.tb_NhaXuatBan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tb_NhaXuatBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tb_NhaXuatBan.Location = new System.Drawing.Point(201, 252);
+            this.tb_NhaXuatBan.Location = new System.Drawing.Point(185, 252);
             this.tb_NhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
             this.tb_NhaXuatBan.Name = "tb_NhaXuatBan";
             this.tb_NhaXuatBan.Size = new System.Drawing.Size(388, 36);
@@ -371,7 +371,7 @@
             // 
             // tb_GiaTien
             // 
-            this.tb_GiaTien.Location = new System.Drawing.Point(201, 352);
+            this.tb_GiaTien.Location = new System.Drawing.Point(185, 352);
             this.tb_GiaTien.Margin = new System.Windows.Forms.Padding(4);
             this.tb_GiaTien.Name = "tb_GiaTien";
             this.tb_GiaTien.Size = new System.Drawing.Size(388, 36);

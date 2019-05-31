@@ -50,6 +50,11 @@ namespace Desktop.DAO
             string Query = "UPDATE CT_USERADMIN SET HoTenAdmin = N'" + AD.HoTenAdmin + "', NgaySinhAdmin = '" + AD.NgaySinhAdmin + "', DiaChiAdmin = N'" + AD.DiaChiAdmin + "', EmailAdmin = '" + AD.EmailAdmin + "' WHERE IDAdmin = '" + AD.IDAdmin + "'";
             return Query;
         }
+        public string QueryUpdatePassAdmin(AdminDTO AD)
+        {
+            string Query = "UPDATE USERADMIN SET PasswordAdmin = N'" + AD.PasswordAdmin + "' WHERE IDAdmin = '" + AD.IDAdmin + "'";
+            return Query;
+        }
 
         public string QueryDeleteUserAdmin(int ID)
         {

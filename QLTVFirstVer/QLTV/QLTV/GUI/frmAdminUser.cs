@@ -235,5 +235,26 @@ namespace Desktop.GUI
             }
         }
         #endregion
+
+        private void btn_ThemLoaiSach_Click(object sender, EventArgs e)
+        {
+            Form fsf = Application.OpenForms["frmPasssWork"];
+            if (fsf != null)
+            {
+                fsf.WindowState = FormWindowState.Normal;
+                fsf.Show();
+                fsf.TopMost = true;
+            }
+            else
+            {
+                int i;
+                i = dgv_DuLieu.CurrentRow.Index;
+                frmPasssWork formSubForm = new frmPasssWork();
+                formSubForm.IDUser = int.Parse(dgv_DuLieu.Rows[i].Cells["cl_IDAdmin"].Value.ToString());
+                formSubForm.UserName = dgv_DuLieu.Rows[i].Cells["cl_UserNameAdmin"].Value.ToString();
+                formSubForm.Show();
+                formSubForm.TopMost = true;
+            }
+        }
     }
 }

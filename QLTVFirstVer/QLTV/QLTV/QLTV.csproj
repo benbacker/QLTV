@@ -168,6 +168,12 @@
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmPasssWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPasssWork.Designer.cs">
+      <DependentUpon>frmPasssWork.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmPhieuThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPasssWork.resx">
+      <DependentUpon>frmPasssWork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPhieuThu.resx">
       <DependentUpon>frmPhieuThu.cs</DependentUpon>

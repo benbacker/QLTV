@@ -26,7 +26,7 @@ namespace Desktop.GUI
         public string EmailDG { get; set; }
         public string TongNo { get; set; }
         #endregion
-
+        #region Load
         private void frmPhieuThu_Load(object sender, EventArgs e)
         {
             lbHoTen.Text = HoTenDG;
@@ -35,7 +35,8 @@ namespace Desktop.GUI
             lbNgayLapPhieu.Text = DateTime.Today.Date.ToString("dd/MM/yyyy");
             this.rpvPhieuThu.RefreshReport();
         }
-
+        #endregion
+        #region Click
         private void bt_CNDL_Click(object sender, EventArgs e)
         {
             int Tien = int.Parse(tb_TienThu.Text);
@@ -93,5 +94,6 @@ namespace Desktop.GUI
                 }
             }
         }
+        #endregion
     }
 }

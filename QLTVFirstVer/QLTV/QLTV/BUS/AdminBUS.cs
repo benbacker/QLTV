@@ -53,6 +53,16 @@ namespace Desktop.BUS
             return table;
         }
 
+        public bool UpdatePassAdmin(AdminDTO AD)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(AD_DAO.QueryUpdatePassAdmin(AD)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
         public bool DeleteAdmin(int ID)
         {
             bool table = false;

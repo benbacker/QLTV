@@ -304,7 +304,7 @@ namespace Desktop.GUI
                 s.NgayNhap = NgayNhap;
                 if (Sach_BUS.UpdateSach(s))
                 {
-                    MessageBox.Show("Cập nhật dữ liệu thành công");
+                    MessageBox.Show("Sữa dữ liệu thành công");
                     HelperGUI.ResetAllControls(groupControl_TTS);
                     dgv_DuLieuSach.AutoGenerateColumns = false;
                     fillAllDataFromTableSach();

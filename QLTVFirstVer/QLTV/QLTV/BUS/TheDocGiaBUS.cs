@@ -14,6 +14,16 @@ namespace Desktop.BUS
     public class TheDocGiaBUS
     {
         TheDocGiaDAO TDG_DAO = new TheDocGiaDAO();
+        #region Identity
+        public int IdentityIDTDG()
+        {
+            int ID = 0;
+            string column = "IDDocGia";
+            string table = "THEDOCGIA";
+            ID = ConnectionSQL.Identitytable(ID, column, table);
+            return ID;
+        }
+        #endregion
         #region SearchTheDocGia
         public DataTable SearchTheDocGia(string SearchTT, string NhapTT)
         {

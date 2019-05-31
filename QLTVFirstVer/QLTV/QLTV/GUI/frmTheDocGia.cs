@@ -27,6 +27,7 @@ namespace Desktop.GUI
         TheDocGiaBUS TDG_BUS = new TheDocGiaBUS();
         #region Value
         //Ghi lại tất cả thuộc tính thể hiện trên frm
+        public int IDDocGia;
         public string HoTenDG;
         public string UserName;
         public string Pwd;
@@ -49,6 +50,7 @@ namespace Desktop.GUI
         {
             dgv_DuLieu.AutoGenerateColumns = false;
             dgv_DuLieu.DataSource = TDG_BUS.LoadTheDocGia();
+            dgv_DuLieu.Columns["cl_Pwd"].Visible = false;
         }
 
         private Form KiemTra(Type fType)
@@ -79,6 +81,7 @@ namespace Desktop.GUI
                 {
                     UserDTO user = new UserDTO();
                     TheDocGiaDTO tdg = new TheDocGiaDTO();
+                    IDDocGia = TDG_BUS.IdentityIDTDG();
                     HoTenDG = HelperGUI.Instance.KiemTraHoTen(tb_HoTenDG.Text);
                     DiaChiDG = tb_Diachi.Text;
                     EmailDG = tb_Email.Text;
@@ -88,6 +91,7 @@ namespace Desktop.GUI
                     UserName = tb_User.Text;
                     Pwd = tb_Passwork.Text;
                     IDLoaiDG = cb_LoaiDocGia.SelectedIndex + 1;
+                    tdg.IDDocGia = IDDocGia;
                     tdg.HoTenDG = HoTenDG;
                     tdg.NgaySinhDG = NgaySinhDG;
                     tdg.DiaChiDG = DiaChiDG;
@@ -96,6 +100,7 @@ namespace Desktop.GUI
                     tdg.NgayLapThe = NgayLapThe;
                     tdg.NgayHetHan = NgayLapThe.AddMonths(6);
                     tdg.TongNo = 0;
+                    user.IDDocGia = IDDocGia;
                     user.Password = Pwd;
                     user.UserName = UserName;
                     if (TDG_BUS.InsertTheDocGia(tdg) && TDG_BUS.InsertUser(user))
@@ -155,8 +160,8 @@ namespace Desktop.GUI
                 cb_LoaiDocGia.SelectedItem = dgv_DuLieu.Rows[i].Cells["cl_TenLoaiDG"].Value.ToString();
                 dt_NgayLT.Value = DateTime.Parse(dgv_DuLieu.Rows[i].Cells["cl_NgayLapThe"].Value.ToString());
                 dt_Ngaysinh.Value = DateTime.Parse(dgv_DuLieu.Rows[i].Cells["cl_Ngaysinh"].Value.ToString());
+                tb_Passwork.Text = dgv_DuLieu.Rows[i].Cells["cl_Pwd"].Value.ToString(); ;
                 bt_CNDL.Enabled = false;
-                tb_Passwork.Enabled = false;
             }
             catch
             {
@@ -168,7 +173,6 @@ namespace Desktop.GUI
         {
             HelperGUI.ResetAllControls(groupControl_TTDG);
             bt_CNDL.Enabled = true;
-            tb_Passwork.Enabled = true;
         }
 
         private void toolStripBt_SuaTT_Click(object sender, EventArgs e)
@@ -196,11 +200,13 @@ namespace Desktop.GUI
                 tdg.IDDocGia = int.Parse(IDDocGia);
                 UserDTO user = new UserDTO();
                 UserName = tb_User.Text;
+                Pwd = tb_Passwork.Text;
                 user.UserName = UserName;
+                user.Password = Pwd;
                 user.IDDocGia = int.Parse(IDDocGia);
                 if (TDG_BUS.UpdateTheDocGia(tdg,user))
                 {
-                    MessageBox.Show("yes");
+                    MessageBox.Show("Sữa thông tin thành công!");
                     HelperGUI.ResetAllControls(groupControl_TTDG);
                     dgv_DuLieu.AutoGenerateColumns = false;
                     fillAllDataFromTableTheDocGia();

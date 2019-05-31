@@ -76,6 +76,7 @@
             this.cl_DiaChiAdmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_EmailAdmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_QuyenHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_ThemLoaiSach = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -145,6 +146,7 @@
             this.groupControl_TTDG.AppearanceCaption.Options.UseFont = true;
             this.groupControl_TTDG.AutoSize = true;
             this.groupControl_TTDG.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl_TTDG.CaptionImageOptions.Image")));
+            this.groupControl_TTDG.Controls.Add(this.btn_ThemLoaiSach);
             this.groupControl_TTDG.Controls.Add(this.tb_HoTenAdmin);
             this.groupControl_TTDG.Controls.Add(this.tb_Passwork);
             this.groupControl_TTDG.Controls.Add(this.label10);
@@ -170,18 +172,18 @@
             // 
             // tb_HoTenAdmin
             // 
-            this.tb_HoTenAdmin.Location = new System.Drawing.Point(175, 73);
+            this.tb_HoTenAdmin.Location = new System.Drawing.Point(146, 73);
             this.tb_HoTenAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.tb_HoTenAdmin.Name = "tb_HoTenAdmin";
-            this.tb_HoTenAdmin.Size = new System.Drawing.Size(417, 36);
+            this.tb_HoTenAdmin.Size = new System.Drawing.Size(428, 36);
             this.tb_HoTenAdmin.TabIndex = 0;
             // 
             // tb_Passwork
             // 
-            this.tb_Passwork.Location = new System.Drawing.Point(175, 180);
+            this.tb_Passwork.Location = new System.Drawing.Point(146, 180);
             this.tb_Passwork.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Passwork.Name = "tb_Passwork";
-            this.tb_Passwork.Size = new System.Drawing.Size(417, 36);
+            this.tb_Passwork.Size = new System.Drawing.Size(428, 36);
             this.tb_Passwork.TabIndex = 2;
             this.tb_Passwork.UseSystemPasswordChar = true;
             // 
@@ -247,44 +249,44 @@
             "Admin",
             "Nhân viên",
             "Kế toán"});
-            this.cb_ChucVu.Location = new System.Drawing.Point(175, 390);
+            this.cb_ChucVu.Location = new System.Drawing.Point(146, 390);
             this.cb_ChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.cb_ChucVu.Name = "cb_ChucVu";
-            this.cb_ChucVu.Size = new System.Drawing.Size(417, 37);
+            this.cb_ChucVu.Size = new System.Drawing.Size(428, 37);
             this.cb_ChucVu.TabIndex = 12;
             // 
             // tb_Email
             // 
-            this.tb_Email.Location = new System.Drawing.Point(175, 337);
+            this.tb_Email.Location = new System.Drawing.Point(146, 337);
             this.tb_Email.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(417, 36);
+            this.tb_Email.Size = new System.Drawing.Size(428, 36);
             this.tb_Email.TabIndex = 11;
             // 
             // tb_Diachi
             // 
-            this.tb_Diachi.Location = new System.Drawing.Point(175, 286);
+            this.tb_Diachi.Location = new System.Drawing.Point(146, 286);
             this.tb_Diachi.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Diachi.Name = "tb_Diachi";
-            this.tb_Diachi.Size = new System.Drawing.Size(417, 36);
+            this.tb_Diachi.Size = new System.Drawing.Size(428, 36);
             this.tb_Diachi.TabIndex = 10;
             // 
             // dt_Ngaysinh
             // 
             this.dt_Ngaysinh.CustomFormat = "dd/MM/yyyy";
             this.dt_Ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_Ngaysinh.Location = new System.Drawing.Point(175, 240);
+            this.dt_Ngaysinh.Location = new System.Drawing.Point(146, 240);
             this.dt_Ngaysinh.Margin = new System.Windows.Forms.Padding(4);
             this.dt_Ngaysinh.Name = "dt_Ngaysinh";
-            this.dt_Ngaysinh.Size = new System.Drawing.Size(417, 36);
+            this.dt_Ngaysinh.Size = new System.Drawing.Size(428, 36);
             this.dt_Ngaysinh.TabIndex = 9;
             // 
             // tb_User
             // 
-            this.tb_User.Location = new System.Drawing.Point(175, 124);
+            this.tb_User.Location = new System.Drawing.Point(146, 124);
             this.tb_User.Margin = new System.Windows.Forms.Padding(4);
             this.tb_User.Name = "tb_User";
-            this.tb_User.Size = new System.Drawing.Size(417, 36);
+            this.tb_User.Size = new System.Drawing.Size(428, 36);
             this.tb_User.TabIndex = 1;
             // 
             // label6
@@ -637,6 +639,16 @@
             this.cl_QuyenHan.Name = "cl_QuyenHan";
             this.cl_QuyenHan.Width = 180;
             // 
+            // btn_ThemLoaiSach
+            // 
+            this.btn_ThemLoaiSach.Location = new System.Drawing.Point(582, 184);
+            this.btn_ThemLoaiSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThemLoaiSach.Name = "btn_ThemLoaiSach";
+            this.btn_ThemLoaiSach.Size = new System.Drawing.Size(116, 34);
+            this.btn_ThemLoaiSach.TabIndex = 35;
+            this.btn_ThemLoaiSach.Text = "Đổi mật khẩu";
+            this.btn_ThemLoaiSach.Click += new System.EventHandler(this.btn_ThemLoaiSach_Click);
+            // 
             // frmAdminUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -720,5 +732,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_QuyenHan;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
+        private DevExpress.XtraEditors.SimpleButton btn_ThemLoaiSach;
     }
 }

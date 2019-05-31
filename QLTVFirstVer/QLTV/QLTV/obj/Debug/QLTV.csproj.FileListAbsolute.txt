@@ -1170,3 +1170,4 @@ C:\Users\benba\Desktop\QLTV\QLTVFirstVer\QLTV\QLTV\obj\Debug\QLTV.csproj.CoreCom
 C:\Users\benba\Desktop\QLTV\QLTVFirstVer\QLTV\QLTV\obj\Debug\QLTV.csproj.CopyComplete
 C:\Users\benba\Desktop\QLTV\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.exe
 C:\Users\benba\Desktop\QLTV\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.pdb
+C:\Users\benba\Documents\QLTV\QLTVFirstVer\QLTV\QLTV\obj\Debug\Desktop.GUI.frmPasssWork.resources

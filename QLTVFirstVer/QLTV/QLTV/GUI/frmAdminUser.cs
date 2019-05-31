@@ -90,8 +90,6 @@ namespace Desktop.GUI
             }
         }
 
-
-
         private void toolStripBt_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -203,6 +201,37 @@ namespace Desktop.GUI
             {
                 SearchTT = "UserNameAdmin";
                 dgv_DuLieu.DataSource = AD_BUS.SearchAdmin(SearchTT, tb_NhapTT.Text.Trim());
+            }
+        }
+
+        private void toolStripBt_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i;
+                i = dgv_DuLieu.CurrentCell.RowIndex;
+                int IDAdmin = Int32.Parse(dgv_DuLieu.Rows[i].Cells["cl_IDAdmin"].Value.ToString());
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa không!!", "Thông báo!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                {
+                    if (result == DialogResult.OK)
+                    {
+                        if (AD_BUS.DeleteAdmin(IDAdmin))
+                        {
+                            MessageBox.Show("Xóa dữ liệu thất thành công!");
+                            HelperGUI.ResetAllControls(groupControl_TTDG);
+                            dgv_DuLieu.AutoGenerateColumns = false;
+                            LoadUserAdmin();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dữ liệu độc giả đã tồn tại xóa thất bại!");
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đã tồn tại không thể xóa");
             }
         }
         #endregion

@@ -100,6 +100,37 @@ namespace Desktop.DAO
             return Query;
         }
         #endregion
+        #region QueryDelete
+        public string QueryDeleteDAUSACH(int ID)
+        {
+            string Query = "DELETE DAUSACH WHERE IDDauSach = "+ ID +"";
+            return Query;
+        }
+
+        public string QueryDeletePhieuNhapSach(int ID)
+        {
+            string Query = "DELETE PHIEUNHAPSACH WHERE IDPhieuNhap =" + ID + "";
+            return Query;
+        }
+
+        public string QueryDeleteCT_PHIEUNHAPSACH(int ID)
+        {
+            string Query = "DELETE CT_PHIEUNHAPSACH WHERE IDPhieuNhap =" + ID + "";
+            return Query;
+        }
+
+        public string QueryDeleteCUONSACH(int ID)
+        {
+            string Query = "DELETE CUONSACH WHERE IDSach =" + ID + "";
+            return Query;
+        }
+
+        public string QueryDeleteSACH(int ID)
+        {
+            string Query = "DELETE SACH WHERE IDSach = " + ID + "";
+            return Query;
+        }
+        #endregion
         #endregion
     }
 }

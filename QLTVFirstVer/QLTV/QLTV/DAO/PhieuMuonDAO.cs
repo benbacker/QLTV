@@ -24,7 +24,7 @@ namespace Desktop.DAO
 
         public string QueryLoadPhieuMuon()
         {
-            string Query = "select IDCTPhieuMuon,HoTenDG,TenDauSach,NgayMuon,HanTra from CT_PHIEUMUON as A,PHIEUMUON as B,THEDOCGIA as C,SACH as D,CUONSACH as E,DAUSACH as F where A.IDPhieuMuon =  B.IDPhieuMuon and A.IDCuonSach = E.IDCuonSach and E.IDSach = D.IDSach and D.IDDauSach = F.IDDauSach and B.IDDocGia = C.IDDocGia";
+            string Query = "select IDCTPhieuMuon,E.IDCuonSach,HoTenDG,TenDauSach,NgayMuon,HanTra from CT_PHIEUMUON as A,PHIEUMUON as B,THEDOCGIA as C,SACH as D,CUONSACH as E,DAUSACH as F where A.IDPhieuMuon =  B.IDPhieuMuon and A.IDCuonSach = E.IDCuonSach and E.IDSach = D.IDSach and D.IDDauSach = F.IDDauSach and B.IDDocGia = C.IDDocGia";
             return Query;
         }
 
@@ -55,6 +55,36 @@ namespace Desktop.DAO
         public string QuerySearch(string SearchTT,string NhapTT)
         {
             string Query = "select IDCTPhieuMuon,HoTenDG,TenDauSach,NgayMuon,HanTra from CT_PHIEUMUON as A,PHIEUMUON as B,THEDOCGIA as C,SACH as D,CUONSACH as E,DAUSACH as F where A.IDPhieuMuon =  B.IDPhieuMuon and A.IDCuonSach = E.IDCuonSach and E.IDSach = D.IDSach and D.IDDauSach = F.IDDauSach and B.IDDocGia = C.IDDocGia and " + SearchTT + " like N'%" + NhapTT + "%'";
+            return Query;
+        }
+
+        public string QueryDeleteCT_PHIEUMUON(int ID)
+        {
+            string Query = "DELETE CT_PHIEUMUON WHERE IDPhieuMuon = "+ID+"";
+            return Query;
+        }
+
+        public string QueryDeletePM(int ID)
+        {
+            string Query = "DELETE PhieuMuon Where IDPhieuMuon = " + ID + "";
+            return Query;
+        }
+
+        public string QueryDeleteBCSACHTRATRE(int ID)
+        {
+            string Query = "DELETE BCSACHTRATRE WHERE IDPhieuMuon = " + ID + "";
+            return Query;
+        }
+
+        public string QueryUpdateDeleteCuonSach(int ID)
+        {
+            string Query = "UPDATE CuonSach SET TinhTrang = N'Chưa cho mượn' WHERE IDCuonSach = '" + ID + "'";
+            return Query;
+        }
+
+        public string QueryCheckDelete(int ID)
+        {
+            string Query = "SELECT IDPhieuMuon from PHIEUMUON where EXISTS (SELECT IDPhieuMuon from CT_PHIEUTRA where PHIEUMUON.IDPhieuMuon = CT_PHIEUTRA.IDPhieuMuon) and IDPhieuMuon =" + ID + "";
             return Query;
         }
         #endregion

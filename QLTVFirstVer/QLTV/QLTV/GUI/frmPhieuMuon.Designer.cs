@@ -63,17 +63,20 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_DuLieuPM = new System.Windows.Forms.DataGridView();
-            this.cl_IDTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_TenNguoiMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBt_Xoa = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cl_IDTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_TenNguoiMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_TenDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -489,6 +492,7 @@
             this.dgv_DuLieuPM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DuLieuPM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cl_IDTacGia,
+            this.cl_ID,
             this.cl_TenNguoiMuon,
             this.cl_TenDauSach,
             this.cl_NgayMuon,
@@ -500,48 +504,6 @@
             this.dgv_DuLieuPM.Size = new System.Drawing.Size(1192, 702);
             this.dgv_DuLieuPM.TabIndex = 0;
             // 
-            // cl_IDTacGia
-            // 
-            this.cl_IDTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_IDTacGia.DataPropertyName = "IDCTPhieuMuon";
-            this.cl_IDTacGia.FillWeight = 228.4264F;
-            this.cl_IDTacGia.HeaderText = "STT";
-            this.cl_IDTacGia.Name = "cl_IDTacGia";
-            this.cl_IDTacGia.Width = 120;
-            // 
-            // cl_TenNguoiMuon
-            // 
-            this.cl_TenNguoiMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_TenNguoiMuon.DataPropertyName = "HoTenDG";
-            this.cl_TenNguoiMuon.HeaderText = "Tên người mượn";
-            this.cl_TenNguoiMuon.Name = "cl_TenNguoiMuon";
-            this.cl_TenNguoiMuon.Width = 270;
-            // 
-            // cl_TenDauSach
-            // 
-            this.cl_TenDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_TenDauSach.DataPropertyName = "TenDauSach";
-            this.cl_TenDauSach.HeaderText = "Tên đầu sách";
-            this.cl_TenDauSach.Name = "cl_TenDauSach";
-            this.cl_TenDauSach.Width = 250;
-            // 
-            // cl_NgayMuon
-            // 
-            this.cl_NgayMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_NgayMuon.DataPropertyName = "NgayMuon";
-            this.cl_NgayMuon.FillWeight = 35.7868F;
-            this.cl_NgayMuon.HeaderText = "Ngày mượn";
-            this.cl_NgayMuon.Name = "cl_NgayMuon";
-            this.cl_NgayMuon.Width = 250;
-            // 
-            // cl_HanTra
-            // 
-            this.cl_HanTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_HanTra.DataPropertyName = "HanTra";
-            this.cl_HanTra.HeaderText = "Hạn Trả";
-            this.cl_HanTra.Name = "cl_HanTra";
-            this.cl_HanTra.Width = 145;
-            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = null;
@@ -551,6 +513,8 @@
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBt_XuatCSV,
+            this.toolStripSeparator1,
+            this.toolStripBt_Xoa,
             this.toolStripSeparator4,
             this.toolStripBt_Reset,
             this.toolStripSeparator6,
@@ -608,6 +572,70 @@
             this.toolStripBt_Thoat.Size = new System.Drawing.Size(95, 32);
             this.toolStripBt_Thoat.Text = "Thoát";
             this.toolStripBt_Thoat.Click += new System.EventHandler(this.toolStripBt_Thoat_Click);
+            // 
+            // toolStripBt_Xoa
+            // 
+            this.toolStripBt_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_Xoa.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Xoa.Image")));
+            this.toolStripBt_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_Xoa.Name = "toolStripBt_Xoa";
+            this.toolStripBt_Xoa.Size = new System.Drawing.Size(76, 32);
+            this.toolStripBt_Xoa.Text = "Xóa";
+            this.toolStripBt_Xoa.Click += new System.EventHandler(this.toolStripBt_Xoa_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
+            // 
+            // cl_IDTacGia
+            // 
+            this.cl_IDTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_IDTacGia.DataPropertyName = "IDCTPhieuMuon";
+            this.cl_IDTacGia.FillWeight = 228.4264F;
+            this.cl_IDTacGia.HeaderText = "STT";
+            this.cl_IDTacGia.Name = "cl_IDTacGia";
+            this.cl_IDTacGia.Width = 120;
+            // 
+            // cl_ID
+            // 
+            this.cl_ID.DataPropertyName = "IDCuonSach";
+            this.cl_ID.HeaderText = "ID";
+            this.cl_ID.Name = "cl_ID";
+            // 
+            // cl_TenNguoiMuon
+            // 
+            this.cl_TenNguoiMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_TenNguoiMuon.DataPropertyName = "HoTenDG";
+            this.cl_TenNguoiMuon.HeaderText = "Tên người mượn";
+            this.cl_TenNguoiMuon.Name = "cl_TenNguoiMuon";
+            this.cl_TenNguoiMuon.Width = 270;
+            // 
+            // cl_TenDauSach
+            // 
+            this.cl_TenDauSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_TenDauSach.DataPropertyName = "TenDauSach";
+            this.cl_TenDauSach.HeaderText = "Tên đầu sách";
+            this.cl_TenDauSach.Name = "cl_TenDauSach";
+            this.cl_TenDauSach.Width = 250;
+            // 
+            // cl_NgayMuon
+            // 
+            this.cl_NgayMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_NgayMuon.DataPropertyName = "NgayMuon";
+            this.cl_NgayMuon.FillWeight = 35.7868F;
+            this.cl_NgayMuon.HeaderText = "Ngày mượn";
+            this.cl_NgayMuon.Name = "cl_NgayMuon";
+            this.cl_NgayMuon.Width = 250;
+            // 
+            // cl_HanTra
+            // 
+            this.cl_HanTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_HanTra.DataPropertyName = "HanTra";
+            this.cl_HanTra.HeaderText = "Hạn Trả";
+            this.cl_HanTra.Name = "cl_HanTra";
+            this.cl_HanTra.Width = 145;
             // 
             // frmPhieuMuon
             // 
@@ -687,7 +715,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TinhTrang;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_IDTacGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cl_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenNguoiMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenDauSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_NgayMuon;

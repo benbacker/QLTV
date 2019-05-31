@@ -48,6 +48,7 @@ namespace Desktop.GUI
         {
             dgv_DuLieuPM.AutoGenerateColumns = false;
             dgv_DuLieuPM.DataSource = PhieuMuon_BUS.LoadPhieuMuon();
+            dgv_DuLieuPM.Columns["cl_ID"].Visible = false;
         }
         #endregion
         #region Autocomplete
@@ -184,6 +185,41 @@ namespace Desktop.GUI
             {
                 SearchTT = "TenDauSach";
                 dgv_DuLieuPM.DataSource = PhieuMuon_BUS.SearchPhieuMuon(SearchTT, tb_NhapTT.Text.Trim());
+            }
+        }
+
+        private void toolStripBt_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i;
+                i = dgv_DuLieuPM.CurrentCell.RowIndex;
+                int IDPM = Int32.Parse(dgv_DuLieuPM.Rows[i].Cells["cl_IDTacGia"].Value.ToString());
+                int IDCS = Int32.Parse(dgv_DuLieuPM.Rows[i].Cells["cl_ID"].Value.ToString());
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa không!!", "Thông báo!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                {
+                    if (result == DialogResult.OK)
+                    {
+                        if (PhieuMuon_BUS.CheckDelete(IDPM).Rows.Count == 0)
+                        {
+                            if (PhieuMuon_BUS.DeletePhieuMuon(IDPM) && PhieuMuon_BUS.DeleteUpdateCS(IDCS))
+                            {
+                                MessageBox.Show("Xóa dữ liệu thất thành công!");
+                                HelperGUI.ResetAllControls(groupControl_TTPM);
+                                dgv_DuLieuPM.AutoGenerateColumns = false;
+                                LoadPhieuMuon();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dữ liệu độc giả đã tồn tại xóa thất bại!");
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đã tồn tại không thể xóa");
             }
         }
         #endregion

@@ -336,6 +336,35 @@ namespace Desktop.GUI
             }
         }
 
+        private void toolStripBt_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i;
+                i = dgv_DuLieuSach.CurrentCell.RowIndex;
+                int IDSach = Int32.Parse(dgv_DuLieuSach.Rows[i].Cells["cl_IDSach"].Value.ToString());
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa không!!", "Thông báo!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                {
+                    if (result == DialogResult.OK)
+                    {
+                        if (Sach_BUS.DeleteSach(IDSach))
+                        {
+                            MessageBox.Show("Xóa dữ liệu thất thành công!");
+                            HelperGUI.ResetAllControls(groupControl_TTS);
+                            fillAllDataFromTableSach();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dữ liệu độc giả đã tồn tại xóa thất bại!");
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đã tồn tại không thể xóa");
+            }
+        }
         #endregion
     }
 }

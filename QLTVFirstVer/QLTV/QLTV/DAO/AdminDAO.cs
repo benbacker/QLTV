@@ -17,7 +17,7 @@ namespace Desktop.DAO
 
         public string QueryLoadAdmin()
         {
-            string Query = "select * from USERADMIN,CT_USERADMIN where USERADMIN.IDAdmin = CT_USERADMIN.IDAdmin";
+            string Query = "select * from USERADMIN,CT_USERADMIN where USERADMIN.IDAdmin = CT_USERADMIN.IDAdmin order by USERADMIN.IDAdmin asc";
             return Query;
         }
 
@@ -48,6 +48,17 @@ namespace Desktop.DAO
         public string QueryUpdateAdmin(AdminDTO AD)
         {
             string Query = "UPDATE CT_USERADMIN SET HoTenAdmin = N'" + AD.HoTenAdmin + "', NgaySinhAdmin = '" + AD.NgaySinhAdmin + "', DiaChiAdmin = N'" + AD.DiaChiAdmin + "', EmailAdmin = '" + AD.EmailAdmin + "' WHERE IDAdmin = '" + AD.IDAdmin + "'";
+            return Query;
+        }
+
+        public string QueryDeleteUserAdmin(int ID)
+        {
+            string Query = "DELETE USERADMIN WHERE IDAdmin = " + ID + "";
+            return Query;
+        }
+        public string QueryDeleteCT_USERADMIN(int ID)
+        {
+            string Query = "DELETE CT_USERADMIN WHERE IDAdmin =" + ID + "";
             return Query;
         }
         #endregion

@@ -51,6 +51,8 @@
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBt_Xoa = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Reset = new System.Windows.Forms.ToolStripButton();
@@ -60,6 +62,7 @@
             this.cl_IDTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -74,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DuLieu)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // navigationPane1
@@ -85,14 +89,14 @@
             this.navigationPane1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navigationPane1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.navigationPane1.Location = new System.Drawing.Point(0, 0);
-            this.navigationPane1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navigationPane1.Margin = new System.Windows.Forms.Padding(4);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage2,
             this.navigationPage1});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(824, 772);
+            this.navigationPane1.RegularSize = new System.Drawing.Size(814, 772);
             this.navigationPane1.SelectedPage = this.navigationPage2;
-            this.navigationPane1.Size = new System.Drawing.Size(824, 772);
+            this.navigationPane1.Size = new System.Drawing.Size(814, 772);
             this.navigationPane1.TabIndex = 2;
             this.navigationPane1.Text = "Tìm kiếm thông tin độc giả";
             // 
@@ -104,18 +108,18 @@
             this.navigationPage2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navigationPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage2.ImageOptions.Image")));
             this.navigationPage2.ImageOptions.SvgImageSize = new System.Drawing.Size(30, 30);
-            this.navigationPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navigationPage2.Margin = new System.Windows.Forms.Padding(4);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(718, 702);
+            this.navigationPage2.Size = new System.Drawing.Size(708, 702);
             // 
             // navigationFrame1
             // 
             this.navigationFrame1.Dock = System.Windows.Forms.DockStyle.Top;
             this.navigationFrame1.Location = new System.Drawing.Point(0, 0);
-            this.navigationFrame1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navigationFrame1.Margin = new System.Windows.Forms.Padding(4);
             this.navigationFrame1.Name = "navigationFrame1";
             this.navigationFrame1.SelectedPage = null;
-            this.navigationFrame1.Size = new System.Drawing.Size(718, 0);
+            this.navigationFrame1.Size = new System.Drawing.Size(708, 0);
             this.navigationFrame1.TabIndex = 2;
             this.navigationFrame1.Text = "navigationFrame1";
             // 
@@ -137,9 +141,9 @@
             this.groupControl_TTTG.Controls.Add(this.bt_CNDL);
             this.groupControl_TTTG.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.groupControl_TTTG.Location = new System.Drawing.Point(0, 0);
-            this.groupControl_TTTG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl_TTTG.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl_TTTG.Name = "groupControl_TTTG";
-            this.groupControl_TTTG.Size = new System.Drawing.Size(701, 714);
+            this.groupControl_TTTG.Size = new System.Drawing.Size(703, 714);
             this.groupControl_TTTG.TabIndex = 0;
             this.groupControl_TTTG.Text = "Thông tin tác giả";
             // 
@@ -148,7 +152,7 @@
             this.dt_NgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dt_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_NgaySinh.Location = new System.Drawing.Point(201, 175);
-            this.dt_NgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dt_NgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dt_NgaySinh.Name = "dt_NgaySinh";
             this.dt_NgaySinh.Size = new System.Drawing.Size(343, 36);
             this.dt_NgaySinh.TabIndex = 22;
@@ -171,7 +175,7 @@
             this.tb_TenTacGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.tb_TenTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tb_TenTacGia.Location = new System.Drawing.Point(201, 68);
-            this.tb_TenTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_TenTacGia.Margin = new System.Windows.Forms.Padding(4);
             this.tb_TenTacGia.Name = "tb_TenTacGia";
             this.tb_TenTacGia.Size = new System.Drawing.Size(343, 36);
             this.tb_TenTacGia.TabIndex = 20;
@@ -194,7 +198,7 @@
             this.bt_Lamlai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Lamlai.Image = ((System.Drawing.Image)(resources.GetObject("bt_Lamlai.Image")));
             this.bt_Lamlai.Location = new System.Drawing.Point(381, 309);
-            this.bt_Lamlai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_Lamlai.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Lamlai.Name = "bt_Lamlai";
             this.bt_Lamlai.Size = new System.Drawing.Size(125, 52);
             this.bt_Lamlai.TabIndex = 15;
@@ -209,7 +213,7 @@
             this.bt_CNDL.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_CNDL.Image = ((System.Drawing.Image)(resources.GetObject("bt_CNDL.Image")));
             this.bt_CNDL.Location = new System.Drawing.Point(63, 309);
-            this.bt_CNDL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_CNDL.Margin = new System.Windows.Forms.Padding(4);
             this.bt_CNDL.Name = "bt_CNDL";
             this.bt_CNDL.Size = new System.Drawing.Size(189, 52);
             this.bt_CNDL.TabIndex = 14;
@@ -224,7 +228,7 @@
             this.navigationPage1.Caption = "Tìm kiếm thông tin tác giả";
             this.navigationPage1.Controls.Add(this.groupControl3);
             this.navigationPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage1.ImageOptions.Image")));
-            this.navigationPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.navigationPage1.Name = "navigationPage1";
             this.navigationPage1.Size = new System.Drawing.Size(718, 702);
             // 
@@ -243,7 +247,7 @@
             this.groupControl3.Controls.Add(this.cbb_ThongTinTimKiem);
             this.groupControl3.Controls.Add(this.label8);
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(705, 702);
             this.groupControl3.TabIndex = 0;
@@ -253,7 +257,7 @@
             // 
             this.bt_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("bt_TimKiem.Image")));
             this.bt_TimKiem.Location = new System.Drawing.Point(213, 278);
-            this.bt_TimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_TimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.bt_TimKiem.Name = "bt_TimKiem";
             this.bt_TimKiem.Size = new System.Drawing.Size(200, 53);
             this.bt_TimKiem.TabIndex = 4;
@@ -265,7 +269,7 @@
             // tb_NhapTT
             // 
             this.tb_NhapTT.Location = new System.Drawing.Point(281, 194);
-            this.tb_NhapTT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_NhapTT.Margin = new System.Windows.Forms.Padding(4);
             this.tb_NhapTT.Name = "tb_NhapTT";
             this.tb_NhapTT.Size = new System.Drawing.Size(355, 36);
             this.tb_NhapTT.TabIndex = 3;
@@ -289,7 +293,7 @@
             this.cbb_ThongTinTimKiem.Items.AddRange(new object[] {
             "Họ và tên"});
             this.cbb_ThongTinTimKiem.Location = new System.Drawing.Point(281, 117);
-            this.cbb_ThongTinTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbb_ThongTinTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_ThongTinTimKiem.Name = "cbb_ThongTinTimKiem";
             this.cbb_ThongTinTimKiem.Size = new System.Drawing.Size(355, 37);
             this.cbb_ThongTinTimKiem.TabIndex = 1;
@@ -308,21 +312,19 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.Appearance.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImageOptions.Image")));
-            this.groupControl2.Controls.Add(this.bindingNavigator1);
-            this.groupControl2.Controls.Add(this.dgv_DuLieu);
+            this.groupControl2.Controls.Add(this.panel1);
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Title;
-            this.groupControl2.Location = new System.Drawing.Point(828, 64);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Location = new System.Drawing.Point(822, 64);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1159, 708);
+            this.groupControl2.Size = new System.Drawing.Size(1205, 697);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Dữ liệu độc giả";
             // 
@@ -336,19 +338,21 @@
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBt_SuaTT,
             this.toolStripSeparator2,
+            this.toolStripBt_Xoa,
+            this.toolStripSeparator1,
             this.toolStripBt_XuatCSV,
             this.toolStripSeparator4,
             this.toolStripBt_Reset,
             this.toolStripSeparator5,
             this.toolStripBt_Thoat});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 40);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
             this.bindingNavigator1.MoveNextItem = null;
             this.bindingNavigator1.MovePreviousItem = null;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1159, 35);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1205, 35);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -367,6 +371,22 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBt_Xoa
+            // 
+            this.toolStripBt_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_Xoa.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Xoa.Image")));
+            this.toolStripBt_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_Xoa.Name = "toolStripBt_Xoa";
+            this.toolStripBt_Xoa.Size = new System.Drawing.Size(76, 32);
+            this.toolStripBt_Xoa.Text = "Xóa";
+            this.toolStripBt_Xoa.Click += new System.EventHandler(this.toolStripBt_Xoa_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
             // 
             // toolStripBt_XuatCSV
             // 
@@ -413,19 +433,17 @@
             // 
             // dgv_DuLieu
             // 
-            this.dgv_DuLieu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DuLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DuLieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cl_IDTacGia,
             this.cl_TenTacGia,
             this.cl_NgaySinh});
-            this.dgv_DuLieu.Location = new System.Drawing.Point(0, 81);
-            this.dgv_DuLieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_DuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DuLieu.Location = new System.Drawing.Point(0, 35);
+            this.dgv_DuLieu.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_DuLieu.Name = "dgv_DuLieu";
-            this.dgv_DuLieu.Size = new System.Drawing.Size(1159, 626);
-            this.dgv_DuLieu.TabIndex = 0;
+            this.dgv_DuLieu.Size = new System.Drawing.Size(1205, 622);
+            this.dgv_DuLieu.TabIndex = 2;
             this.dgv_DuLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DuLieu_CellClick);
             // 
             // cl_IDTacGia
@@ -453,6 +471,16 @@
             this.cl_NgaySinh.HeaderText = "Ngày sinh";
             this.cl_NgaySinh.Name = "cl_NgaySinh";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgv_DuLieu);
+            this.panel1.Controls.Add(this.bindingNavigator1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1205, 657);
+            this.panel1.TabIndex = 3;
+            // 
             // frmTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -461,7 +489,7 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.navigationPane1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTacGia";
             this.Text = "Tác giả";
             this.Load += new System.EventHandler(this.frmTacGia_Load);
@@ -479,11 +507,12 @@
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DuLieu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -520,5 +549,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_IDTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_NgaySinh;
+        private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

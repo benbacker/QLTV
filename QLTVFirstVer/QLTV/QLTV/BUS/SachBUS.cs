@@ -104,5 +104,16 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region DeletSach
+        public bool DeleteSach(int ID)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(Sach_DAO.QueryDeleteCUONSACH(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(Sach_DAO.QueryDeleteCT_PHIEUNHAPSACH(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(Sach_DAO.QueryDeletePhieuNhapSach(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(Sach_DAO.QueryDeleteSACH(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(Sach_DAO.QueryDeleteDAUSACH(ID)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+        #endregion
     }
 }

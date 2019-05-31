@@ -94,6 +94,33 @@ namespace Desktop.BUS
             }
             return table;
         }
+
+        public bool DeletePhieuMuon(int ID)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(PhieuMuon_DAO.QueryDeleteBCSACHTRATRE(ID)) >= 0 && ConnectionSQL.ExecuteNonQuery(PhieuMuon_DAO.QueryDeleteCT_PHIEUMUON(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(PhieuMuon_DAO.QueryDeletePM(ID)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
+        public bool DeleteUpdateCS(int ID)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(PhieuMuon_DAO.QueryUpdateDeleteCuonSach(ID)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
+        public DataTable CheckDelete(int ID)
+        {
+            DataTable table;
+            table = ConnectionSQL.TaoBang(PhieuMuon_DAO.QueryCheckDelete(ID));
+            return table;
+        }
         #endregion
         #region Search
         public DataTable SearchPhieuMuon(string SearchTT, string NhapTT)

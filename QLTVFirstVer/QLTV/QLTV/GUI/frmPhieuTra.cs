@@ -32,6 +32,7 @@ namespace Desktop.GUI
         public string TenSach { get; set; }
         public decimal SoTienTra =0;
         #endregion
+        #region fillAllDataFromTablePhieuTra    
 
         private void frmPhieuTra_Load(object sender, EventArgs e)
         {
@@ -39,7 +40,7 @@ namespace Desktop.GUI
             LoadSachTra();
             LoadPhieuTra();
         }
-        #region fillAllDataFromTablePhieuTra
+
         public void LoadSachTra()
         {
             dgv_DuLieuTra.AutoGenerateColumns = false;
@@ -53,6 +54,7 @@ namespace Desktop.GUI
             dgv_DuLieuPT.DataSource = PhieuTra_BUS.LoadPhieuTra();
         }
         #endregion
+        #region Click
         private void bt_CNDL_Click(object sender, EventArgs e)
         {
             try
@@ -150,5 +152,36 @@ namespace Desktop.GUI
                 dgv_DuLieuPT.DataSource = PhieuTra_BUS.SearchPhieuTra(SearchTT, tb_NhapTT.Text.Trim());
             }
         }
+
+        private void toolStripBt_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i;
+                i = dgv_DuLieuPT.CurrentCell.RowIndex;
+                int IDPT = Int32.Parse(dgv_DuLieuPT.Rows[i].Cells["cl_IDTacGia"].Value.ToString());
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa không!!", "Thông báo!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                {
+                    if (result == DialogResult.OK)
+                    {
+                        if (PhieuTra_BUS.DeletePhieuTra(IDPT))
+                        {
+                            MessageBox.Show("Xóa dữ liệu thất thành công!");
+                            HelperGUI.ResetAllControls(groupControl_TTPT);
+                            LoadPhieuTra();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dữ liệu độc giả đã tồn tại xóa thất bại!");
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đã tồn tại không thể xóa");
+            }
+        }
+        #endregion
     }
 }

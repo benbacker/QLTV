@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTheDocGia));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -75,6 +75,8 @@
             this.cl_TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBt_Xoa = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -119,9 +121,9 @@
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage2,
             this.navigationPage1});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(706, 696);
+            this.navigationPane1.RegularSize = new System.Drawing.Size(703, 696);
             this.navigationPane1.SelectedPage = this.navigationPage2;
-            this.navigationPane1.Size = new System.Drawing.Size(706, 696);
+            this.navigationPane1.Size = new System.Drawing.Size(703, 696);
             this.navigationPane1.TabIndex = 0;
             this.navigationPane1.Text = "Tìm kiếm thông tin độc giả";
             // 
@@ -135,7 +137,7 @@
             this.navigationPage2.ImageOptions.SvgImageSize = new System.Drawing.Size(30, 30);
             this.navigationPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(600, 626);
+            this.navigationPage2.Size = new System.Drawing.Size(597, 626);
             // 
             // navigationFrame1
             // 
@@ -144,7 +146,7 @@
             this.navigationFrame1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navigationFrame1.Name = "navigationFrame1";
             this.navigationFrame1.SelectedPage = null;
-            this.navigationFrame1.Size = new System.Drawing.Size(600, 0);
+            this.navigationFrame1.Size = new System.Drawing.Size(597, 0);
             this.navigationFrame1.TabIndex = 2;
             this.navigationFrame1.Text = "navigationFrame1";
             // 
@@ -479,7 +481,7 @@
             this.groupControl2.Location = new System.Drawing.Point(709, 64);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1070, 629);
+            this.groupControl2.Size = new System.Drawing.Size(1070, 622);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Dữ liệu độc giả";
             // 
@@ -489,7 +491,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 554);
+            this.panel1.Size = new System.Drawing.Size(1070, 547);
             this.panel1.TabIndex = 2;
             // 
             // dgv_DuLieu
@@ -511,7 +513,7 @@
             this.dgv_DuLieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_DuLieu.MultiSelect = false;
             this.dgv_DuLieu.Name = "dgv_DuLieu";
-            this.dgv_DuLieu.Size = new System.Drawing.Size(1070, 554);
+            this.dgv_DuLieu.Size = new System.Drawing.Size(1070, 547);
             this.dgv_DuLieu.TabIndex = 0;
             this.dgv_DuLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DuLieu_CellClick);
             // 
@@ -591,8 +593,8 @@
             // 
             this.cl_TongNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.cl_TongNo.DataPropertyName = "TongNo";
-            dataGridViewCellStyle8.Format = "#,###";
-            this.cl_TongNo.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Format = "#,###";
+            this.cl_TongNo.DefaultCellStyle = dataGridViewCellStyle2;
             this.cl_TongNo.HeaderText = "Tổng nợ";
             this.cl_TongNo.Name = "cl_TongNo";
             this.cl_TongNo.Width = 160;
@@ -606,6 +608,8 @@
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBt_SuaTT,
+            this.toolStripSeparator7,
+            this.toolStripBt_Xoa,
             this.toolStripSeparator2,
             this.toolStripBt_XuatCSV,
             this.toolStripSeparator4,
@@ -639,6 +643,22 @@
             this.toolStripBt_SuaTT.Size = new System.Drawing.Size(169, 32);
             this.toolStripBt_SuaTT.Text = "Sữa thông tin";
             this.toolStripBt_SuaTT.Click += new System.EventHandler(this.toolStripBt_SuaTT_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBt_Xoa
+            // 
+            this.toolStripBt_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_Xoa.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Xoa.Image")));
+            this.toolStripBt_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_Xoa.Name = "toolStripBt_Xoa";
+            this.toolStripBt_Xoa.Size = new System.Drawing.Size(76, 32);
+            this.toolStripBt_Xoa.Text = "Xóa";
+            this.toolStripBt_Xoa.Click += new System.EventHandler(this.toolStripBt_Xoa_Click);
             // 
             // toolStripSeparator2
             // 
@@ -830,5 +850,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TenLoaiDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TongNo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
     }
 }

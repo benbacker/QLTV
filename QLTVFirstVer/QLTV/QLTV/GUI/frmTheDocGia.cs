@@ -168,6 +168,7 @@ namespace Desktop.GUI
         {
             HelperGUI.ResetAllControls(groupControl_TTDG);
             bt_CNDL.Enabled = true;
+            tb_Passwork.Enabled = true;
         }
 
         private void toolStripBt_SuaTT_Click(object sender, EventArgs e)
@@ -285,6 +286,37 @@ namespace Desktop.GUI
                 f.TongNo = dgv_DuLieu.CurrentRow.Cells["cl_TongNo"].Value.ToString();
                 f.IDLoaiDG = Int32.Parse(dgv_DuLieu.CurrentRow.Cells["cl_ID"].Value.ToString());
                 f.Show();
+            }
+        }
+
+        private void toolStripBt_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i, ID;
+                i = dgv_DuLieu.CurrentRow.Index;
+                ID = Int32.Parse(dgv_DuLieu.CurrentRow.Cells["cl_ID"].Value.ToString());
+                MessageBox.Show("Bạn có chắc chắn xóa không!!", "Thông báo!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                {
+                    if(TDG_BUS.CheckTDGinPM(ID).Rows.Count == 0)
+                    {
+                        if (TDG_BUS.DeleteTheDocGia(ID))
+                        {
+                            MessageBox.Show("Xóa dữ liệu thất thành công!");
+                            HelperGUI.ResetAllControls(groupControl_TTDG);
+                            dgv_DuLieu.AutoGenerateColumns = false;
+                            fillAllDataFromTableTheDocGia();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dữ liệu độc giả đã tồn tại xóa thất bại!");
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đã tồn tại không thể xóa");
             }
         }
         #endregion

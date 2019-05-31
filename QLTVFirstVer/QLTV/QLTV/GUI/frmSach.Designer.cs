@@ -82,6 +82,8 @@
             this.cl_ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBt_Xoa = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_XuatCSV = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -537,7 +539,7 @@
             this.groupControl2.Location = new System.Drawing.Point(842, 64);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1185, 568);
+            this.groupControl2.Size = new System.Drawing.Size(1185, 556);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Dữ liệu độc giả";
             // 
@@ -547,7 +549,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1185, 493);
+            this.panel1.Size = new System.Drawing.Size(1185, 481);
             this.panel1.TabIndex = 2;
             // 
             // dgv_DuLieuSach
@@ -569,7 +571,7 @@
             this.dgv_DuLieuSach.Location = new System.Drawing.Point(0, 0);
             this.dgv_DuLieuSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_DuLieuSach.Name = "dgv_DuLieuSach";
-            this.dgv_DuLieuSach.Size = new System.Drawing.Size(1185, 493);
+            this.dgv_DuLieuSach.Size = new System.Drawing.Size(1185, 481);
             this.dgv_DuLieuSach.TabIndex = 4;
             this.dgv_DuLieuSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DuLieuSach_CellClick);
             // 
@@ -675,6 +677,8 @@
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBt_SuaTT,
+            this.toolStripSeparator1,
+            this.toolStripBt_Xoa,
             this.toolStripSeparator2,
             this.toolStripBt_XuatCSV,
             this.toolStripSeparator4,
@@ -702,6 +706,22 @@
             this.toolStripBt_SuaTT.Size = new System.Drawing.Size(169, 32);
             this.toolStripBt_SuaTT.Text = "Sữa thông tin";
             this.toolStripBt_SuaTT.Click += new System.EventHandler(this.toolStripBt_SuaTT_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBt_Xoa
+            // 
+            this.toolStripBt_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_Xoa.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Xoa.Image")));
+            this.toolStripBt_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_Xoa.Name = "toolStripBt_Xoa";
+            this.toolStripBt_Xoa.Size = new System.Drawing.Size(76, 32);
+            this.toolStripBt_Xoa.Text = "Xóa";
+            this.toolStripBt_Xoa.Click += new System.EventHandler(this.toolStripBt_Xoa_Click);
             // 
             // toolStripSeparator2
             // 
@@ -843,5 +863,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_ThanhTien;
         private DevExpress.XtraEditors.SimpleButton btnThemTacGia;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
     }
 }

@@ -83,5 +83,16 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region DeletePhieuTra
+        public bool DeletePhieuTra(int ID)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(PhieuTra_DAO.QueryDeleteCT_PHIEUTRA(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(PhieuTra_DAO.QueryDeletePHIEUTRA(ID)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+        #endregion
     }
 }

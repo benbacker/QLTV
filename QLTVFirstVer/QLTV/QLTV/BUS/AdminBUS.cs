@@ -53,6 +53,16 @@ namespace Desktop.BUS
             return table;
         }
 
+        public bool DeleteAdmin(int ID)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(AD_DAO.QueryDeleteUserAdmin(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(AD_DAO.QueryDeleteCT_USERADMIN(ID)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
         public int IdentityIDAdmin()
         {
             int ID = 0;

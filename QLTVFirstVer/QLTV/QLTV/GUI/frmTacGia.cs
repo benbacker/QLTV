@@ -150,6 +150,37 @@ namespace Desktop.GUI
         {
             HelperGUI.Instance.ExportExcel(dgv_DuLieu);
         }
+
+        private void toolStripBt_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i;
+                i = dgv_DuLieu.CurrentCell.RowIndex;
+                int IDTacGia = Int32.Parse(dgv_DuLieu.Rows[i].Cells["cl_IDTacGia"].Value.ToString());
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn xóa không!!", "Thông báo!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                {
+                    if (result == DialogResult.OK)
+                    {
+                        if (TG_BUS.DeteleTacGia(IDTacGia))
+                        {
+                            MessageBox.Show("Xóa dữ liệu thất thành công!");
+                            HelperGUI.ResetAllControls(groupControl_TTTG);
+                            dgv_DuLieu.AutoGenerateColumns = false;
+                            fillAllDataFromTableTacGia();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dữ liệu độc giả đã tồn tại xóa thất bại!");
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đã tồn tại không thể xóa");
+            }
+        }
         #endregion
         #region KeyPress
         private void tb_TenTacGia_KeyPress(object sender, KeyPressEventArgs e)

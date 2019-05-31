@@ -51,6 +51,24 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region DeleteTheDocGia
+        public bool DeleteTheDocGia(int ID)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(TDG_DAO.QueryDeleteUser(ID)) > 0 && ConnectionSQL.ExecuteNonQuery(TDG_DAO.QueryDeletePhieuThu(ID)) >= 0 && ConnectionSQL.ExecuteNonQuery(TDG_DAO.QueryDeleteTDG(ID)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+
+        public DataTable CheckTDGinPM(int ID)
+        {
+            DataTable table;
+            table = ConnectionSQL.TaoBang(TDG_DAO.QueryCheckTDGinPM(ID));
+            return table;
+        }
+        #endregion
         #region UpdateTheDocGia
         public bool UpdateTheDocGia(TheDocGiaDTO TDG, UserDTO user)
         {

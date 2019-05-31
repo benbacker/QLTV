@@ -52,6 +52,17 @@ namespace Desktop.BUS
             return table;
         }
         #endregion
+        #region DeleteTacGia
+        public bool DeteleTacGia(int IDTG)
+        {
+            bool table = false;
+            if (ConnectionSQL.ExecuteNonQuery(TG_DAO.QueryDeleteTacGia(IDTG)) > 0)
+            {
+                table = true;
+            }
+            return table;
+        }
+        #endregion
         #region SearchTacGia
         public DataTable SearchTacGia(string SearchTT, string NhapTT)
         {

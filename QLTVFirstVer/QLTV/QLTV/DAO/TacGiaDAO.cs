@@ -37,6 +37,12 @@ namespace Desktop.DAO
             string Query = "select * From TacGia where  " + SearchTT + " like N'%" + NhapTT + "%' order by IDTacGia asc";
             return Query;
         }
+
+        public string QueryDeleteTacGia(int IDTG)
+        {
+            string Query = "DELETE TacGia WHERE IDTacGia = " + IDTG + "";
+            return Query;
+        }
         #endregion
     }
 }

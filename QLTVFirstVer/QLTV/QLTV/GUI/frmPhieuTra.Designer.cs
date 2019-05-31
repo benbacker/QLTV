@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuTra));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -70,6 +70,8 @@
             this.cl_HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_SoNgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_TienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripBt_Xoa = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -414,6 +416,8 @@
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBt_XuatCSV,
+            this.toolStripSeparator1,
+            this.toolStripBt_Xoa,
             this.toolStripSeparator4,
             this.toolStripBt_Reset,
             this.toolStripSeparator6,
@@ -534,11 +538,27 @@
             // 
             this.cl_TienPhat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.cl_TienPhat.DataPropertyName = "TienPhat";
-            dataGridViewCellStyle1.Format = "#,###";
-            this.cl_TienPhat.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "#,###";
+            this.cl_TienPhat.DefaultCellStyle = dataGridViewCellStyle2;
             this.cl_TienPhat.HeaderText = "Tiền phạt kì này";
             this.cl_TienPhat.Name = "cl_TienPhat";
             this.cl_TienPhat.Width = 250;
+            // 
+            // toolStripBt_Xoa
+            // 
+            this.toolStripBt_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBt_Xoa.ForeColor = System.Drawing.Color.Red;
+            this.toolStripBt_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBt_Xoa.Image")));
+            this.toolStripBt_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBt_Xoa.Name = "toolStripBt_Xoa";
+            this.toolStripBt_Xoa.Size = new System.Drawing.Size(76, 32);
+            this.toolStripBt_Xoa.Text = "Xóa";
+            this.toolStripBt_Xoa.Click += new System.EventHandler(this.toolStripBt_Xoa_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
             // 
             // frmPhieuTra
             // 
@@ -617,5 +637,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_HanTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_SoNgayMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_TienPhat;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripBt_Xoa;
     }
 }

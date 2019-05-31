@@ -50,6 +50,18 @@ namespace Desktop.DAO
             return Query;
         }
         #endregion
+        #region Delete
+        public string QueryDeleteCT_PHIEUTRA(int ID)
+        {
+            string Query = "DELETE CT_PHIEUTRA WHERE IDCTPhieuTra = " + ID + "";
+            return Query;
+        }
+        public string QueryDeletePHIEUTRA(int ID)
+        {
+            string Query = "DELETE PHIEUTRA WHERE IDPhieuTra = " + ID + "";
+            return Query;
+        }
+        #endregion
         #endregion
     }
 }

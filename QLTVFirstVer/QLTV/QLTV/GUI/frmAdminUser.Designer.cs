@@ -34,6 +34,7 @@
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.groupControl_TTDG = new DevExpress.XtraEditors.GroupControl();
+            this.btn_ThemLoaiSach = new DevExpress.XtraEditors.SimpleButton();
             this.tb_HoTenAdmin = new System.Windows.Forms.TextBox();
             this.tb_Passwork = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -76,7 +77,6 @@
             this.cl_DiaChiAdmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_EmailAdmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_QuyenHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_ThemLoaiSach = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -170,6 +170,16 @@
             this.groupControl_TTDG.TabIndex = 0;
             this.groupControl_TTDG.Text = "Thông tin admin";
             // 
+            // btn_ThemLoaiSach
+            // 
+            this.btn_ThemLoaiSach.Location = new System.Drawing.Point(582, 184);
+            this.btn_ThemLoaiSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThemLoaiSach.Name = "btn_ThemLoaiSach";
+            this.btn_ThemLoaiSach.Size = new System.Drawing.Size(116, 34);
+            this.btn_ThemLoaiSach.TabIndex = 35;
+            this.btn_ThemLoaiSach.Text = "Đổi mật khẩu";
+            this.btn_ThemLoaiSach.Click += new System.EventHandler(this.btn_ThemLoaiSach_Click);
+            // 
             // tb_HoTenAdmin
             // 
             this.tb_HoTenAdmin.Location = new System.Drawing.Point(146, 73);
@@ -195,9 +205,9 @@
             this.label10.Location = new System.Drawing.Point(4, 188);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 29);
+            this.label10.Size = new System.Drawing.Size(120, 29);
             this.label10.TabIndex = 17;
-            this.label10.Text = "Passwork:";
+            this.label10.Text = "Mật khẩu:";
             // 
             // label1
             // 
@@ -638,16 +648,6 @@
             this.cl_QuyenHan.HeaderText = "Chức vụ";
             this.cl_QuyenHan.Name = "cl_QuyenHan";
             this.cl_QuyenHan.Width = 180;
-            // 
-            // btn_ThemLoaiSach
-            // 
-            this.btn_ThemLoaiSach.Location = new System.Drawing.Point(582, 184);
-            this.btn_ThemLoaiSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ThemLoaiSach.Name = "btn_ThemLoaiSach";
-            this.btn_ThemLoaiSach.Size = new System.Drawing.Size(116, 34);
-            this.btn_ThemLoaiSach.TabIndex = 35;
-            this.btn_ThemLoaiSach.Text = "Đổi mật khẩu";
-            this.btn_ThemLoaiSach.Click += new System.EventHandler(this.btn_ThemLoaiSach_Click);
             // 
             // frmAdminUser
             // 

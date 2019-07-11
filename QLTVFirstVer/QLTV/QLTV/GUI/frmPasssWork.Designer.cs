@@ -188,6 +188,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPasssWork";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tài khoản";
             this.Load += new System.EventHandler(this.frmPasssWork_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TickYes)).EndInit();

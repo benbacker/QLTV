@@ -51,16 +51,18 @@
             this.groupControl_ThemTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl_ThemTheLoai.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.groupControl_ThemTheLoai.Location = new System.Drawing.Point(0, 0);
+            this.groupControl_ThemTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl_ThemTheLoai.Name = "groupControl_ThemTheLoai";
-            this.groupControl_ThemTheLoai.Size = new System.Drawing.Size(434, 196);
+            this.groupControl_ThemTheLoai.Size = new System.Drawing.Size(579, 241);
             this.groupControl_ThemTheLoai.TabIndex = 1;
             this.groupControl_ThemTheLoai.Text = "Thông tin thể loại";
             // 
             // tb_ThemTheLoaiSach
             // 
-            this.tb_ThemTheLoaiSach.Location = new System.Drawing.Point(136, 81);
+            this.tb_ThemTheLoaiSach.Location = new System.Drawing.Point(181, 100);
+            this.tb_ThemTheLoaiSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_ThemTheLoaiSach.Name = "tb_ThemTheLoaiSach";
-            this.tb_ThemTheLoaiSach.Size = new System.Drawing.Size(248, 30);
+            this.tb_ThemTheLoaiSach.Size = new System.Drawing.Size(329, 36);
             this.tb_ThemTheLoaiSach.TabIndex = 15;
             // 
             // label2
@@ -68,9 +70,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(3, 84);
+            this.label2.Location = new System.Drawing.Point(4, 103);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 23);
+            this.label2.Size = new System.Drawing.Size(161, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Thể loại sách:";
             // 
@@ -78,9 +81,10 @@
             // 
             this.bt_CNDL.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_CNDL.Image = ((System.Drawing.Image)(resources.GetObject("bt_CNDL.Image")));
-            this.bt_CNDL.Location = new System.Drawing.Point(155, 133);
+            this.bt_CNDL.Location = new System.Drawing.Point(207, 164);
+            this.bt_CNDL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_CNDL.Name = "bt_CNDL";
-            this.bt_CNDL.Size = new System.Drawing.Size(142, 42);
+            this.bt_CNDL.Size = new System.Drawing.Size(189, 52);
             this.bt_CNDL.TabIndex = 14;
             this.bt_CNDL.Text = "Cập nhật dữ liệu";
             this.bt_CNDL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -90,12 +94,14 @@
             // 
             // FrmThemLoaiSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 196);
+            this.ClientSize = new System.Drawing.Size(579, 241);
             this.Controls.Add(this.groupControl_ThemTheLoai);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmThemLoaiSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Thêm thể loại sách";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_ThemTheLoai)).EndInit();
             this.groupControl_ThemTheLoai.ResumeLayout(false);

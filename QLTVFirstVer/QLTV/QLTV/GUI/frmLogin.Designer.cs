@@ -61,8 +61,9 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 589);
+            this.panel1.Size = new System.Drawing.Size(480, 725);
             this.panel1.TabIndex = 0;
             // 
             // btnCSDL
@@ -83,10 +84,10 @@
             this.btnCSDL.IdleFillColor = System.Drawing.Color.White;
             this.btnCSDL.IdleForecolor = System.Drawing.Color.Black;
             this.btnCSDL.IdleLineColor = System.Drawing.Color.Black;
-            this.btnCSDL.Location = new System.Drawing.Point(82, 449);
-            this.btnCSDL.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCSDL.Location = new System.Drawing.Point(109, 553);
+            this.btnCSDL.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnCSDL.Name = "btnCSDL";
-            this.btnCSDL.Size = new System.Drawing.Size(189, 41);
+            this.btnCSDL.Size = new System.Drawing.Size(252, 50);
             this.btnCSDL.TabIndex = 4;
             this.btnCSDL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCSDL.Click += new System.EventHandler(this.btnCSDL_Click);
@@ -95,11 +96,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.LightCyan;
-            this.label4.Font = new System.Drawing.Font("Bungee Inline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(49, 80);
+            this.label4.Location = new System.Drawing.Point(65, 98);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(266, 61);
+            this.label4.Size = new System.Drawing.Size(272, 36);
             this.label4.TabIndex = 13;
             this.label4.Text = "Quản Lý Thư Viện\r\n";
             // 
@@ -107,11 +109,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LightCyan;
-            this.label3.Font = new System.Drawing.Font("Bungee Inline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Location = new System.Drawing.Point(100, 22);
+            this.label3.Location = new System.Drawing.Point(133, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 61);
+            this.label3.Size = new System.Drawing.Size(174, 36);
             this.label3.TabIndex = 12;
             this.label3.Text = "Phần Mềm \r\n";
             // 
@@ -122,8 +125,9 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(360, 589);
+            this.pictureBox4.Size = new System.Drawing.Size(480, 725);
             this.pictureBox4.TabIndex = 11;
             this.pictureBox4.TabStop = false;
             // 
@@ -132,9 +136,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(366, 34);
+            this.label1.Location = new System.Drawing.Point(488, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 76);
+            this.label1.Size = new System.Drawing.Size(217, 95);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
@@ -143,9 +148,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(375, 121);
+            this.label2.Location = new System.Drawing.Point(500, 149);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 20);
+            this.label2.Size = new System.Drawing.Size(269, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Xin Chào! Mời bạn đăng nhập";
             // 
@@ -161,10 +167,10 @@
             this.tbPassWork.LineIdleColor = System.Drawing.Color.White;
             this.tbPassWork.LineMouseHoverColor = System.Drawing.Color.White;
             this.tbPassWork.LineThickness = 4;
-            this.tbPassWork.Location = new System.Drawing.Point(367, 312);
-            this.tbPassWork.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbPassWork.Location = new System.Drawing.Point(489, 384);
+            this.tbPassWork.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbPassWork.Name = "tbPassWork";
-            this.tbPassWork.Size = new System.Drawing.Size(316, 50);
+            this.tbPassWork.Size = new System.Drawing.Size(421, 62);
             this.tbPassWork.TabIndex = 2;
             this.tbPassWork.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbPassWork.OnValueChanged += new System.EventHandler(this.tbPassWork_OnValueChanged);
@@ -188,10 +194,10 @@
             this.btnLogin.IdleFillColor = System.Drawing.Color.White;
             this.btnLogin.IdleForecolor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnLogin.IdleLineColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogin.Location = new System.Drawing.Point(424, 394);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnLogin.Location = new System.Drawing.Point(565, 485);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(201, 41);
+            this.btnLogin.Size = new System.Drawing.Size(268, 50);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -208,10 +214,10 @@
             this.tbUser.LineIdleColor = System.Drawing.Color.White;
             this.tbUser.LineMouseHoverColor = System.Drawing.Color.White;
             this.tbUser.LineThickness = 4;
-            this.tbUser.Location = new System.Drawing.Point(367, 234);
-            this.tbUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbUser.Location = new System.Drawing.Point(489, 288);
+            this.tbUser.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(316, 50);
+            this.tbUser.Size = new System.Drawing.Size(421, 62);
             this.tbUser.TabIndex = 1;
             this.tbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -219,9 +225,10 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(649, 246);
+            this.pictureBox2.Location = new System.Drawing.Point(865, 303);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(45, 36);
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
@@ -229,9 +236,10 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(649, 323);
+            this.pictureBox1.Location = new System.Drawing.Point(865, 398);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 36);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -239,9 +247,10 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(454, 155);
+            this.pictureBox3.Location = new System.Drawing.Point(605, 191);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(145, 70);
+            this.pictureBox3.Size = new System.Drawing.Size(193, 86);
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
             // 
@@ -249,20 +258,21 @@
             // 
             this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Location = new System.Drawing.Point(655, 2);
+            this.btnExit.Location = new System.Drawing.Point(873, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(34, 29);
+            this.btnExit.Size = new System.Drawing.Size(45, 36);
             this.btnExit.TabIndex = 11;
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(691, 589);
+            this.ClientSize = new System.Drawing.Size(921, 725);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
@@ -275,6 +285,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";

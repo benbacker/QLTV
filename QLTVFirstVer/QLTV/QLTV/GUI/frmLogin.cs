@@ -81,6 +81,7 @@ namespace Desktop.GUI
 
         private void tbPassWork_OnValueChanged(object sender, EventArgs e)
         {
+            tbPassWork.HintText = null;
             tbPassWork.isPassword = true;
         }
 

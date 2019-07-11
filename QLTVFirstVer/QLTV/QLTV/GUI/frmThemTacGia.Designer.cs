@@ -55,17 +55,19 @@
             this.groupControl_ThemTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl_ThemTacGia.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.groupControl_ThemTacGia.Location = new System.Drawing.Point(0, 0);
+            this.groupControl_ThemTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl_ThemTacGia.Name = "groupControl_ThemTacGia";
-            this.groupControl_ThemTacGia.Size = new System.Drawing.Size(550, 310);
+            this.groupControl_ThemTacGia.Size = new System.Drawing.Size(733, 382);
             this.groupControl_ThemTacGia.TabIndex = 1;
             this.groupControl_ThemTacGia.Text = "Thông tin tác giả";
             // 
             // dt_NgaySinh
             // 
             this.dt_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_NgaySinh.Location = new System.Drawing.Point(151, 142);
+            this.dt_NgaySinh.Location = new System.Drawing.Point(201, 175);
+            this.dt_NgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dt_NgaySinh.Name = "dt_NgaySinh";
-            this.dt_NgaySinh.Size = new System.Drawing.Size(340, 30);
+            this.dt_NgaySinh.Size = new System.Drawing.Size(452, 36);
             this.dt_NgaySinh.TabIndex = 22;
             // 
             // label1
@@ -73,17 +75,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(11, 140);
+            this.label1.Location = new System.Drawing.Point(15, 172);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(125, 29);
             this.label1.TabIndex = 21;
             this.label1.Text = "Ngày sinh:";
             // 
             // tb_TenTacGia
             // 
-            this.tb_TenTacGia.Location = new System.Drawing.Point(151, 55);
+            this.tb_TenTacGia.Location = new System.Drawing.Point(201, 68);
+            this.tb_TenTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_TenTacGia.Name = "tb_TenTacGia";
-            this.tb_TenTacGia.Size = new System.Drawing.Size(340, 30);
+            this.tb_TenTacGia.Size = new System.Drawing.Size(452, 36);
             this.tb_TenTacGia.TabIndex = 20;
             // 
             // label2
@@ -91,9 +95,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(11, 57);
+            this.label2.Location = new System.Drawing.Point(15, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 23);
+            this.label2.Size = new System.Drawing.Size(140, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên tác giả:";
             // 
@@ -101,9 +106,10 @@
             // 
             this.bt_CNDL.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_CNDL.Image = ((System.Drawing.Image)(resources.GetObject("bt_CNDL.Image")));
-            this.bt_CNDL.Location = new System.Drawing.Point(198, 225);
+            this.bt_CNDL.Location = new System.Drawing.Point(264, 277);
+            this.bt_CNDL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_CNDL.Name = "bt_CNDL";
-            this.bt_CNDL.Size = new System.Drawing.Size(142, 42);
+            this.bt_CNDL.Size = new System.Drawing.Size(189, 52);
             this.bt_CNDL.TabIndex = 14;
             this.bt_CNDL.Text = "Cập nhật dữ liệu";
             this.bt_CNDL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,12 +119,14 @@
             // 
             // frmThemTacGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 310);
+            this.ClientSize = new System.Drawing.Size(733, 382);
             this.Controls.Add(this.groupControl_ThemTacGia);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmThemTacGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm tác giả";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_ThemTacGia)).EndInit();
             this.groupControl_ThemTacGia.ResumeLayout(false);

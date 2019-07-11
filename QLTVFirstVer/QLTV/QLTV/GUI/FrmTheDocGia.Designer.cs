@@ -63,6 +63,17 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_DuLieu = new System.Windows.Forms.DataGridView();
+            this.cl_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_Pwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_NgayLapThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_TenLoaiDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cl_TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripBt_SuaTT = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -79,17 +90,6 @@
             this.toolStrip_PThu = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBt_Thoat = new System.Windows.Forms.ToolStripButton();
-            this.cl_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_Pwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_NgayLapThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_TenLoaiDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cl_TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage2.SuspendLayout();
@@ -210,9 +210,9 @@
             this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(3, 188);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 29);
+            this.label10.Size = new System.Drawing.Size(120, 29);
             this.label10.TabIndex = 17;
-            this.label10.Text = "Passwork:";
+            this.label10.Text = "Mật khẩu:";
             // 
             // label1
             // 
@@ -519,6 +519,94 @@
             this.dgv_DuLieu.TabIndex = 0;
             this.dgv_DuLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DuLieu_CellClick);
             // 
+            // cl_ID
+            // 
+            this.cl_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_ID.DataPropertyName = "IDDocGia";
+            this.cl_ID.HeaderText = "STT";
+            this.cl_ID.Name = "cl_ID";
+            this.cl_ID.Width = 125;
+            // 
+            // cl_HoTen
+            // 
+            this.cl_HoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_HoTen.DataPropertyName = "HoTenDG";
+            this.cl_HoTen.HeaderText = "Họ và tên";
+            this.cl_HoTen.Name = "cl_HoTen";
+            this.cl_HoTen.Width = 127;
+            // 
+            // cl_User
+            // 
+            this.cl_User.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_User.DataPropertyName = "UserName";
+            this.cl_User.HeaderText = "Tài khoản";
+            this.cl_User.Name = "cl_User";
+            this.cl_User.Width = 128;
+            // 
+            // cl_Pwd
+            // 
+            this.cl_Pwd.DataPropertyName = "Pwd";
+            this.cl_Pwd.HeaderText = "Pass";
+            this.cl_Pwd.Name = "cl_Pwd";
+            // 
+            // cl_DiaChi
+            // 
+            this.cl_DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_DiaChi.DataPropertyName = "DiaChiDG";
+            this.cl_DiaChi.HeaderText = "Địa chỉ";
+            this.cl_DiaChi.Name = "cl_DiaChi";
+            this.cl_DiaChi.Width = 101;
+            // 
+            // cl_Email
+            // 
+            this.cl_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_Email.DataPropertyName = "EmailDG";
+            this.cl_Email.HeaderText = "Email";
+            this.cl_Email.Name = "cl_Email";
+            this.cl_Email.Width = 88;
+            // 
+            // cl_NgaySinh
+            // 
+            this.cl_NgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_NgaySinh.DataPropertyName = "NgaySinhDG";
+            this.cl_NgaySinh.HeaderText = "Ngày Sinh";
+            this.cl_NgaySinh.Name = "cl_NgaySinh";
+            this.cl_NgaySinh.Width = 132;
+            // 
+            // cl_NgayLapThe
+            // 
+            this.cl_NgayLapThe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_NgayLapThe.DataPropertyName = "NgayLapThe";
+            this.cl_NgayLapThe.HeaderText = "Ngày lập thẻ";
+            this.cl_NgayLapThe.Name = "cl_NgayLapThe";
+            this.cl_NgayLapThe.Width = 156;
+            // 
+            // cl_NgayHetHan
+            // 
+            this.cl_NgayHetHan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_NgayHetHan.DataPropertyName = "NgayHetHan";
+            this.cl_NgayHetHan.HeaderText = "Ngày hết hạn";
+            this.cl_NgayHetHan.Name = "cl_NgayHetHan";
+            this.cl_NgayHetHan.Width = 180;
+            // 
+            // cl_TenLoaiDG
+            // 
+            this.cl_TenLoaiDG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_TenLoaiDG.DataPropertyName = "TenLoaiDG";
+            this.cl_TenLoaiDG.HeaderText = "Tên loại độc giả";
+            this.cl_TenLoaiDG.Name = "cl_TenLoaiDG";
+            this.cl_TenLoaiDG.Width = 210;
+            // 
+            // cl_TongNo
+            // 
+            this.cl_TongNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cl_TongNo.DataPropertyName = "TongNo";
+            dataGridViewCellStyle1.Format = "#,###";
+            this.cl_TongNo.DefaultCellStyle = dataGridViewCellStyle1;
+            this.cl_TongNo.HeaderText = "Tổng nợ";
+            this.cl_TongNo.Name = "cl_TongNo";
+            this.cl_TongNo.Width = 160;
+            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = null;
@@ -675,94 +763,6 @@
             this.toolStripBt_Thoat.Size = new System.Drawing.Size(95, 32);
             this.toolStripBt_Thoat.Text = "Thoát";
             this.toolStripBt_Thoat.Click += new System.EventHandler(this.toolStripBt_Thoat_Click);
-            // 
-            // cl_ID
-            // 
-            this.cl_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_ID.DataPropertyName = "IDDocGia";
-            this.cl_ID.HeaderText = "STT";
-            this.cl_ID.Name = "cl_ID";
-            this.cl_ID.Width = 125;
-            // 
-            // cl_HoTen
-            // 
-            this.cl_HoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_HoTen.DataPropertyName = "HoTenDG";
-            this.cl_HoTen.HeaderText = "Họ và tên";
-            this.cl_HoTen.Name = "cl_HoTen";
-            this.cl_HoTen.Width = 127;
-            // 
-            // cl_User
-            // 
-            this.cl_User.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_User.DataPropertyName = "UserName";
-            this.cl_User.HeaderText = "Tài khoản";
-            this.cl_User.Name = "cl_User";
-            this.cl_User.Width = 128;
-            // 
-            // cl_Pwd
-            // 
-            this.cl_Pwd.DataPropertyName = "Pwd";
-            this.cl_Pwd.HeaderText = "Pass";
-            this.cl_Pwd.Name = "cl_Pwd";
-            // 
-            // cl_DiaChi
-            // 
-            this.cl_DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_DiaChi.DataPropertyName = "DiaChiDG";
-            this.cl_DiaChi.HeaderText = "Địa chỉ";
-            this.cl_DiaChi.Name = "cl_DiaChi";
-            this.cl_DiaChi.Width = 101;
-            // 
-            // cl_Email
-            // 
-            this.cl_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_Email.DataPropertyName = "EmailDG";
-            this.cl_Email.HeaderText = "Email";
-            this.cl_Email.Name = "cl_Email";
-            this.cl_Email.Width = 88;
-            // 
-            // cl_NgaySinh
-            // 
-            this.cl_NgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_NgaySinh.DataPropertyName = "NgaySinhDG";
-            this.cl_NgaySinh.HeaderText = "Ngày Sinh";
-            this.cl_NgaySinh.Name = "cl_NgaySinh";
-            this.cl_NgaySinh.Width = 132;
-            // 
-            // cl_NgayLapThe
-            // 
-            this.cl_NgayLapThe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_NgayLapThe.DataPropertyName = "NgayLapThe";
-            this.cl_NgayLapThe.HeaderText = "Ngày lập thẻ";
-            this.cl_NgayLapThe.Name = "cl_NgayLapThe";
-            this.cl_NgayLapThe.Width = 156;
-            // 
-            // cl_NgayHetHan
-            // 
-            this.cl_NgayHetHan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_NgayHetHan.DataPropertyName = "NgayHetHan";
-            this.cl_NgayHetHan.HeaderText = "Ngày hết hạn";
-            this.cl_NgayHetHan.Name = "cl_NgayHetHan";
-            this.cl_NgayHetHan.Width = 180;
-            // 
-            // cl_TenLoaiDG
-            // 
-            this.cl_TenLoaiDG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_TenLoaiDG.DataPropertyName = "TenLoaiDG";
-            this.cl_TenLoaiDG.HeaderText = "Tên loại độc giả";
-            this.cl_TenLoaiDG.Name = "cl_TenLoaiDG";
-            this.cl_TenLoaiDG.Width = 210;
-            // 
-            // cl_TongNo
-            // 
-            this.cl_TongNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cl_TongNo.DataPropertyName = "TongNo";
-            dataGridViewCellStyle1.Format = "#,###";
-            this.cl_TongNo.DefaultCellStyle = dataGridViewCellStyle1;
-            this.cl_TongNo.HeaderText = "Tổng nợ";
-            this.cl_TongNo.Name = "cl_TongNo";
-            this.cl_TongNo.Width = 160;
             // 
             // frmTheDocGia
             // 
